@@ -65,6 +65,7 @@
   moreBtn.addEventListener('click', function (e) {
     e.stopPropagation();
     var open = panel.hidden;
+    if (open) closeMenu();
     panel.hidden = !open;
     moreBtn.setAttribute('aria-expanded', String(open));
   });
@@ -74,7 +75,7 @@
     if (e.key === 'Escape' && !panel.hidden) { closePanel(); moreBtn.focus(); }
   });
   document.querySelectorAll('[data-lang-code]').forEach(function (b) {
-    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang-code')); closePanel(); });
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-lang-code')); closePanel(); closeMenu(); });
   });
 
   // Default is Italiano; a visitor's earlier choice is remembered.
@@ -140,20 +141,40 @@
   syncMenu();
 
   /* ---------- Placeholder images that fail to load ---------- */
-  document.querySelectorAll('img').forEach(function (img) {
+  document.querySelectorAll('main img').forEach(function (img) {
     img.addEventListener('error', function () { img.style.visibility = 'hidden'; });
   });
 
-  /* ---------- Tap-to-enlarge photos ---------- */
+  /* ---------- Tap-to-enlarge photos (with prev/next, arrow keys, swipe, counter) ---------- */
   var box = document.getElementById('lightbox');
   var boxImg = document.getElementById('lightboxImg');
+  var boxCount = document.getElementById('lightboxCount');
+  var prevBtn = document.getElementById('lightboxPrev');
+  var nextBtn = document.getElementById('lightboxNext');
+  var photos = Array.prototype.slice.call(document.querySelectorAll('main img'));
+  var list = [];
+  var idx = 0;
   var lastFocus = null;
 
-  function openBox(img) {
-    if (img.style.visibility === 'hidden') return;
-    lastFocus = document.activeElement;
+  function show(i) {
+    var n = list.length;
+    idx = (i + n) % n;
+    var img = list[idx];
+    boxImg.style.visibility = ''; // the broken-image handler must never hide the lightbox image
     boxImg.src = img.currentSrc || img.src;
     boxImg.alt = img.alt || '';
+    boxCount.textContent = (idx + 1) + ' / ' + n;
+    prevBtn.hidden = nextBtn.hidden = n < 2;
+    boxCount.hidden = n < 2;
+    if (n > 1) { // warm the neighbours so swiping feels instant
+      [list[(idx + 1) % n], list[(idx - 1 + n) % n]].forEach(function (nb) { new Image().src = nb.currentSrc || nb.src; });
+    }
+  }
+  function openBox(img) {
+    if (img.style.visibility === 'hidden') return;
+    list = photos.filter(function (p) { return p.style.visibility !== 'hidden'; });
+    lastFocus = document.activeElement;
+    show(list.indexOf(img));
     box.hidden = false;
     document.body.style.overflow = 'hidden';
     document.getElementById('lightboxClose').focus();
@@ -164,7 +185,8 @@
     document.body.style.overflow = '';
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
-  document.querySelectorAll('main img').forEach(function (img) {
+
+  photos.forEach(function (img) {
     if (img.classList.contains('hero-img')) return;
     img.classList.add('zoomable');
     img.setAttribute('tabindex', '0');
@@ -177,8 +199,32 @@
   document.getElementById('heroZoom').addEventListener('click', function () {
     openBox(document.querySelector('.hero-img'));
   });
+
+  prevBtn.addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); });
+  nextBtn.addEventListener('click', function (e) { e.stopPropagation(); show(idx + 1); });
+  document.getElementById('lightboxClose').addEventListener('click', function (e) { e.stopPropagation(); closeBox(); });
   box.addEventListener('click', closeBox);
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !box.hidden) closeBox();
+    if (box.hidden) return;
+    if (e.key === 'Escape') closeBox();
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); show(idx - 1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); show(idx + 1); }
   });
+
+  // Swipe left/right on phones
+  var sx = 0, sy = 0, swipedAt = 0;
+  box.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1) return;
+    sx = e.touches[0].clientX; sy = e.touches[0].clientY;
+  }, { passive: true });
+  box.addEventListener('touchend', function (e) {
+    var t = e.changedTouches[0];
+    var dx = t.clientX - sx, dy = t.clientY - sy;
+    if (list.length > 1 && Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      swipedAt = Date.now();
+      show(dx < 0 ? idx + 1 : idx - 1);
+    }
+  }, { passive: true });
+  // a swipe must not also count as a tap-to-close
+  box.addEventListener('click', function (e) { if (Date.now() - swipedAt < 400) e.stopImmediatePropagation(); }, true);
 })();

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
 <title>Bar Dante Alighieri · Radda in Chianti</title>
 <meta name="description" content="Bar Dante Alighieri — Bar · Enoteca · Tabacchi nella piazza di Radda in Chianti. Caffè, vini del Chianti e cucina toscana. / Bar, wine bar and tobacconist on the village square of Radda in Chianti.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +17,6 @@
 <header class="site-header" id="top">
   <div class="wrap header-inner">
     <a class="brand" href="#home" aria-label="Bar Dante Alighieri">Bar Dante <span>Alighieri</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav">
-      <span class="sr-only"><span lang="it">Menu</span><span lang="en">Menu</span></span>
-      <span class="bars" aria-hidden="true"></span>
-    </button>
     <nav id="nav" class="nav">
       <a href="#home"><span lang="it">Home</span><span lang="en">Home</span></a>
       <a href="#chi-siamo"><span lang="it">Chi siamo</span><span lang="en">About</span></a>
@@ -27,47 +24,51 @@
       <a href="#vini"><span lang="it">I vini</span><span lang="en">Wines</span></a>
       <a href="#dove-siamo"><span lang="it">Dove siamo</span><span lang="en">Find us</span></a>
       <a href="#galleria"><span lang="it">Galleria</span><span lang="en">Gallery</span></a>
-      <div class="lang-picker" id="langPicker" role="group" aria-label="Lingua / Language">
-        <button type="button" class="lang-btn" data-lang-code="it" lang="it" aria-pressed="true">Italiano</button>
-        <button type="button" class="lang-btn" data-lang-code="en" lang="en" aria-pressed="false">English</button>
-        <div class="more-wrap">
-          <button type="button" class="lang-btn more-btn" id="moreLangBtn" aria-haspopup="true" aria-expanded="false" aria-controls="langPanel" aria-label="More languages" title="More languages">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.6 4.2 5.8 4.2 9.5s-1.4 6.9-4.2 9.5c-2.8-2.6-4.2-5.8-4.2-9.5S9.2 5.1 12 2.5z"/></svg><span class="more-label"><span lang="it">Altre lingue</span><span lang="en">More languages</span></span>
-          </button>
-          <div class="lang-panel" id="langPanel" hidden>
-            <ul>
-            <li><button type="button" class="lang-item" data-lang-code="de" lang="de">Deutsch</button></li>
-            <li><button type="button" class="lang-item" data-lang-code="fr" lang="fr">Français</button></li>
-            <li><button type="button" class="lang-item" data-lang-code="es" lang="es">Español</button></li>
-            <li><button type="button" class="lang-item" lang="nl" disabled aria-disabled="true">Nederlands<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="pt" disabled aria-disabled="true">Português<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" data-lang-code="ja" lang="ja">日本語</button></li>
-            <li><button type="button" class="lang-item" data-lang-code="zh" lang="zh">中文</button></li>
-            <li><button type="button" class="lang-item" lang="ko" disabled aria-disabled="true">한국어<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="ru" disabled aria-disabled="true">Русский<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="pl" disabled aria-disabled="true">Polski<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="sv" disabled aria-disabled="true">Svenska<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="da" disabled aria-disabled="true">Dansk<small>prossimamente / coming soon</small></button></li>
-            <li class="lang-divider" role="separator"></li>
-            <li><button type="button" class="lang-item" lang="ar" disabled aria-disabled="true">العربية<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="hr" disabled aria-disabled="true">Hrvatski<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="cs" disabled aria-disabled="true">Čeština<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="fi" disabled aria-disabled="true">Suomi<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="el" disabled aria-disabled="true">Ελληνικά<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="he" disabled aria-disabled="true">עברית<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="hi" disabled aria-disabled="true">हिन्दी<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="hu" disabled aria-disabled="true">Magyar<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="no" disabled aria-disabled="true">Norsk<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="fa" disabled aria-disabled="true">فارسی<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="ro" disabled aria-disabled="true">Română<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="th" disabled aria-disabled="true">ไทย<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="tr" disabled aria-disabled="true">Türkçe<small>prossimamente / coming soon</small></button></li>
-            <li><button type="button" class="lang-item" lang="uk" disabled aria-disabled="true">Українська<small>prossimamente / coming soon</small></button></li>
-            </ul>
-          </div>
+    </nav>
+    <div class="lang-picker" id="langPicker" role="group" aria-label="Lingua / Language">
+      <button type="button" class="lang-btn" data-lang-code="it" lang="it" aria-pressed="true" aria-label="Italiano"><span class="full">Italiano</span><span class="abbr" aria-hidden="true">IT</span></button>
+      <button type="button" class="lang-btn" data-lang-code="en" lang="en" aria-pressed="false" aria-label="English"><span class="full">English</span><span class="abbr" aria-hidden="true">EN</span></button>
+      <div class="more-wrap">
+        <button type="button" class="lang-btn more-btn" id="moreLangBtn" aria-haspopup="true" aria-expanded="false" aria-controls="langPanel" aria-label="More languages" title="More languages">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.6 4.2 5.8 4.2 9.5s-1.4 6.9-4.2 9.5c-2.8-2.6-4.2-5.8-4.2-9.5S9.2 5.1 12 2.5z"/></svg><span class="more-label"><span lang="it">Altre lingue</span><span lang="en">More languages</span></span>
+        </button>
+        <div class="lang-panel" id="langPanel" hidden>
+          <ul>
+          <li><button type="button" class="lang-item" data-lang-code="de" lang="de">Deutsch</button></li>
+          <li><button type="button" class="lang-item" data-lang-code="fr" lang="fr">Français</button></li>
+          <li><button type="button" class="lang-item" data-lang-code="es" lang="es">Español</button></li>
+          <li><button type="button" class="lang-item" lang="nl" disabled aria-disabled="true">Nederlands<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="pt" disabled aria-disabled="true">Português<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" data-lang-code="ja" lang="ja">日本語</button></li>
+          <li><button type="button" class="lang-item" data-lang-code="zh" lang="zh">中文</button></li>
+          <li><button type="button" class="lang-item" lang="ko" disabled aria-disabled="true">한국어<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="ru" disabled aria-disabled="true">Русский<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="pl" disabled aria-disabled="true">Polski<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="sv" disabled aria-disabled="true">Svenska<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="da" disabled aria-disabled="true">Dansk<small>prossimamente / coming soon</small></button></li>
+          <li class="lang-divider" role="separator"></li>
+          <li><button type="button" class="lang-item" lang="ar" disabled aria-disabled="true">العربية<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="hr" disabled aria-disabled="true">Hrvatski<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="cs" disabled aria-disabled="true">Čeština<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="fi" disabled aria-disabled="true">Suomi<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="el" disabled aria-disabled="true">Ελληνικά<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="he" disabled aria-disabled="true">עברית<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="hi" disabled aria-disabled="true">हिन्दी<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="hu" disabled aria-disabled="true">Magyar<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="no" disabled aria-disabled="true">Norsk<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="fa" disabled aria-disabled="true">فارسی<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="ro" disabled aria-disabled="true">Română<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="th" disabled aria-disabled="true">ไทย<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="tr" disabled aria-disabled="true">Türkçe<small>prossimamente / coming soon</small></button></li>
+          <li><button type="button" class="lang-item" lang="uk" disabled aria-disabled="true">Українська<small>prossimamente / coming soon</small></button></li>
+          </ul>
         </div>
       </div>
-    </nav>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav">
+      <span class="sr-only"><span lang="it">Menu</span><span lang="en">Menu</span></span>
+      <span class="bars" aria-hidden="true"></span>
+    </button>
   </div>
 </header>
 
@@ -103,7 +104,7 @@
       <h2><span lang="it">Quarant'anni di piazza, un nuovo capitolo</span><span lang="en">Forty years on the square, a new chapter</span></h2>
       <p>
         <span lang="it">Per quarant'anni il Bar Dante Alighieri è stato di Fabrizio e Carolyn, che hanno servito generazioni di radd&shy;esi e di viaggiatori. Dicono i clienti che la <em>bruschetta di Fabrizio</em> fosse «la più buona del Chianti» — e la sua fama non si è mai spenta.</span>
-        <span lang="en">For forty years Bar Dante Alighieri belonged to Fabrizio and Carolyn, who served generations of locals and travelers. Guests still talk about <em>Fabrizio's infamous bruschetta</em> — “the tastiest in Chianti.”</span>
+        <span lang="en">For forty years Bar Dante Alighieri belonged to Fabrizio and Carolyn, who served generations of locals and travelers. Guests still talk about <em>Fabrizio's famous bruschetta</em> — “the tastiest in Chianti.”</span>
       </p>
       <p>
         <span lang="it">Da febbraio 2025 il bar è di Claudio e Virginia Midolini, una giovane coppia di qui. Hanno raccolto il testimone con rispetto e tanta voglia di fare: la stessa accoglienza di sempre, un capitolo nuovo.</span>
@@ -448,14 +449,17 @@
     <p>Piazza Dante Alighieri 1 · 53017 Radda in Chianti (SI) · Italia</p>
     <!-- TO-CONFIRM: P.IVA — family to provide, then add a visible line here. Not shown until confirmed. -->
     <!-- TO-CONFIRM: email / WhatsApp — family to provide, then add here. Not shown until confirmed. -->
-    <!-- PLACEHOLDER: all photos on this page are stock images, not the bar -->
+    <!-- PLACEHOLDER: all photos on this page are temporary TripAdvisor guest photos, not the family's own -->
     <p class="small">Radda in Chianti · Toscana</p>
   </div>
 </footer>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto / Photo" hidden>
   <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Chiudi / Close">&times;</button>
-  <img id="lightboxImg" src="" alt="">
+  <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Precedente / Previous">&#8249;</button>
+  <img id="lightboxImg" alt="">
+  <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Successiva / Next">&#8250;</button>
+  <p class="lightbox-count" id="lightboxCount" aria-live="polite"></p>
 </div>
 
 <script src="script.js"></script>
