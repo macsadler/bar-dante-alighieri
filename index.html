@@ -26,9 +26,37 @@
       <a href="#vini"><span lang="it">I vini</span><span lang="en">Wines</span></a>
       <a href="#dove-siamo"><span lang="it">Dove siamo</span><span lang="en">Find us</span></a>
       <a href="#galleria"><span lang="it">Galleria</span><span lang="en">Gallery</span></a>
-      <div class="lang-toggle" role="group" aria-label="Lingua / Language">
-        <button type="button" data-set-lang="it" aria-pressed="true">IT</button>
-        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      <div class="lang-select">
+        <select id="langSelect" aria-label="Lingua / Language">
+          <option value="it">Italiano</option>
+          <option value="en">English</option>
+          <option value="" disabled>Français — prossimamente / coming soon</option>
+          <option value="" disabled>Español — prossimamente / coming soon</option>
+          <option value="" disabled>Deutsch — prossimamente / coming soon</option>
+          <option value="" disabled>日本語 — prossimamente / coming soon</option>
+          <option value="" disabled>한국어 — prossimamente / coming soon</option>
+          <option value="" disabled>中文 — prossimamente / coming soon</option>
+          <option value="" disabled>Русский — prossimamente / coming soon</option>
+          <option value="" disabled>العربية — prossimamente / coming soon</option>
+          <option value="" disabled>فارسی — prossimamente / coming soon</option>
+          <option value="" disabled>Português — prossimamente / coming soon</option>
+          <option value="" disabled>Nederlands — prossimamente / coming soon</option>
+          <option value="" disabled>Dansk — prossimamente / coming soon</option>
+          <option value="" disabled>Suomi — prossimamente / coming soon</option>
+          <option value="" disabled>Svenska — prossimamente / coming soon</option>
+          <option value="" disabled>Magyar — prossimamente / coming soon</option>
+          <option value="" disabled>ไทย — prossimamente / coming soon</option>
+          <option value="" disabled>Polski — prossimamente / coming soon</option>
+          <option value="" disabled>Norsk — prossimamente / coming soon</option>
+          <option value="" disabled>Română — prossimamente / coming soon</option>
+          <option value="" disabled>Ελληνικά — prossimamente / coming soon</option>
+          <option value="" disabled>Türkçe — prossimamente / coming soon</option>
+          <option value="" disabled>עברית — prossimamente / coming soon</option>
+          <option value="" disabled>हिन्दी — prossimamente / coming soon</option>
+          <option value="" disabled>Čeština — prossimamente / coming soon</option>
+          <option value="" disabled>Hrvatski — prossimamente / coming soon</option>
+          <option value="" disabled>Українська — prossimamente / coming soon</option>
+        </select>
       </div>
     </nav>
   </div>
@@ -41,6 +69,7 @@
   <!-- PLACEHOLDER: temporary TripAdvisor guest photo (terrace dining outside, hero) from the Bar Dante TripAdvisor listing. User-uploaded, not licensed for public use: replace with the family's own photo before launch. -->
   <img class="hero-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/78/53/b3/dining-outside.jpg?w=1200&h=800&s=1" alt="Outdoor terrace dining at Bar Dante" width="1200" height="800">
   <div class="hero-shade"></div>
+  <button type="button" class="hero-zoom" id="heroZoom" aria-label="Ingrandisci foto / Enlarge photo"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 4h6v2H6v4H4V4zm10 0h6v6h-2V6h-4V4zM4 14h2v4h4v2H4v-6zm14 0h2v6h-6v-2h4v-4z" fill="currentColor"/></svg></button>
   <div class="wrap hero-content">
     <p class="eyebrow">Bar · Enoteca · Tabacchi</p>
     <h1>Bar Dante Alighieri</h1>
@@ -354,7 +383,7 @@
       <!-- PLACEHOLDER: temporary TripAdvisor guest photo (gallery) from the Bar Dante TripAdvisor listing. User-uploaded, not licensed for public use: replace with the family's own photo before launch. -->
       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/67/02/c4/photo0jpg.jpg?w=1200&h=1200&s=1" alt="A plate from the Bar Dante kitchen" loading="lazy" width="1200" height="1200">
       <!-- PLACEHOLDER: temporary TripAdvisor guest photo (gallery) from the Bar Dante TripAdvisor listing. User-uploaded, not licensed for public use: replace with the family's own photo before launch. -->
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/3c/d3/72/bar-dante.jpg?w=1200&h=1200&s=1" alt="Bar Dante" loading="lazy" width="1200" height="1200">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/c7/09/a2/bruschette.jpg?w=1200&h=1200&s=1" alt="Bruschette at Bar Dante" loading="lazy" width="1200" height="1200">
       <!-- PLACEHOLDER: temporary TripAdvisor guest photo (gallery) from the Bar Dante TripAdvisor listing. User-uploaded, not licensed for public use: replace with the family's own photo before launch. -->
       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/85/5f/25/photo0jpg.jpg?w=1200&h=1200&s=1" alt="A plate from the Bar Dante kitchen" loading="lazy" width="1200" height="1200">
       <!-- PLACEHOLDER: temporary TripAdvisor guest photo (gallery) from the Bar Dante TripAdvisor listing. User-uploaded, not licensed for public use: replace with the family's own photo before launch. -->
@@ -382,6 +411,11 @@
     <p class="small">Radda in Chianti · Toscana</p>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto / Photo" hidden>
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Chiudi / Close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
 
 <script src="script.js"></script>
 </body>
