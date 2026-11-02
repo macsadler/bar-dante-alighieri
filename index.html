@@ -401,8 +401,13 @@
       </div>
       <div class="map">
         <!-- TO-CONFIRM: marker position approximate (Radda village square); verify against exact door -->
-        <iframe title="Mappa / Map — Piazza Dante Alighieri 1, Radda in Chianti" loading="lazy"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=11.3720%2C43.4865%2C11.3800%2C43.4905&amp;layer=mapnik&amp;marker=43.4885%2C11.3760"></iframe>
+        <div class="map-frame" id="mapFrame">
+          <iframe title="Mappa / Map — Piazza Dante Alighieri 1, Radda in Chianti" loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=11.3720%2C43.4865%2C11.3800%2C43.4905&amp;layer=mapnik&amp;marker=43.4885%2C11.3760"></iframe>
+          <!-- Touch guard: the map ignores finger drags until tapped, so the page keeps scrolling on phones -->
+          <button type="button" class="map-shield" id="mapShield" aria-label="Tocca per interagire con la mappa / Tap to interact with the map"><span class="map-hint"><span lang="it">Tocca per interagire</span><span lang="en">Tap to interact</span></span></button>
+          <button type="button" class="map-lock" id="mapLock" aria-label="Fine / Done" hidden>&times;</button>
+        </div>
       <figure class="visit-photo">
         <!-- PLACEHOLDER: temporary TripAdvisor guest photo (interior, visit section) from the Bar Dante TripAdvisor listing. User-uploaded, not licensed for public use: replace with the family's own photo before launch. -->
         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/06/ce/3c/interior.jpg?w=1200&h=1200&s=1" alt="Inside Bar Dante Alighieri" loading="lazy" width="1200" height="1200">

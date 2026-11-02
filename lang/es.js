@@ -95,6 +95,7 @@ window.BDA_LANG.es = {
  "Get directions": "Cómo llegar",
  "Open larger map": "Abrir el mapa en grande",
  "A taste of Radda": "Un poco de Radda",
- "More languages": "Más idiomas"
+ "More languages": "Más idiomas",
+ "Tap to interact": "Toca para interactuar"
 }
 };

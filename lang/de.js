@@ -95,6 +95,7 @@ window.BDA_LANG.de = {
  "Get directions": "Route planen",
  "Open larger map": "Größere Karte öffnen",
  "A taste of Radda": "Ein Vorgeschmack auf Radda",
- "More languages": "Weitere Sprachen"
+ "More languages": "Weitere Sprachen",
+ "Tap to interact": "Zum Bedienen tippen"
 }
 };

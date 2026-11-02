@@ -140,6 +140,19 @@
   if (mq.addEventListener) mq.addEventListener('change', syncMenu); else if (mq.addListener) mq.addListener(syncMenu);
   syncMenu();
 
+  /* ---------- Map: ignore finger drags until tapped, so the page keeps scrolling ---------- */
+  var mapFrame = document.getElementById('mapFrame');
+  var mapShield = document.getElementById('mapShield');
+  var mapLock = document.getElementById('mapLock');
+  function wakeMap() { mapFrame.classList.add('active'); mapLock.hidden = false; }
+  function sleepMap() { mapFrame.classList.remove('active'); mapLock.hidden = true; }
+  mapShield.addEventListener('click', wakeMap);
+  mapLock.addEventListener('click', sleepMap);
+  // touching anywhere outside the map puts it back to sleep for the next scroll past it
+  document.addEventListener('pointerdown', function (e) {
+    if (mapFrame.classList.contains('active') && !mapFrame.contains(e.target)) sleepMap();
+  });
+
   /* ---------- Placeholder images that fail to load ---------- */
   document.querySelectorAll('main img').forEach(function (img) {
     img.addEventListener('error', function () { img.style.visibility = 'hidden'; });

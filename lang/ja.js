@@ -95,6 +95,7 @@ window.BDA_LANG.ja = {
  "Get directions": "ルート案内",
  "Open larger map": "大きな地図を開く",
  "A taste of Radda": "ラッダの魅力",
- "More languages": "その他の言語"
+ "More languages": "その他の言語",
+ "Tap to interact": "タップして操作"
 }
 };

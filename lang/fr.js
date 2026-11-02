@@ -95,6 +95,7 @@ window.BDA_LANG.fr = {
  "Get directions": "Itinéraire",
  "Open larger map": "Ouvrir la carte en grand",
  "A taste of Radda": "Un avant-goût de Radda",
- "More languages": "Plus de langues"
+ "More languages": "Plus de langues",
+ "Tap to interact": "Touchez pour interagir"
 }
 };

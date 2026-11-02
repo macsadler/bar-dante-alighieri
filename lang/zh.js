@@ -95,6 +95,7 @@ window.BDA_LANG.zh = {
  "Get directions": "获取路线",
  "Open larger map": "打开大地图",
  "A taste of Radda": "领略拉达风情",
- "More languages": "更多语言"
+ "More languages": "更多语言",
+ "Tap to interact": "点按以操作地图"
 }
 };
