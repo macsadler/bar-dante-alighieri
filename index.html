@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bar Dante Alighieri · Radda in Chianti</title>
+<meta name="description" content="Bar Dante Alighieri — Bar · Enoteca · Tabacchi nella piazza di Radda in Chianti. Caffè, vini del Chianti e cucina toscana. / Bar, wine bar and tobacconist on the village square of Radda in Chianti.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home" aria-label="Bar Dante Alighieri">Bar Dante <span>Alighieri</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav">
+      <span class="sr-only"><span lang="it">Menu</span><span lang="en">Menu</span></span>
+      <span class="bars" aria-hidden="true"></span>
+    </button>
+    <nav id="nav" class="nav">
+      <a href="#home"><span lang="it">Home</span><span lang="en">Home</span></a>
+      <a href="#chi-siamo"><span lang="it">Chi siamo</span><span lang="en">About</span></a>
+      <a href="#carta"><span lang="it">La carta</span><span lang="en">Menu</span></a>
+      <a href="#vini"><span lang="it">I vini</span><span lang="en">Wines</span></a>
+      <a href="#dove-siamo"><span lang="it">Dove siamo</span><span lang="en">Find us</span></a>
+      <a href="#galleria"><span lang="it">Galleria</span><span lang="en">Gallery</span></a>
+      <div class="lang-toggle" role="group" aria-label="Lingua / Language">
+        <button type="button" data-set-lang="it" aria-pressed="true">IT</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="hero" id="home">
+  <!-- PLACEHOLDER: family photo (hero — Tuscan village square / vineyard hills at golden hour) -->
+  <img class="hero-img" src="https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1800&q=70" alt="" width="1800" height="1200">
+  <div class="hero-shade"></div>
+  <div class="wrap hero-content">
+    <p class="eyebrow">Bar · Enoteca · Tabacchi</p>
+    <h1>Bar Dante Alighieri</h1>
+    <p class="lead">
+      <span lang="it">Nel cuore della piazza di Radda in Chianti: dal caffè del mattino allo spritz della sera.</span>
+      <span lang="en">In the heart of the village square in Radda in Chianti: from the morning espresso to the evening spritz.</span>
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="#carta"><span lang="it">Scopri la carta</span><span lang="en">See the menu</span></a>
+      <a class="btn btn-ghost" href="#dove-siamo"><span lang="it">Come arrivare</span><span lang="en">Find us</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CHI SIAMO -->
+<section class="section" id="chi-siamo">
+  <div class="wrap two-col">
+    <div>
+      <p class="eyebrow"><span lang="it">Chi siamo</span><span lang="en">About us</span></p>
+      <h2><span lang="it">Quarant'anni di piazza, un nuovo capitolo</span><span lang="en">Forty years on the square, a new chapter</span></h2>
+      <p>
+        <span lang="it">Per quarant'anni il Bar Dante è stato di Fabrizio e Carolyn, che hanno servito generazioni di radd&shy;esi e di viaggiatori. Dicono i clienti che la <em>bruschetta di Fabrizio</em> fosse «la più buona del Chianti» — e la sua fama non si è mai spenta.</span>
+        <span lang="en">For forty years Bar Dante belonged to Fabrizio and Carolyn, who served generations of locals and travelers. Guests still talk about <em>Fabrizio's infamous bruschetta</em> — “the tastiest in Chianti.”</span>
+      </p>
+      <p>
+        <span lang="it">Da febbraio 2025 il bar è di Claudio e Virginia Midolini, una giovane coppia di qui. Hanno raccolto il testimone con rispetto e tanta voglia di fare: la stessa accoglienza di sempre, un capitolo nuovo.</span>
+        <span lang="en">Since February 2025 the bar has been run by Claudio and Virginia Midolini, a young local couple. They have taken up the torch with respect and plenty of energy: the same warm welcome, a new chapter.</span>
+      </p>
+      <p>
+        <span lang="it">Dall'espresso del mattino agli spritz della sera sul nostro dehors, nel cuore della piazza: venite a sedervi con noi.</span>
+        <span lang="en">From the morning espresso to evening spritzes on our patio in the heart of the square: come and sit with us.</span>
+      </p>
+      <p class="note-small">
+        <span lang="it">Fabrizio e Carolyn, dopo la pensione, gestiscono l'Enoteca Toscana, a due passi da noi in Via Roma 4.</span>
+        <span lang="en">Fabrizio and Carolyn, now retired from the bar, run the Enoteca Toscana wine shop just next door at Via Roma 4.</span>
+      </p>
+    </div>
+    <figure class="photo">
+      <!-- PLACEHOLDER: family photo (Claudio and Virginia at the bar) -->
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" width="900" height="1100">
+      <figcaption><span lang="it">Il caffè, ogni mattina.</span><span lang="en">Coffee, every morning.</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap quotes">
+    <!-- Paraphrased guest sentiments, TripAdvisor-style. No invented names. -->
+    <blockquote><span lang="it">«L'esperienza più magica di Radda.»</span><span lang="en">“The most magical experience in Radda.”</span></blockquote>
+    <blockquote><span lang="it">«Pranzi deliziosi e spritz rinfrescanti nel pomeriggio, sul loro dehors accogliente.»</span><span lang="en">“Delicious lunches and refreshing afternoon spritzes on their cozy patio.”</span></blockquote>
+    <blockquote><span lang="it">«La bruschetta più buona del Chianti.»</span><span lang="en">“The tastiest bruschetta in Chianti.”</span></blockquote>
+    <p class="quotes-link">
+      <!-- TO-CONFIRM: exact TripAdvisor listing URL for "Bar Dante, Radda in Chianti" (4.1, ~530 reviews). This is a search link until the direct listing URL is pasted in. -->
+      <a href="https://www.tripadvisor.com/Search?q=Bar%20Dante%20Radda%20in%20Chianti" target="_blank" rel="noopener"><span lang="it">Leggi le recensioni dei clienti →</span><span lang="en">Read guest reviews →</span></a>
+    </p>
+  </div>
+</section>
+
+<!-- LA CARTA -->
+<section class="section tint" id="carta">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="it">La carta</span><span lang="en">The menu</span></p>
+    <h2><span lang="it">Cucina toscana, semplice e golosa</span><span lang="en">Tuscan cooking, simple and generous</span></h2>
+    <p class="section-intro">
+      <span lang="it">Piatti della tradizione, preparati con ingredienti del territorio. Prezzi e disponibilità: chiedete al banco.</span>
+      <span lang="en">Traditional dishes made with local ingredients. Prices and availability: ask at the counter.</span>
+    </p>
+    <!-- TO-CONFIRM: prices — family to provide. Do not invent. Dishes drawn from family draft and guest reviews; confirm the current menu. -->
+    <div class="menu-grid">
+      <article class="menu-card">
+        <h3><span lang="it">Crostoni e Crostini</span><span lang="en">Crostoni &amp; Crostini</span></h3>
+        <ul>
+          <li><strong>La Fett'unta</strong><span lang="it">Pane tostato con olio nuovo</span><span lang="en">Grilled bread with new olive oil</span></li>
+          <li><strong>Bruschetta</strong><span lang="it">La classica</span><span lang="en">The classic</span></li>
+          <li><strong>Crostini misti toscani</strong><span lang="it">Assortimento della tradizione</span><span lang="en">A mix of Tuscan classics</span></li>
+        </ul>
+      </article>
+      <article class="menu-card">
+        <h3><span lang="it">Le Zuppe</span><span lang="en">Soups</span></h3>
+        <ul>
+          <li><strong>Ribollita del Nonno</strong><span lang="it">Zuppa di pane e verdure</span><span lang="en">Bread and vegetable soup</span></li>
+          <li><strong>Pappa al Pomodoro</strong><span lang="it">Pane, pomodoro, basilico</span><span lang="en">Bread, tomato, basil</span></li>
+        </ul>
+      </article>
+      <article class="menu-card">
+        <h3><span lang="it">Primi</span><span lang="en">First courses</span></h3>
+        <ul>
+          <li><strong>Pappardelle al Ragù di Cinghiale</strong><span lang="it">Con ragù di cinghiale</span><span lang="en">With wild boar ragù</span></li>
+          <li><strong>Pici all'Aglione</strong><span lang="it">Pasta fatta a mano toscana</span><span lang="en">Hand-rolled Tuscan pasta</span></li>
+          <li><strong>Tagliatelle ai Funghi</strong><span lang="it">Con funghi</span><span lang="en">With mushrooms</span></li>
+          <li><strong>Lasagne</strong><span lang="it">Al forno</span><span lang="en">Oven-baked</span></li>
+        </ul>
+      </article>
+      <article class="menu-card">
+        <h3><span lang="it">Taglieri</span><span lang="en">Boards</span></h3>
+        <ul>
+          <li><strong><span lang="it">Tagliere di salumi toscani</span><span lang="en">Tuscan cold cuts board</span></strong><span lang="it">Salumi del territorio</span><span lang="en">Local cured meats</span></li>
+          <li><strong><span lang="it">Tagliere di pecorino</span><span lang="en">Pecorino board</span></strong><span lang="it">Formaggi di pecora toscani</span><span lang="en">Tuscan sheep's cheeses</span></li>
+        </ul>
+      </article>
+      <article class="menu-card">
+        <h3><span lang="it">Dolci</span><span lang="en">Desserts</span></h3>
+        <ul>
+          <li><strong>Tiramisù</strong></li>
+          <li><strong>Torta della Nonna</strong></li>
+          <li><strong><span lang="it">Torta di mele</span><span lang="en">Apple pie</span></strong></li>
+          <li><strong>Cheesecake</strong></li>
+        </ul>
+      </article>
+      <aside class="menu-card menu-note">
+        <h3><span lang="it">Prezzi</span><span lang="en">Prices</span></h3>
+        <p><span lang="it">Chiedete al banco: vi diremo cosa c'è oggi.</span><span lang="en">Ask at the counter — we'll tell you what's on today.</span></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- I VINI -->
+<section class="section" id="vini">
+  <div class="wrap two-col reverse">
+    <figure class="photo">
+      <!-- PLACEHOLDER: family photo (wine glasses / Chianti bottles at the bar) -->
+      <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy" width="900" height="1100">
+    </figure>
+    <div>
+      <p class="eyebrow"><span lang="it">I vini</span><span lang="en">Wines &amp; drinks</span></p>
+      <h2><span lang="it">Dal caffè al calice</span><span lang="en">From coffee to wine glass</span></h2>
+      <h3 class="sub"><span lang="it">Bar</span><span lang="en">Bar</span></h3>
+      <p><span lang="it">Espresso, cappuccino, spritz e le birre artigianali locali.</span><span lang="en">Espresso, cappuccino, spritz and local craft beers.</span></p>
+      <h3 class="sub"><span lang="it">Enoteca</span><span lang="en">Enoteca</span></h3>
+      <ul class="wine-list">
+        <li>Chianti Classico DOCG</li>
+        <li>Chianti Classico Riserva &amp; Gran Selezione</li>
+        <li>Super Tuscans</li>
+        <li>Vernaccia di San Gimignano</li>
+        <li>Brunello di Montalcino</li>
+        <li>Vino Nobile di Montepulciano</li>
+        <li>Vin Santo</li>
+      </ul>
+      <p class="note-small"><span lang="it">Chiedete al banco per l'etichetta del giorno e per un consiglio.</span><span lang="en">Ask at the counter for today's bottles and a recommendation.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- DOVE SIAMO -->
+<section class="section tint" id="dove-siamo">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="it">Dove siamo</span><span lang="en">Find us</span></p>
+    <h2><span lang="it">Nel cuore della piazza</span><span lang="en">In the heart of the village square</span></h2>
+    <div class="find-grid">
+      <div class="find-info">
+        <address>
+          <strong>Bar Dante Alighieri</strong><br>
+          Piazza Dante Alighieri 1<br>
+          53017 Radda in Chianti (SI)<br>
+          Italia
+        </address>
+        <dl>
+          <!-- TO-CONFIRM: phone from public listings; new owners have not reconfirmed -->
+          <dt><span lang="it">Telefono</span><span lang="en">Phone</span></dt>
+          <dd><a href="tel:+390577738815">+39 0577 738815</a></dd>
+          <!-- TO-CONFIRM: email — family to provide -->
+          <!-- TO-CONFIRM: WhatsApp — family to provide -->
+          <dt>Instagram</dt>
+          <!-- TO-CONFIRM: Instagram handle unverified -->
+          <dd><a href="https://www.instagram.com/bar_dante_radda/" target="_blank" rel="noopener">@bar_dante_radda</a></dd>
+        </dl>
+        <h3 class="sub"><span lang="it">Orari</span><span lang="en">Hours</span></h3>
+        <!-- TO-CONFIRM: hours from public listings, may predate new ownership -->
+        <table class="hours">
+          <tr><th><span lang="it">Lunedì</span><span lang="en">Monday</span></th><td>6:30 – 21:30</td></tr>
+          <tr class="closed"><th><span lang="it">Martedì</span><span lang="en">Tuesday</span></th><td><span lang="it">Chiuso</span><span lang="en">Closed</span></td></tr>
+          <tr><th><span lang="it">Mercoledì</span><span lang="en">Wednesday</span></th><td>6:30 – 21:30</td></tr>
+          <tr><th><span lang="it">Giovedì</span><span lang="en">Thursday</span></th><td>6:30 – 21:30</td></tr>
+          <tr><th><span lang="it">Venerdì</span><span lang="en">Friday</span></th><td>6:30 – 21:30</td></tr>
+          <tr><th><span lang="it">Sabato</span><span lang="en">Saturday</span></th><td>6:30 – 21:30</td></tr>
+          <tr><th><span lang="it">Domenica</span><span lang="en">Sunday</span></th><td>8:15 – 21:30</td></tr>
+        </table>
+        <p>
+          <a class="btn btn-small" href="https://www.google.com/maps/dir/?api=1&amp;destination=Piazza+Dante+Alighieri+1,+53017+Radda+in+Chianti+SI" target="_blank" rel="noopener"><span lang="it">Indicazioni stradali</span><span lang="en">Get directions</span></a>
+        </p>
+      </div>
+      <div class="map">
+        <!-- TO-CONFIRM: marker position approximate (Radda village square); verify against exact door -->
+        <iframe title="Mappa / Map — Piazza Dante Alighieri 1, Radda in Chianti" loading="lazy"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=11.3720%2C43.4865%2C11.3800%2C43.4905&amp;layer=mapnik&amp;marker=43.4885%2C11.3760"></iframe>
+        <a class="map-link" href="https://www.openstreetmap.org/?mlat=43.4885&amp;mlon=11.3760#map=18/43.4885/11.3760" target="_blank" rel="noopener"><span lang="it">Apri la mappa grande</span><span lang="en">Open larger map</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERIA -->
+<section class="section" id="galleria">
+  <div class="wrap">
+    <p class="eyebrow"><span lang="it">Galleria</span><span lang="en">Gallery</span></p>
+    <h2><span lang="it">Un po' di Radda</span><span lang="en">A taste of Radda</span></h2>
+    <div class="gallery">
+      <!-- PLACEHOLDER: family photo (espresso cups) -->
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=70" alt="" loading="lazy" width="800" height="800">
+      <!-- PLACEHOLDER: family photo (cappuccino) -->
+      <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=70" alt="" loading="lazy" width="800" height="800">
+      <!-- PLACEHOLDER: family photo (bruschetta / crostini) -->
+      <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=800&q=70" alt="" loading="lazy" width="800" height="800">
+      <!-- PLACEHOLDER: family photo (Chianti bottles) -->
+      <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=70" alt="" loading="lazy" width="800" height="800">
+      <!-- PLACEHOLDER: family photo (Tuscan village square) -->
+      <img src="https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=800&q=70" alt="" loading="lazy" width="800" height="800">
+      <!-- PLACEHOLDER: family photo (vineyard hills, golden hour) -->
+      <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=800&q=70" alt="" loading="lazy" width="800" height="800">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="brand-foot">Bar Dante Alighieri</p>
+    <p>Bar · Enoteca · Tabacchi</p>
+    <p>Piazza Dante Alighieri 1 · 53017 Radda in Chianti (SI) · Italia</p>
+    <!-- TO-CONFIRM: P.IVA — family to provide -->
+    <p class="small">P.IVA [da confermare / to be confirmed]</p>
+    <!-- TO-CONFIRM: email / WhatsApp — family to provide -->
+    <p class="small">
+      <span lang="it">Immagini illustrative; foto della famiglia in arrivo.</span>
+      <span lang="en">Illustrative images; family photos coming soon.</span>
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
