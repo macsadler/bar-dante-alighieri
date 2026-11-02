@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=" js";</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,41 +27,51 @@
       <a href="#vini"><span lang="it">I vini</span><span lang="en">Wines</span></a>
       <a href="#dove-siamo"><span lang="it">Dove siamo</span><span lang="en">Find us</span></a>
       <a href="#galleria"><span lang="it">Galleria</span><span lang="en">Gallery</span></a>
-      <div class="lang-select">
-        <select id="langSelect" aria-label="Lingua / Language">
-          <option value="it">Italiano</option>
-          <option value="en">English</option>
-          <option value="" disabled>Français — prossimamente / coming soon</option>
-          <option value="" disabled>Español — prossimamente / coming soon</option>
-          <option value="" disabled>Deutsch — prossimamente / coming soon</option>
-          <option value="" disabled>日本語 — prossimamente / coming soon</option>
-          <option value="" disabled>한국어 — prossimamente / coming soon</option>
-          <option value="" disabled>中文 — prossimamente / coming soon</option>
-          <option value="" disabled>Русский — prossimamente / coming soon</option>
-          <option value="" disabled>العربية — prossimamente / coming soon</option>
-          <option value="" disabled>فارسی — prossimamente / coming soon</option>
-          <option value="" disabled>Português — prossimamente / coming soon</option>
-          <option value="" disabled>Nederlands — prossimamente / coming soon</option>
-          <option value="" disabled>Dansk — prossimamente / coming soon</option>
-          <option value="" disabled>Suomi — prossimamente / coming soon</option>
-          <option value="" disabled>Svenska — prossimamente / coming soon</option>
-          <option value="" disabled>Magyar — prossimamente / coming soon</option>
-          <option value="" disabled>ไทย — prossimamente / coming soon</option>
-          <option value="" disabled>Polski — prossimamente / coming soon</option>
-          <option value="" disabled>Norsk — prossimamente / coming soon</option>
-          <option value="" disabled>Română — prossimamente / coming soon</option>
-          <option value="" disabled>Ελληνικά — prossimamente / coming soon</option>
-          <option value="" disabled>Türkçe — prossimamente / coming soon</option>
-          <option value="" disabled>עברית — prossimamente / coming soon</option>
-          <option value="" disabled>हिन्दी — prossimamente / coming soon</option>
-          <option value="" disabled>Čeština — prossimamente / coming soon</option>
-          <option value="" disabled>Hrvatski — prossimamente / coming soon</option>
-          <option value="" disabled>Українська — prossimamente / coming soon</option>
-        </select>
+      <div class="lang-picker" id="langPicker" role="group" aria-label="Lingua / Language">
+        <button type="button" class="lang-btn" data-lang-code="it" lang="it" aria-pressed="true">Italiano</button>
+        <button type="button" class="lang-btn" data-lang-code="en" lang="en" aria-pressed="false">English</button>
+        <div class="more-wrap">
+          <button type="button" class="lang-btn more-btn" id="moreLangBtn" aria-haspopup="true" aria-expanded="false" aria-controls="langPanel" aria-label="More languages" title="More languages">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.6 4.2 5.8 4.2 9.5s-1.4 6.9-4.2 9.5c-2.8-2.6-4.2-5.8-4.2-9.5S9.2 5.1 12 2.5z"/></svg><span class="more-label"><span lang="it">Altre lingue</span><span lang="en">More languages</span></span>
+          </button>
+          <div class="lang-panel" id="langPanel" hidden>
+            <ul>
+            <li><button type="button" class="lang-item" data-lang-code="de" lang="de">Deutsch</button></li>
+            <li><button type="button" class="lang-item" data-lang-code="fr" lang="fr">Français</button></li>
+            <li><button type="button" class="lang-item" data-lang-code="es" lang="es">Español</button></li>
+            <li><button type="button" class="lang-item" lang="nl" disabled aria-disabled="true">Nederlands<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="pt" disabled aria-disabled="true">Português<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" data-lang-code="ja" lang="ja">日本語</button></li>
+            <li><button type="button" class="lang-item" data-lang-code="zh" lang="zh">中文</button></li>
+            <li><button type="button" class="lang-item" lang="ko" disabled aria-disabled="true">한국어<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="ru" disabled aria-disabled="true">Русский<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="pl" disabled aria-disabled="true">Polski<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="sv" disabled aria-disabled="true">Svenska<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="da" disabled aria-disabled="true">Dansk<small>prossimamente / coming soon</small></button></li>
+            <li class="lang-divider" role="separator"></li>
+            <li><button type="button" class="lang-item" lang="ar" disabled aria-disabled="true">العربية<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="hr" disabled aria-disabled="true">Hrvatski<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="cs" disabled aria-disabled="true">Čeština<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="fi" disabled aria-disabled="true">Suomi<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="el" disabled aria-disabled="true">Ελληνικά<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="he" disabled aria-disabled="true">עברית<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="hi" disabled aria-disabled="true">हिन्दी<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="hu" disabled aria-disabled="true">Magyar<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="no" disabled aria-disabled="true">Norsk<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="fa" disabled aria-disabled="true">فارسی<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="ro" disabled aria-disabled="true">Română<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="th" disabled aria-disabled="true">ไทย<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="tr" disabled aria-disabled="true">Türkçe<small>prossimamente / coming soon</small></button></li>
+            <li><button type="button" class="lang-item" lang="uk" disabled aria-disabled="true">Українська<small>prossimamente / coming soon</small></button></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
   </div>
 </header>
+
+<p class="mt-note" id="mtNote" hidden>Traduzione automatica — in attesa di revisione da parte di un madrelingua / Automatic translation — awaiting native-speaker review.</p>
 
 <main>
 
@@ -146,148 +157,177 @@
       <!-- PLACEHOLDER: temporary TripAdvisor guest photo (dish, menu) from the Bar Dante TripAdvisor listing. User-uploaded, not licensed for public use: replace with the family's own photo before launch. -->
       <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/a9/05/26/caption.jpg?w=1200&h=1200&s=1" alt="A plate from the Bar Dante kitchen" loading="lazy" width="1200" height="1200">
     </div>
+    <nav class="menu-tabs" id="menuTabs" aria-label="Menu">
+        <button type="button" data-target="menu-1"><span lang="it">Vino al bicchiere e bibite</span><span lang="en">Wine by the glass &amp; soft drinks</span></button>
+        <button type="button" data-target="menu-2"><span lang="it">Aperitivi</span><span lang="en">Aperitifs</span></button>
+        <button type="button" data-target="menu-3"><span lang="it">Birra</span><span lang="en">Beer</span></button>
+        <button type="button" data-target="menu-4"><span lang="it">Panini</span><span lang="en">Sandwiches</span></button>
+        <button type="button" data-target="menu-5"><span lang="it">Le nostre bruschette</span><span lang="en">Our bruschette</span></button>
+        <button type="button" data-target="menu-6"><span lang="it">Antipasti da condividere</span><span lang="en">Sharing platters</span></button>
+        <button type="button" data-target="menu-7"><span lang="it">Piatti freddi e antipasti</span><span lang="en">Cold dishes &amp; starters</span></button>
+        <button type="button" data-target="menu-8"><span lang="it">Primi piatti</span><span lang="en">First courses</span></button>
+        <button type="button" data-target="menu-9"><span lang="it">Piatti della tradizione</span><span lang="en">Traditional dishes</span></button>
+    </nav>
     <div class="menu-grid">
-      <article class="menu-card">
-        <h3><span lang="it">Vino al bicchiere e bibite</span><span lang="en">Wine by the glass &amp; soft drinks</span></h3>
-        <ul>
-          <li><span class="dish"><strong>Chianti Classico di Radda</strong></span><span class="price">€&nbsp;5</span></li>
-          <li><span class="dish"><strong>Chianti Classico Riserva</strong></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>Vino bianco Toscano</strong></span><span class="price">€&nbsp;4</span></li>
-          <li><span class="dish"><strong>Rosato locale</strong></span><span class="price">€&nbsp;4</span></li>
-          <li><span class="dish"><strong>Vino della casa bianco e rosso</strong><em class="desc"><span lang="it">1/4 litro 4 · 1/2 litro 7 · 1 litro 12</span><span lang="en">1/4 litro 4 · 1/2 litro 7 · 1 litro 12</span></em></span><span class="price">€&nbsp;4 / 7 / 12</span></li>
-          <li><span class="dish"><strong>Acqua minerale</strong><em class="desc"><span lang="it">1/2 litro 2 · 1 litro 3</span><span lang="en">1/2 litro 2 · 1 litro 3</span></em></span><span class="price">€&nbsp;2 / 3</span></li>
-          <li><span class="dish"><strong>Acqua micro filtrata depurata</strong><em class="desc"><span lang="it">frizzante o naturale</span><span lang="en">sparkling or still</span></em></span><span class="price">€&nbsp;2</span></li>
-          <li><span class="dish"><strong>Spremuta d'arancia</strong><em class="desc"><span lang="it"></span><span lang="en">fresh orange juice</span></em></span><span class="price">€&nbsp;4</span></li>
-          <li><span class="dish"><strong>Limonata fresca</strong><em class="desc"><span lang="it">limonata fatta in casa</span><span lang="en">homemade lemonade</span></em></span><span class="price">€&nbsp;3.50</span></li>
-          <li><span class="dish"><strong>Chinotto, lemon soda, Oran soda, Sprite, Coca Cola, Coca zero, Acqua Tonica, Te freddo, Succo di frutta</strong></span><span class="price">€&nbsp;3</span></li>
-        </ul>
+      <article class="menu-card" id="menu-1">
+        <h3><button type="button" class="card-toggle" aria-expanded="false" aria-controls="menu-1-body"><span lang="it">Vino al bicchiere e bibite</span><span lang="en">Wine by the glass &amp; soft drinks</span></button></h3>
+        <div class="card-body" id="menu-1-body">
+          <ul>
+            <li><span class="dish"><strong>Chianti Classico di Radda</strong></span><span class="price">€&nbsp;5</span></li>
+            <li><span class="dish"><strong>Chianti Classico Riserva</strong></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>Vino bianco Toscano</strong></span><span class="price">€&nbsp;4</span></li>
+            <li><span class="dish"><strong>Rosato locale</strong></span><span class="price">€&nbsp;4</span></li>
+            <li><span class="dish"><strong>Vino della casa bianco e rosso</strong><em class="desc"><span lang="it">1/4 litro 4 · 1/2 litro 7 · 1 litro 12</span><span lang="en">1/4 litro 4 · 1/2 litro 7 · 1 litro 12</span></em></span><span class="price">€&nbsp;4 / 7 / 12</span></li>
+            <li><span class="dish"><strong>Acqua minerale</strong><em class="desc"><span lang="it">1/2 litro 2 · 1 litro 3</span><span lang="en">1/2 litro 2 · 1 litro 3</span></em></span><span class="price">€&nbsp;2 / 3</span></li>
+            <li><span class="dish"><strong>Acqua micro filtrata depurata</strong><em class="desc"><span lang="it">frizzante o naturale</span><span lang="en">sparkling or still</span></em></span><span class="price">€&nbsp;2</span></li>
+            <li><span class="dish"><strong>Spremuta d'arancia</strong><em class="desc"><span lang="it"></span><span lang="en">fresh orange juice</span></em></span><span class="price">€&nbsp;4</span></li>
+            <li><span class="dish"><strong>Limonata fresca</strong><em class="desc"><span lang="it">limonata fatta in casa</span><span lang="en">homemade lemonade</span></em></span><span class="price">€&nbsp;3.50</span></li>
+            <li><span class="dish"><strong>Chinotto, lemon soda, Oran soda, Sprite, Coca Cola, Coca zero, Acqua Tonica, Te freddo, Succo di frutta</strong></span><span class="price">€&nbsp;3</span></li>
+          </ul>
+        </div>
       </article>
-      <article class="menu-card">
-        <h3><span lang="it">Aperitivi</span><span lang="en">Aperitifs</span></h3>
-        <ul>
-          <li><span class="dish"><strong>Prosecco</strong></span><span class="price">€&nbsp;5</span></li>
-          <li><span class="dish"><strong>Spumante Rose</strong></span><span class="price">€&nbsp;5</span></li>
-          <li><span class="dish"><strong>Aperol Spritz, Campari Spritz</strong></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>'Americano a Radda'</strong></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>Vermouth di Istine</strong></span><span class="price">€&nbsp;4</span></li>
-          <li><span class="dish"><strong>Mimosa, Bellini</strong></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>Gin/vodka Tonic</strong></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>Campari Orange</strong></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>Campari Soda</strong></span><span class="price">€&nbsp;4</span></li>
-          <li><span class="dish"><strong>Negroni</strong></span><span class="price">€&nbsp;8</span></li>
-          <li><span class="dish"><strong>Hugo</strong></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>Ginger ale, Crodino, Sanbitter</strong></span><span class="price">€&nbsp;4</span></li>
-        </ul>
+      <article class="menu-card" id="menu-2">
+        <h3><button type="button" class="card-toggle" aria-expanded="false" aria-controls="menu-2-body"><span lang="it">Aperitivi</span><span lang="en">Aperitifs</span></button></h3>
+        <div class="card-body" id="menu-2-body">
+          <ul>
+            <li><span class="dish"><strong>Prosecco</strong></span><span class="price">€&nbsp;5</span></li>
+            <li><span class="dish"><strong>Spumante Rose</strong></span><span class="price">€&nbsp;5</span></li>
+            <li><span class="dish"><strong>Aperol Spritz, Campari Spritz</strong></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>'Americano a Radda'</strong></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>Vermouth di Istine</strong></span><span class="price">€&nbsp;4</span></li>
+            <li><span class="dish"><strong>Mimosa, Bellini</strong></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>Gin/vodka Tonic</strong></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>Campari Orange</strong></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>Campari Soda</strong></span><span class="price">€&nbsp;4</span></li>
+            <li><span class="dish"><strong>Negroni</strong></span><span class="price">€&nbsp;8</span></li>
+            <li><span class="dish"><strong>Hugo</strong></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>Ginger ale, Crodino, Sanbitter</strong></span><span class="price">€&nbsp;4</span></li>
+          </ul>
+        </div>
       </article>
-      <article class="menu-card">
-        <h3><span lang="it">Birra</span><span lang="en">Beer</span></h3>
-        <h4><span lang="it">Alla spina</span><span lang="en">On tap</span></h4>
-        <ul>
-          <li><span class="dish"><strong>Moretti Baffo D'Oro</strong><em class="desc"><span lang="it">Piccola 3 · Grande 5</span><span lang="en">Piccola 3 · Grande 5</span></em></span><span class="price">€&nbsp;3 / 5</span></li>
-        </ul>
-        <h4><span lang="it">In bottiglia</span><span lang="en">Bottled</span></h4>
-        <ul>
-          <li><span class="dish"><strong>Moretti 'Toscana' artigianale</strong></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>Ichnusa</strong></span><span class="price">€&nbsp;5</span></li>
-          <li><span class="dish"><strong>Birra analcolica</strong></span><span class="price">€&nbsp;4</span></li>
-        </ul>
-        <h4><span lang="it">Chianti Brew Fighters</span><span lang="en">Chianti Brew Fighters — local craft, bottled</span></h4>
-        <ul>
-          <li><span class="dish"><strong>La Vergine</strong><em class="desc"><span lang="it">birra bianca (witbier)</span><span lang="en">witbier</span></em></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>La Bestemmia</strong><em class="desc"><span lang="it">strong ale</span><span lang="en">strong ale</span></em></span><span class="price">€&nbsp;7</span></li>
-        </ul>
+      <article class="menu-card" id="menu-3">
+        <h3><button type="button" class="card-toggle" aria-expanded="false" aria-controls="menu-3-body"><span lang="it">Birra</span><span lang="en">Beer</span></button></h3>
+        <div class="card-body" id="menu-3-body">
+          <h4><span lang="it">Alla spina</span><span lang="en">On tap</span></h4>
+          <ul>
+            <li><span class="dish"><strong>Moretti Baffo D'Oro</strong><em class="desc"><span lang="it">Piccola 3 · Grande 5</span><span lang="en">Piccola 3 · Grande 5</span></em></span><span class="price">€&nbsp;3 / 5</span></li>
+          </ul>
+          <h4><span lang="it">In bottiglia</span><span lang="en">Bottled</span></h4>
+          <ul>
+            <li><span class="dish"><strong>Moretti 'Toscana' artigianale</strong></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>Ichnusa</strong></span><span class="price">€&nbsp;5</span></li>
+            <li><span class="dish"><strong>Birra analcolica</strong></span><span class="price">€&nbsp;4</span></li>
+          </ul>
+          <h4><span lang="it">Chianti Brew Fighters</span><span lang="en">Chianti Brew Fighters — local craft, bottled</span></h4>
+          <ul>
+            <li><span class="dish"><strong>La Vergine</strong><em class="desc"><span lang="it">birra bianca (witbier)</span><span lang="en">witbier</span></em></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>La Bestemmia</strong><em class="desc"><span lang="it">strong ale</span><span lang="en">strong ale</span></em></span><span class="price">€&nbsp;7</span></li>
+          </ul>
+        </div>
       </article>
-      <article class="menu-card">
-        <h3><span lang="it">Panini</span><span lang="en">Sandwiches</span></h3>
-        <p class="card-note"><span lang="it">Disponibili dalle 8:00 alle 16:00</span><span lang="en">Available 8:00–16:00</span></p>
-        <ul>
-          <li><span class="dish"><strong>Fiore</strong><em class="desc"><span lang="it">prosciutto toscano e formaggio</span><span lang="en">Tuscan ham &amp; cheese</span></em></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>Lirica</strong><em class="desc"><span lang="it">prosciutto toscano, formaggio e pomodoro</span><span lang="en">Tuscan ham, cheese &amp; tomato</span></em></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>Amore</strong><em class="desc"><span lang="it">formaggio, pomodoro e basilico</span><span lang="en">cheese, tomato &amp; basil</span></em></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>Inferno</strong><em class="desc"><span lang="it">formaggio, pomodoro e melanzane grigliate piccanti</span><span lang="en">cheese, tomato &amp; spicy grilled eggplant</span></em></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>Convivio</strong><em class="desc"><span lang="it">prosciutto toscano, formaggio cremoso e rucola</span><span lang="en">Tuscan ham, cream cheese &amp; rocket</span></em></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>Divina</strong><em class="desc"><span lang="it">porchetta di maiale arrosto, pepata</span><span lang="en">peppery roast pork porchetta</span></em></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>Beatrice</strong><em class="desc"><span lang="it">tonno e capperi, maionese, pomodoro, lattuga</span><span lang="en">tunafish &amp; caper, mayo, tomato, lettuce</span></em></span><span class="price">€&nbsp;6</span></li>
-        </ul>
+      <article class="menu-card" id="menu-4">
+        <h3><button type="button" class="card-toggle" aria-expanded="false" aria-controls="menu-4-body"><span lang="it">Panini</span><span lang="en">Sandwiches</span></button></h3>
+        <div class="card-body" id="menu-4-body">
+          <p class="card-note"><span lang="it">Disponibili dalle 8:00 alle 16:00</span><span lang="en">Available 8:00–16:00</span></p>
+          <ul>
+            <li><span class="dish"><strong>Fiore</strong><em class="desc"><span lang="it">prosciutto toscano e formaggio</span><span lang="en">Tuscan ham &amp; cheese</span></em></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>Lirica</strong><em class="desc"><span lang="it">prosciutto toscano, formaggio e pomodoro</span><span lang="en">Tuscan ham, cheese &amp; tomato</span></em></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>Amore</strong><em class="desc"><span lang="it">formaggio, pomodoro e basilico</span><span lang="en">cheese, tomato &amp; basil</span></em></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>Inferno</strong><em class="desc"><span lang="it">formaggio, pomodoro e melanzane grigliate piccanti</span><span lang="en">cheese, tomato &amp; spicy grilled eggplant</span></em></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>Convivio</strong><em class="desc"><span lang="it">prosciutto toscano, formaggio cremoso e rucola</span><span lang="en">Tuscan ham, cream cheese &amp; rocket</span></em></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>Divina</strong><em class="desc"><span lang="it">porchetta di maiale arrosto, pepata</span><span lang="en">peppery roast pork porchetta</span></em></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>Beatrice</strong><em class="desc"><span lang="it">tonno e capperi, maionese, pomodoro, lattuga</span><span lang="en">tunafish &amp; caper, mayo, tomato, lettuce</span></em></span><span class="price">€&nbsp;6</span></li>
+          </ul>
+        </div>
       </article>
-      <article class="menu-card">
-        <h3><span lang="it">Le nostre bruschette</span><span lang="en">Our bruschette</span></h3>
-        <p class="card-note"><span lang="it">Dalle 10:00 · ogni porzione 2 fette</span><span lang="en">From 10:00 · each portion 2 slices</span></p>
-        <ul>
-          <li><span class="dish"><strong>Mozzarella e melanzane</strong><em class="desc"><span lang="it">melanzane grigliate piccanti e formaggio</span><span lang="en">spicy grilled eggplant &amp; cheese</span></em></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>Pomodoro e Basilico</strong></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>La Fett'unta con olio d.o.p.</strong><em class="desc"><span lang="it">pane all'aglio con olio locale</span><span lang="en">garlic bread with local olive oil</span></em></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>Crostini neri Toscani</strong><em class="desc"><span lang="it">paté di fegatini toscano</span><span lang="en">Tuscan chicken liver pate</span></em></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>Salsiccia e stracchino</strong><em class="desc"><span lang="it">salsiccia toscana e stracchino</span><span lang="en">Tuscan sausage &amp; cream cheese</span></em></span><span class="price">€&nbsp;6</span></li>
-          <li><span class="dish"><strong>Tris di bruschette vegetariane</strong></span><span class="price">€&nbsp;9</span></li>
-          <li><span class="dish"><strong>Grande piatto di bruschette miste</strong><em class="desc"><span lang="it">selezione di 5</span><span lang="en">selection of 5</span></em></span><span class="price">€&nbsp;15</span></li>
-          <li><span class="dish"><strong>Porzione di olive</strong></span><span class="price">€&nbsp;3</span></li>
-          <li><span class="dish"><strong>Porzione di carciofi</strong><em class="desc"><span lang="it">cuori di carciofo</span><span lang="en">artichoke hearts</span></em></span><span class="price">€&nbsp;4</span></li>
-        </ul>
+      <article class="menu-card" id="menu-5">
+        <h3><button type="button" class="card-toggle" aria-expanded="false" aria-controls="menu-5-body"><span lang="it">Le nostre bruschette</span><span lang="en">Our bruschette</span></button></h3>
+        <div class="card-body" id="menu-5-body">
+          <p class="card-note"><span lang="it">Dalle 10:00 · ogni porzione 2 fette</span><span lang="en">From 10:00 · each portion 2 slices</span></p>
+          <ul>
+            <li><span class="dish"><strong>Mozzarella e melanzane</strong><em class="desc"><span lang="it">melanzane grigliate piccanti e formaggio</span><span lang="en">spicy grilled eggplant &amp; cheese</span></em></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>Pomodoro e Basilico</strong></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>La Fett'unta con olio d.o.p.</strong><em class="desc"><span lang="it">pane all'aglio con olio locale</span><span lang="en">garlic bread with local olive oil</span></em></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>Crostini neri Toscani</strong><em class="desc"><span lang="it">paté di fegatini toscano</span><span lang="en">Tuscan chicken liver pate</span></em></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>Salsiccia e stracchino</strong><em class="desc"><span lang="it">salsiccia toscana e stracchino</span><span lang="en">Tuscan sausage &amp; cream cheese</span></em></span><span class="price">€&nbsp;6</span></li>
+            <li><span class="dish"><strong>Tris di bruschette vegetariane</strong></span><span class="price">€&nbsp;9</span></li>
+            <li><span class="dish"><strong>Grande piatto di bruschette miste</strong><em class="desc"><span lang="it">selezione di 5</span><span lang="en">selection of 5</span></em></span><span class="price">€&nbsp;15</span></li>
+            <li><span class="dish"><strong>Porzione di olive</strong></span><span class="price">€&nbsp;3</span></li>
+            <li><span class="dish"><strong>Porzione di carciofi</strong><em class="desc"><span lang="it">cuori di carciofo</span><span lang="en">artichoke hearts</span></em></span><span class="price">€&nbsp;4</span></li>
+          </ul>
+        </div>
       </article>
-      <article class="menu-card">
-        <h3><span lang="it">Antipasti da condividere</span><span lang="en">Sharing platters</span></h3>
-        <p class="card-note"><span lang="it">Per 2–4 persone</span><span lang="en">For 2–4 people</span></p>
-        <ul>
-          <li><span class="dish"><strong>Toscano</strong><em class="desc"><span lang="it">specialità tipiche toscane</span><span lang="en">typical Tuscan specialities</span></em></span><span class="price">€&nbsp;24.00</span></li>
-          <li><span class="dish"><strong>Classico</strong><em class="desc"><span lang="it">salumi, formaggi, 5 bruschette</span><span lang="en">cold cuts, cheeses, 5 bruschettas</span></em></span><span class="price">€&nbsp;30.00</span></li>
-          <li><span class="dish"><strong>Vegetariano</strong></span><span class="price">€&nbsp;25.00</span></li>
-          <li><span class="dish"><strong>Eroica</strong><em class="desc"><span lang="it">per viaggiatori affamati</span><span lang="en">for hungry travelers</span></em></span><span class="price">€&nbsp;32.00</span></li>
-          <li><span class="dish"><strong>Estivo</strong><em class="desc"><span lang="it">estivo, da metà maggio a metà settembre</span><span lang="en">summer, mid-May to mid-September</span></em></span><span class="price">€&nbsp;30.00</span></li>
-        </ul>
+      <article class="menu-card" id="menu-6">
+        <h3><button type="button" class="card-toggle" aria-expanded="false" aria-controls="menu-6-body"><span lang="it">Antipasti da condividere</span><span lang="en">Sharing platters</span></button></h3>
+        <div class="card-body" id="menu-6-body">
+          <p class="card-note"><span lang="it">Per 2–4 persone</span><span lang="en">For 2–4 people</span></p>
+          <ul>
+            <li><span class="dish"><strong>Toscano</strong><em class="desc"><span lang="it">specialità tipiche toscane</span><span lang="en">typical Tuscan specialities</span></em></span><span class="price">€&nbsp;24.00</span></li>
+            <li><span class="dish"><strong>Classico</strong><em class="desc"><span lang="it">salumi, formaggi, 5 bruschette</span><span lang="en">cold cuts, cheeses, 5 bruschettas</span></em></span><span class="price">€&nbsp;30.00</span></li>
+            <li><span class="dish"><strong>Vegetariano</strong></span><span class="price">€&nbsp;25.00</span></li>
+            <li><span class="dish"><strong>Eroica</strong><em class="desc"><span lang="it">per viaggiatori affamati</span><span lang="en">for hungry travelers</span></em></span><span class="price">€&nbsp;32.00</span></li>
+            <li><span class="dish"><strong>Estivo</strong><em class="desc"><span lang="it">estivo, da metà maggio a metà settembre</span><span lang="en">summer, mid-May to mid-September</span></em></span><span class="price">€&nbsp;30.00</span></li>
+          </ul>
+        </div>
       </article>
-      <article class="menu-card">
-        <h3><span lang="it">Piatti freddi e antipasti</span><span lang="en">Cold dishes &amp; starters</span></h3>
-        <p class="card-note"><span lang="it">Da mezzogiorno</span><span lang="en">From midday</span></p>
-        <ul>
-          <li><span class="dish"><strong>La Panzanella di Nonno Fabrizio</strong></span><span class="price">€&nbsp;7</span></li>
-          <li><span class="dish"><strong>'La Delizia'</strong><em class="desc"><span lang="it">prosciutto toscano e mozzarella di bufala</span><span lang="en">Tuscan ham &amp; buffalo mozzarella</span></em></span><span class="price">€&nbsp;14</span></li>
-          <li><span class="dish"><strong>Antipasto Toscano Dante</strong><em class="desc"><span lang="it">salumi, crostini e formaggio</span><span lang="en">cured meats, crostini &amp; cheese</span></em></span><span class="price">€&nbsp;12</span></li>
-          <li><span class="dish"><strong>Pecorini Toscani con mostarda di frutta</strong></span><span class="price">€&nbsp;10</span></li>
-          <li><span class="dish"><strong>La Caprese di bufala con olive</strong></span><span class="price">€&nbsp;9</span></li>
-          <li><span class="dish"><strong>Piatto 'Boss'</strong><em class="desc"><span lang="it">caprese di bufala con prosciutto toscano</span><span lang="en">buffalo mozzarella caprese with Tuscan ham</span></em></span><span class="price">€&nbsp;15</span></li>
-          <li><span class="dish"><strong>Porchetta con cuori di carciofi</strong></span><span class="price">€&nbsp;12</span></li>
-          <li><span class="dish"><strong>Acciughe sotto pesto con pane tostato</strong></span><span class="price">€&nbsp;10</span></li>
-          <li><span class="dish"><strong>Affettati e formaggi</strong><em class="desc"><span lang="it">x1 12 · x2 19</span><span lang="en">x1 12 · x2 19</span></em></span><span class="price">€&nbsp;12 / 19</span></li>
-        </ul>
-        <h4><span lang="it">Insalatone</span><span lang="en">Big salads</span></h4>
-        <ul>
-          <li><span class="dish"><strong>Insalata mista, mozzarella di bufala, pomodorini e olive</strong></span><span class="price">€&nbsp;9</span></li>
-          <li><span class="dish"><strong>Insalata mista, tonno, pomodorini, olive</strong></span><span class="price">€&nbsp;9</span></li>
-          <li><span class="dish"><strong>Insalata mista, tonno e bufala, pomodorini e olive</strong></span><span class="price">€&nbsp;11</span></li>
-        </ul>
+      <article class="menu-card" id="menu-7">
+        <h3><button type="button" class="card-toggle" aria-expanded="false" aria-controls="menu-7-body"><span lang="it">Piatti freddi e antipasti</span><span lang="en">Cold dishes &amp; starters</span></button></h3>
+        <div class="card-body" id="menu-7-body">
+          <p class="card-note"><span lang="it">Da mezzogiorno</span><span lang="en">From midday</span></p>
+          <ul>
+            <li><span class="dish"><strong>La Panzanella di Nonno Fabrizio</strong></span><span class="price">€&nbsp;7</span></li>
+            <li><span class="dish"><strong>'La Delizia'</strong><em class="desc"><span lang="it">prosciutto toscano e mozzarella di bufala</span><span lang="en">Tuscan ham &amp; buffalo mozzarella</span></em></span><span class="price">€&nbsp;14</span></li>
+            <li><span class="dish"><strong>Antipasto Toscano Dante</strong><em class="desc"><span lang="it">salumi, crostini e formaggio</span><span lang="en">cured meats, crostini &amp; cheese</span></em></span><span class="price">€&nbsp;12</span></li>
+            <li><span class="dish"><strong>Pecorini Toscani con mostarda di frutta</strong></span><span class="price">€&nbsp;10</span></li>
+            <li><span class="dish"><strong>La Caprese di bufala con olive</strong></span><span class="price">€&nbsp;9</span></li>
+            <li><span class="dish"><strong>Piatto 'Boss'</strong><em class="desc"><span lang="it">caprese di bufala con prosciutto toscano</span><span lang="en">buffalo mozzarella caprese with Tuscan ham</span></em></span><span class="price">€&nbsp;15</span></li>
+            <li><span class="dish"><strong>Porchetta con cuori di carciofi</strong></span><span class="price">€&nbsp;12</span></li>
+            <li><span class="dish"><strong>Acciughe sotto pesto con pane tostato</strong></span><span class="price">€&nbsp;10</span></li>
+            <li><span class="dish"><strong>Affettati e formaggi</strong><em class="desc"><span lang="it">x1 12 · x2 19</span><span lang="en">x1 12 · x2 19</span></em></span><span class="price">€&nbsp;12 / 19</span></li>
+          </ul>
+          <h4><span lang="it">Insalatone</span><span lang="en">Big salads</span></h4>
+          <ul>
+            <li><span class="dish"><strong>Insalata mista, mozzarella di bufala, pomodorini e olive</strong></span><span class="price">€&nbsp;9</span></li>
+            <li><span class="dish"><strong>Insalata mista, tonno, pomodorini, olive</strong></span><span class="price">€&nbsp;9</span></li>
+            <li><span class="dish"><strong>Insalata mista, tonno e bufala, pomodorini e olive</strong></span><span class="price">€&nbsp;11</span></li>
+          </ul>
+        </div>
       </article>
-      <article class="menu-card">
-        <h3><span lang="it">Primi piatti</span><span lang="en">First courses</span></h3>
-        <p class="card-note"><span lang="it">(V) vegetariano</span><span lang="en">(V) vegetarian</span></p>
-        <ul>
-          <li><span class="dish"><strong>Risotto del giorno</strong></span><span class="price">€&nbsp;10</span></li>
-          <li><span class="dish"><strong>Lasagne del giorno</strong></span><span class="price">€&nbsp;10</span></li>
-          <li><span class="dish"><strong>Garganelli speck e formaggio erborinato</strong></span><span class="price">€&nbsp;10</span></li>
-          <li><span class="dish"><strong>Ravioli di patate con salsa tartufo e funghi (V)</strong></span><span class="price">€&nbsp;13</span></li>
-          <li><span class="dish"><strong>Melanzane alla Parmigiana (V)</strong></span><span class="price">€&nbsp;10</span></li>
-        </ul>
+      <article class="menu-card" id="menu-8">
+        <h3><button type="button" class="card-toggle" aria-expanded="false" aria-controls="menu-8-body"><span lang="it">Primi piatti</span><span lang="en">First courses</span></button></h3>
+        <div class="card-body" id="menu-8-body">
+          <p class="card-note"><span lang="it">(V) vegetariano</span><span lang="en">(V) vegetarian</span></p>
+          <ul>
+            <li><span class="dish"><strong>Risotto del giorno</strong></span><span class="price">€&nbsp;10</span></li>
+            <li><span class="dish"><strong>Lasagne del giorno</strong></span><span class="price">€&nbsp;10</span></li>
+            <li><span class="dish"><strong>Garganelli speck e formaggio erborinato</strong></span><span class="price">€&nbsp;10</span></li>
+            <li><span class="dish"><strong>Ravioli di patate con salsa tartufo e funghi (V)</strong></span><span class="price">€&nbsp;13</span></li>
+            <li><span class="dish"><strong>Melanzane alla Parmigiana (V)</strong></span><span class="price">€&nbsp;10</span></li>
+          </ul>
+        </div>
       </article>
-      <article class="menu-card">
-        <h3><span lang="it">Piatti della tradizione</span><span lang="en">Traditional dishes</span></h3>
-        <ul>
-          <li><span class="dish"><strong>La Pappa al pomodoro (V)</strong></span><span class="price">€&nbsp;9</span></li>
-          <li><span class="dish"><strong>La Ribollita (V)</strong></span><span class="price">€&nbsp;9</span></li>
-          <li><span class="dish"><strong>Pappardelle al cinghiale</strong></span><span class="price">€&nbsp;11</span></li>
-          <li><span class="dish"><strong>Pici all'Anatra</strong></span><span class="price">€&nbsp;11</span></li>
-          <li><span class="dish"><strong>Salsicce e fagioli all'uccelletto</strong></span><span class="price">€&nbsp;11</span></li>
-          <li><span class="dish"><strong>Cinghiale in umido</strong></span><span class="price">€&nbsp;12</span></li>
-          <li><span class="dish"><strong>Pollo alla Cacciatora</strong></span><span class="price">€&nbsp;12</span></li>
-        </ul>
-        <h4><span lang="it">Contorni</span><span lang="en">Side dishes</span></h4>
-        <ul>
-          <li><span class="dish"><strong>Peperonata</strong></span><span class="price">€&nbsp;4</span></li>
-          <li><span class="dish"><strong>Fagioli all'olio</strong></span><span class="price">€&nbsp;3</span></li>
-          <li><span class="dish"><strong>Spinaci saltati</strong></span><span class="price">€&nbsp;4</span></li>
-          <li><span class="dish"><strong>Melanzane grigliate</strong></span><span class="price">€&nbsp;4</span></li>
-          <li><span class="dish"><strong>Insalata mista</strong></span><span class="price">€&nbsp;4</span></li>
-          <li><span class="dish"><strong>Insalata pomodorini e cipolla</strong></span><span class="price">€&nbsp;5</span></li>
-        </ul>
+      <article class="menu-card" id="menu-9">
+        <h3><button type="button" class="card-toggle" aria-expanded="false" aria-controls="menu-9-body"><span lang="it">Piatti della tradizione</span><span lang="en">Traditional dishes</span></button></h3>
+        <div class="card-body" id="menu-9-body">
+          <ul>
+            <li><span class="dish"><strong>La Pappa al pomodoro (V)</strong></span><span class="price">€&nbsp;9</span></li>
+            <li><span class="dish"><strong>La Ribollita (V)</strong></span><span class="price">€&nbsp;9</span></li>
+            <li><span class="dish"><strong>Pappardelle al cinghiale</strong></span><span class="price">€&nbsp;11</span></li>
+            <li><span class="dish"><strong>Pici all'Anatra</strong></span><span class="price">€&nbsp;11</span></li>
+            <li><span class="dish"><strong>Salsicce e fagioli all'uccelletto</strong></span><span class="price">€&nbsp;11</span></li>
+            <li><span class="dish"><strong>Cinghiale in umido</strong></span><span class="price">€&nbsp;12</span></li>
+            <li><span class="dish"><strong>Pollo alla Cacciatora</strong></span><span class="price">€&nbsp;12</span></li>
+          </ul>
+          <h4><span lang="it">Contorni</span><span lang="en">Side dishes</span></h4>
+          <ul>
+            <li><span class="dish"><strong>Peperonata</strong></span><span class="price">€&nbsp;4</span></li>
+            <li><span class="dish"><strong>Fagioli all'olio</strong></span><span class="price">€&nbsp;3</span></li>
+            <li><span class="dish"><strong>Spinaci saltati</strong></span><span class="price">€&nbsp;4</span></li>
+            <li><span class="dish"><strong>Melanzane grigliate</strong></span><span class="price">€&nbsp;4</span></li>
+            <li><span class="dish"><strong>Insalata mista</strong></span><span class="price">€&nbsp;4</span></li>
+            <li><span class="dish"><strong>Insalata pomodorini e cipolla</strong></span><span class="price">€&nbsp;5</span></li>
+          </ul>
+        </div>
       </article>
     </div>
   </div>
@@ -402,6 +442,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
+    <p class="mt-note-foot" id="mtNoteFoot" hidden>Traduzione automatica — in attesa di revisione da parte di un madrelingua / Automatic translation — awaiting native-speaker review.</p>
     <p class="brand-foot">Bar Dante Alighieri</p>
     <p>Bar · Enoteca · Tabacchi</p>
     <p>Piazza Dante Alighieri 1 · 53017 Radda in Chianti (SI) · Italia</p>
