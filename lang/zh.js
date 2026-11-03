@@ -16,7 +16,7 @@ window.BDA_LANG.zh = {
  "About us": "关于我们",
  "Forty years on the square, a new chapter": "广场上四十年，新的篇章",
  "For forty years Bar Dante Alighieri belonged to Fabrizio and Carolyn, who served generations of locals and travelers. Guests still talk about <em>Fabrizio's famous bruschetta</em> — “the tastiest in Chianti.”": "四十年来，Bar Dante Alighieri 属于法布里齐奥和卡罗琳，他们接待了几代本地人和旅行者。客人们至今仍津津乐道<em>法布里齐奥那款鼎鼎大名的意式烤面包</em>——“基安蒂最美味的一款”。",
- "Since February 2025 the bar has been run by Claudio and Virginia Midolini, a young local couple. They have taken up the torch with respect and plenty of energy: the same warm welcome, a new chapter.": "自2025年2月起，酒吧由当地的年轻夫妇克劳迪奥和维尔吉尼亚·米多里尼经营。他们怀着敬意和满满的干劲接过了接力棒：同样温暖的欢迎，全新的篇章。",
+ "Since February 2025 the bar has been run by Claudio and Virginia Midollini, a young local couple. They have taken up the torch with respect and plenty of energy: the same warm welcome, a new chapter.": "自2025年2月起，酒吧由当地的年轻夫妇克劳迪奥和维尔吉尼亚·米多里尼经营。他们怀着敬意和满满的干劲接过了接力棒：同样温暖的欢迎，全新的篇章。",
  "From the morning espresso to evening spritzes on our patio in the heart of the square: come and sit with us.": "从清晨的浓缩咖啡到傍晚的气泡酒，就在广场中心的露台上：来和我们坐一坐吧。",
  "Fabrizio and Carolyn, now retired from the bar, run the Enoteca Toscana wine shop just next door at Via Roma 4.": "法布里齐奥和卡罗琳已从酒吧退休，现在就在隔壁罗马街4号经营托斯卡纳葡萄酒店（Enoteca Toscana）。",
  "Coffee, every morning.": "每天清晨的咖啡。",
