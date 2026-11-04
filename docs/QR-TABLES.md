@@ -11,6 +11,10 @@ This is for whoever sets the bar up once. Nothing here has to be maintained afte
 
 The site stores nothing, has no accounts and no server. A person confirms every order in the chat. The message is always written in Italian, whatever language the guest used.
 
+## Why this way
+
+QR code per table with the table number in the link, a small cart on the page, and a `wa.me` link carrying the order is a well-proven pattern for small restaurants: it needs no backend, no subscription and no commission (unlike delivery platforms, which take a large cut). Here it stays a **hybrid**: physical menus stay on the tables for anyone who prefers paper, payment stays at the counter, and a person confirms every order in the chat.
+
 ## Go-live checklist (all three are required)
 
 - [ ] **Put the bar's order number in `config.js`** — digits only, country code first, no `+` or spaces (for example `39XXXXXXXXXX`). Until this is set, the ordering buttons, the WhatsApp button and the WhatsApp feedback button stay hidden, so nothing on the site is a dead end.

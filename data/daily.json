@@ -3,804 +3,938 @@
   "ref": "Inferno I, 1",
   "verse": "Nel mezzo del cammin di nostra vita / mi ritrovai per una selva oscura",
   "it": "Ogni strada ha un punto in cui non si vede più dove porta. Una sosta aiuta a ritrovare la direzione.",
-  "en": "Every road has a point where you can't see where it leads. A pause helps you find your bearings."
+  "en": "Every road has a point where you can't see where it leads. A pause helps you find your bearings.",
+  "trans": "Midway along the journey of our life / I found myself in a dark wood"
  },
  {
   "ref": "Inferno I, 3",
   "verse": "ché la diritta via era smarrita",
   "it": "Perdere la strada capita a tutti; la piazza è un buon posto per ritrovarla.",
-  "en": "Everyone loses the way now and then; the square is a good place to find it again."
+  "en": "Everyone loses the way now and then; the square is a good place to find it again.",
+  "trans": "for the straight way had been lost"
  },
  {
   "ref": "Inferno I, 85",
   "verse": "Tu se' lo mio maestro e 'l mio autore",
   "it": "Si dice grazie a chi ci ha insegnato qualcosa. Chi è stato il tuo maestro?",
-  "en": "Say thanks to whoever taught you something. Who was your teacher?"
+  "en": "Say thanks to whoever taught you something. Who was your teacher?",
+  "trans": "You are my master and my author"
  },
  {
   "ref": "Inferno II, 1",
   "verse": "Lo giorno se n'andava, e l'aere bruno",
   "it": "La sera arriva piano sulla piazza: l'ora in cui il lavoro finisce e la conversazione comincia.",
-  "en": "Evening settles slowly over the square — the hour when work ends and conversation begins."
+  "en": "Evening settles slowly over the square — the hour when work ends and conversation begins.",
+  "trans": "The day was departing, and the darkening air"
  },
  {
   "ref": "Inferno II, 88–90",
   "verse": "Temer si dee di sole quelle cose / c'hanno potenza di fare altrui male; / de l'altre no, ché non son paurose",
   "it": "Dalle paure vere ci si guarda; tutte le altre si lasciano al caffè.",
-  "en": "Be wary of real dangers; leave all the other fears to a coffee."
+  "en": "Be wary of real dangers; leave all the other fears to a coffee.",
+  "trans": "One should fear only those things / that have the power to do others harm; / the rest, no, for they are not fearful"
  },
  {
   "ref": "Inferno III, 9",
   "verse": "Lasciate ogne speranza, voi ch'intrate",
   "it": "Per fortuna la nostra porta dice l'opposto: si entra, ci si siede e si spera in un buon caffè.",
-  "en": "Luckily our door says the opposite: come in, sit down, and hope for a good coffee."
+  "en": "Luckily our door says the opposite: come in, sit down, and hope for a good coffee.",
+  "trans": "Abandon all hope, you who enter"
  },
  {
   "ref": "Inferno III, 14",
   "verse": "Qui si convien lasciare ogni sospetto",
   "it": "Alla porta del bar si lasciano fuori i sospetti e la fretta: dentro si parla.",
-  "en": "At the door of the bar you leave suspicion and hurry outside: inside, we talk."
+  "en": "At the door of the bar you leave suspicion and hurry outside: inside, we talk.",
+  "trans": "Here you must leave behind all suspicion"
  },
  {
   "ref": "Inferno III, 51",
   "verse": "non ragioniam di lor, ma guarda e passa",
   "it": "Alcune cose non meritano parole: si guarda, e si va avanti.",
-  "en": "Some things don't deserve discussion: look, and move on."
+  "en": "Some things don't deserve discussion: look, and move on.",
+  "trans": "let us not speak of them, but look and pass on"
  },
  {
   "ref": "Inferno III, 95–96",
   "verse": "Vuolsi così colà dove si puote / ciò che si vuole, e più non dimandare",
   "it": "A certe domande non c'è risposta, e va bene così: si ordina e si gode.",
-  "en": "Some questions have no answer, and that's fine: order, and enjoy."
+  "en": "Some questions have no answer, and that's fine: order, and enjoy.",
+  "trans": "It is willed so, there where one can do / whatever is willed; and ask no more"
  },
  {
   "ref": "Inferno IV, 1",
   "verse": "Ruppemi l'alto sonno ne la testa",
   "it": "Un rumore forte e il sonno si spezza. Una buona colazione aiuta a riprendersi.",
-  "en": "A loud noise breaks deep sleep. A good breakfast helps you recover."
+  "en": "A loud noise breaks deep sleep. A good breakfast helps you recover.",
+  "trans": "A heavy sleep broke inside my head"
  },
  {
   "ref": "Inferno IV, 131",
   "verse": "il maestro di color che sanno",
   "it": "Chi sa molto continua a fare domande. Al banco, chiedere è sempre benvenuto.",
-  "en": "Those who know most keep asking questions. At the counter, asking is always welcome."
+  "en": "Those who know most keep asking questions. At the counter, asking is always welcome.",
+  "trans": "the master of those who know"
  },
  {
   "ref": "Inferno V, 1",
   "verse": "Così discesi del cerchio primaio",
   "it": "Si scende di un gradino, e il racconto si fa più intenso.",
-  "en": "One step down, and the story grows more intense."
+  "en": "One step down, and the story grows more intense.",
+  "trans": "So I went down from the first circle"
  },
  {
   "ref": "Inferno V, 100",
   "verse": "Amor, che al cor gentil ratto s'apprende",
   "it": "L'amore trova subito casa in un cuore gentile.",
-  "en": "Love quickly finds a home in a kind heart."
+  "en": "Love quickly finds a home in a kind heart.",
+  "trans": "Love, which is quickly kindled in a gentle heart"
  },
  {
   "ref": "Inferno V, 103",
   "verse": "Amor, ch'a nullo amato amar perdona",
   "it": "L'amore chiama amore: succede anche con un bicchiere condiviso.",
-  "en": "Love calls for love — and so, often, does a glass shared with someone."
+  "en": "Love calls for love — and so, often, does a glass shared with someone.",
+  "trans": "Love, which lets no beloved off from loving in return"
  },
  {
   "ref": "Inferno V, 121–123",
   "verse": "Nessun maggior dolore / che ricordarsi del tempo felice / ne la miseria",
   "it": "Il ricordo dei bei tempi consola e punge insieme. Meglio crearne di nuovi, a tavola.",
-  "en": "Remembering happy times both comforts and stings. Better to make new ones, at the table."
+  "en": "Remembering happy times both comforts and stings. Better to make new ones, at the table.",
+  "trans": "There is no greater pain / than to remember the happy time / in misery"
  },
  {
   "ref": "Inferno V, 137",
   "verse": "Galeotto fu 'l libro e chi lo scrisse",
   "it": "A volte basta un libro, o un caffè, per far nascere una storia.",
-  "en": "Sometimes a book — or a coffee — is all it takes to start a story."
+  "en": "Sometimes a book — or a coffee — is all it takes to start a story.",
+  "trans": "A Galehaut was the book, and the one who wrote it"
  },
  {
   "ref": "Inferno VI, 1",
   "verse": "Al tornar de la mente, che si chiuse",
   "it": "Dopo l'emozione la mente torna a casa. Serve un attimo per ripartire.",
-  "en": "After the emotion, the mind finds its way home. It takes a moment to set off again."
+  "en": "After the emotion, the mind finds its way home. It takes a moment to set off again.",
+  "trans": "When my mind came back, which had closed"
  },
  {
   "ref": "Inferno VI, 52",
   "verse": "Voi cittadini mi chiamaste Ciacco",
   "it": "Ciacco amava la tavola più del dovuto. Il nostro consiglio: assaggia tutto, ma con misura.",
-  "en": "Ciacco loved the table too much. Our advice: taste everything, but in moderation."
+  "en": "Ciacco loved the table too much. Our advice: taste everything, but in moderation.",
+  "trans": "You citizens called me Ciacco"
  },
  {
   "ref": "Inferno VII, 1",
   "verse": "Pape Satàn, pape Satàn aleppe",
   "it": "Un verso che nessuno ha mai spiegato del tutto: a volte il mistero fa parte del fascino.",
-  "en": "A line nobody has ever fully explained — sometimes mystery is part of the charm."
+  "en": "A line nobody has ever fully explained — sometimes mystery is part of the charm.",
+  "trans": "(Words of uncertain meaning, which no one has ever fully explained.)"
  },
  {
   "ref": "Inferno VIII, 1",
   "verse": "Io dico, seguitando, ch'assai prima",
   "it": "Si riprende il discorso da dove ci eravamo lasciati: il bello delle chiacchiere a tavola.",
-  "en": "We pick the conversation up where we left it — the best part of table talk."
+  "en": "We pick the conversation up where we left it — the best part of table talk.",
+  "trans": "I say, continuing, that long before"
  },
  {
   "ref": "Inferno IX, 1",
   "verse": "Quel color che viltà di fuor mi pinse",
   "it": "Un attimo di paura, poi il colore torna sul viso. Un sorso d'acqua aiuta.",
-  "en": "A moment of fear, then the colour comes back. A sip of water helps."
+  "en": "A moment of fear, then the colour comes back. A sip of water helps.",
+  "trans": "That colour which cowardice painted on my face"
  },
  {
   "ref": "Inferno IX, 61–63",
   "verse": "O voi ch'avete li 'ntelletti sani, / mirate la dottrina che s'asconde / sotto 'l velame de li versi strani",
   "it": "Dietro le parole c'è sempre un significato da cercare. Anche dietro il nome di un panino.",
-  "en": "Behind the words there is always a meaning to find — even behind the name of a sandwich."
+  "en": "Behind the words there is always a meaning to find — even behind the name of a sandwich.",
+  "trans": "O you who have sound understanding, / look at the teaching that is hidden / beneath the veil of the strange verses"
  },
  {
   "ref": "Inferno X, 1",
   "verse": "Ora sen va per un secreto calle",
   "it": "Si prende la stradina meno battuta: spesso è quella che porta alle cose migliori.",
-  "en": "Take the quieter little path — it often leads to the best things."
+  "en": "Take the quieter little path — it often leads to the best things.",
+  "trans": "Now my master goes along a secret path"
  },
  {
   "ref": "Inferno X, 35–36",
   "verse": "ed el s'ergea col petto e con la fronte / com' avesse l'inferno a gran dispitto",
   "it": "Farinata: fiero anche nel posto peggiore. Un po' d'orgoglio toscano non guasta.",
-  "en": "Farinata, proud even in the worst of places. A little Tuscan pride never hurts."
+  "en": "Farinata, proud even in the worst of places. A little Tuscan pride never hurts.",
+  "trans": "and he rose up with chest and brow / as if he held hell in great scorn"
  },
  {
   "ref": "Inferno XI, 1",
   "verse": "In su l'estremità d'un'alta ripa",
   "it": "Ogni tanto ci si ferma sul bordo, per respirare prima di ripartire.",
-  "en": "Now and then we stop at the edge, to catch our breath before going on."
+  "en": "Now and then we stop at the edge, to catch our breath before going on.",
+  "trans": "On the edge of a high bank"
  },
  {
   "ref": "Inferno XII, 1",
   "verse": "Era lo loco ove a scender la riva",
   "it": "La discesa è ripida: meglio affrontarla dopo una buona colazione.",
-  "en": "The slope is steep — best tackled after a good breakfast."
+  "en": "The slope is steep — best tackled after a good breakfast.",
+  "trans": "The place where we came to go down the bank"
  },
  {
   "ref": "Inferno XIII, 1",
   "verse": "Non era ancor di là Nesso arrivato",
   "it": "Un passo dopo l'altro, senza fretta: il bosco non scappa.",
-  "en": "One step at a time, without hurry: the wood isn't going anywhere."
+  "en": "One step at a time, without hurry: the wood isn't going anywhere.",
+  "trans": "Nessus had not yet reached the other side"
  },
  {
   "ref": "Inferno XIII, 25–27",
   "verse": "Cred'io ch'ei credette ch'io credesse / che tante voci uscisser tra quei bronchi / da gente che per noi si nascondesse",
   "it": "Quanti «credo» in una sola frase! Spesso pensiamo di sapere cosa pensa l'altro.",
-  "en": "So many beliefs in a single sentence! We often think we know what the other is thinking."
+  "en": "So many beliefs in a single sentence! We often think we know what the other is thinking.",
+  "trans": "I believe that he believed that I believed / that so many voices came from among those thorns / from people hiding from us"
  },
  {
   "ref": "Inferno XIV, 1",
   "verse": "Poi che la carità del natio loco",
   "it": "Il luogo dove si è nati ha una forza speciale: tornarci fa sempre bene.",
-  "en": "The place where you were born has a special pull — returning always does you good."
+  "en": "The place where you were born has a special pull — returning always does you good.",
+  "trans": "Since love for my native place"
  },
  {
   "ref": "Inferno XV, 1",
   "verse": "Ora cen porta l'un de' duri margini",
   "it": "A volte il sentiero più stretto è anche quello più sicuro.",
-  "en": "Sometimes the narrowest path is also the safest."
+  "en": "Sometimes the narrowest path is also the safest.",
+  "trans": "Now one of the hard banks carries us along"
  },
  {
   "ref": "Inferno XV, 85",
   "verse": "m'insegnavate come l'uom s'etterna",
   "it": "Chi ci insegna qualcosa resta con noi. Una buona ricetta, per esempio, passa di mano in mano.",
-  "en": "Those who teach us stay with us. A good recipe, for example, is handed down."
+  "en": "Those who teach us stay with us. A good recipe, for example, is handed down.",
+  "trans": "taught me how man makes himself eternal"
  },
  {
   "ref": "Inferno XVI, 1",
   "verse": "Già era in loco onde s'udia 'l rimbombo",
   "it": "Già si sente il rumore dell'acqua: qualcosa di bello è vicino.",
-  "en": "You can already hear the water — something good is near."
+  "en": "You can already hear the water — something good is near.",
+  "trans": "I was already in a place where the roar was heard"
  },
  {
   "ref": "Inferno XVII, 1",
   "verse": "Ecco la fiera con la coda aguzza",
   "it": "Ecco la bestia dalla coda aguzza! Per fortuna, al nostro banco ci sono solo spritz.",
-  "en": "Behold the beast with the pointed tail! Luckily, at our counter there are only spritzes."
+  "en": "Behold the beast with the pointed tail! Luckily, at our counter there are only spritzes.",
+  "trans": "Behold the beast with the pointed tail"
  },
  {
   "ref": "Inferno XVIII, 1",
   "verse": "Luogo è in inferno detto Malebolge",
   "it": "Un luogo con un nome così non si dimentica. Il nostro, per fortuna, si chiama Piazza Dante.",
-  "en": "A place with a name like that is unforgettable. Ours, luckily, is called Piazza Dante."
+  "en": "A place with a name like that is unforgettable. Ours, luckily, is called Piazza Dante.",
+  "trans": "There is a place in hell called Malebolge"
  },
  {
   "ref": "Inferno XIX, 1",
   "verse": "O Simon mago, o miseri seguaci",
   "it": "Dante non risparmia nessuno, nemmeno i potenti: la satira è una vecchia tradizione italiana.",
-  "en": "Dante spares no one, not even the powerful — satire is an old Italian tradition."
+  "en": "Dante spares no one, not even the powerful — satire is an old Italian tradition.",
+  "trans": "O Simon Magus, O wretched followers"
  },
  {
   "ref": "Inferno XX, 1",
   "verse": "Di nova pena mi conven far versi",
   "it": "Ogni nuovo giorno merita parole nuove.",
-  "en": "Every new day deserves new words."
+  "en": "Every new day deserves new words.",
+  "trans": "Of new punishment I must make verses"
  },
  {
   "ref": "Inferno XXI, 1",
   "verse": "Così di ponte in ponte, altro parlando",
   "it": "Si va da un ponte all'altro chiacchierando: il modo migliore di fare strada.",
-  "en": "From bridge to bridge, chatting as we go — the best way to travel."
+  "en": "From bridge to bridge, chatting as we go — the best way to travel.",
+  "trans": "So from bridge to bridge, talking of other things"
  },
  {
   "ref": "Inferno XXII, 1",
   "verse": "Io vidi già cavalier muover campo",
   "it": "Ci sono ricordi di feste e di sfilate che non sbiadiscono mai.",
-  "en": "Some memories of festivals and parades never fade."
+  "en": "Some memories of festivals and parades never fade.",
+  "trans": "I have seen horsemen before now break camp"
  },
  {
   "ref": "Inferno XXIII, 1",
   "verse": "Taciti, soli, sanza compagnia",
   "it": "A volte il silenzio in due è la migliore compagnia.",
-  "en": "Sometimes silence shared by two is the best company."
+  "en": "Sometimes silence shared by two is the best company.",
+  "trans": "Silent, alone, without company"
  },
  {
   "ref": "Inferno XXIV, 1",
   "verse": "In quella parte del giovanetto anno",
   "it": "L'inizio dell'anno, quando il freddo cede e tutto sembra possibile.",
-  "en": "The start of the year, when the cold gives way and anything seems possible."
+  "en": "The start of the year, when the cold gives way and anything seems possible.",
+  "trans": "In that part of the youthful year"
  },
  {
   "ref": "Inferno XXV, 1",
   "verse": "Al fine de le sue parole il ladro",
   "it": "Quando le parole finiscono, si vede chi sei davvero. Meglio un gesto gentile.",
-  "en": "When the words run out, you see who someone really is. Better a kind gesture."
+  "en": "When the words run out, you see who someone really is. Better a kind gesture.",
+  "trans": "At the end of his words the thief"
  },
  {
   "ref": "Inferno XXVI, 1",
   "verse": "Godi, Fiorenza, poi che se' sì grande",
   "it": "Un saluto alla città vicina, con un pizzico di ironia toscana.",
-  "en": "A greeting to the neighbouring city, with a pinch of Tuscan irony."
+  "en": "A greeting to the neighbouring city, with a pinch of Tuscan irony.",
+  "trans": "Rejoice, Florence, since you are so great"
  },
  {
   "ref": "Inferno XXVI, 118–120",
   "verse": "Considerate la vostra semenza: / fatti non foste a viver come bruti, / ma per seguir virtute e canoscenza",
   "it": "Siamo fatti per cercare, imparare, assaggiare cose nuove: anche un vino che non conosci.",
-  "en": "We are made to seek, to learn, to try new things — even a wine you don't know yet."
+  "en": "We are made to seek, to learn, to try new things — even a wine you don't know yet.",
+  "trans": "Consider your origin: / you were not made to live as brutes, / but to follow virtue and knowledge"
  },
  {
   "ref": "Inferno XXVII, 1",
   "verse": "Già era dritta in sù la fiamma e queta",
   "it": "Tutto si calma: la fiamma, la voce, la sera.",
-  "en": "Everything quiets down — the flame, the voice, the evening."
+  "en": "Everything quiets down — the flame, the voice, the evening.",
+  "trans": "The flame was already upright and still"
  },
  {
   "ref": "Inferno XXVIII, 1",
   "verse": "Chi poria mai pur con parole sciolte",
   "it": "Certe cose non si raccontano: si vivono.",
-  "en": "Some things can't be told — they have to be lived."
+  "en": "Some things can't be told — they have to be lived.",
+  "trans": "Who could ever, even in unbound prose"
  },
  {
   "ref": "Inferno XXIX, 1",
   "verse": "La molta gente e le diverse piaghe",
   "it": "Tanta gente, tante storie: la piazza è fatta di volti diversi.",
-  "en": "So many people, so many stories — the square is made of different faces."
+  "en": "So many people, so many stories — the square is made of different faces.",
+  "trans": "The many people and the various wounds"
  },
  {
   "ref": "Inferno XXX, 1",
   "verse": "Nel tempo che Iunone era crucciata",
   "it": "Anche gli dèi hanno le loro giornate storte. Un caffè può cambiare le cose.",
-  "en": "Even the gods have bad days. A coffee can change things."
+  "en": "Even the gods have bad days. A coffee can change things.",
+  "trans": "In the time when Juno was angry"
  },
  {
   "ref": "Inferno XXXI, 1",
   "verse": "Una medesma lingua pria mi morse",
   "it": "La stessa lingua che ferisce può anche guarire: scegli parole gentili.",
-  "en": "The same tongue that wounds can also heal — choose kind words."
+  "en": "The same tongue that wounds can also heal — choose kind words.",
+  "trans": "One and the same tongue first bit me"
  },
  {
   "ref": "Inferno XXXII, 1",
   "verse": "S'io avessi le rime aspre e chiocce",
   "it": "A volte servirebbero parole più forti. Altre volte basta un sorriso.",
-  "en": "Sometimes you'd need stronger words. Other times a smile is enough."
+  "en": "Sometimes you'd need stronger words. Other times a smile is enough.",
+  "trans": "If I had rhymes harsh and rasping"
  },
  {
   "ref": "Inferno XXXIII, 1",
   "verse": "La bocca sollevò dal fiero pasto",
   "it": "Ci sono storie dure, e Dante le racconta senza sconti. Qui la tavola è un posto di pace.",
-  "en": "Some stories are harsh, and Dante tells them without softening. Here, the table is a place of peace."
+  "en": "Some stories are harsh, and Dante tells them without softening. Here, the table is a place of peace.",
+  "trans": "He lifted his mouth from his savage meal"
  },
  {
   "ref": "Inferno XXXIV, 1",
   "verse": "«Vexilla regis prodeunt inferni»",
   "it": "Anche la discesa più lunga ha una fine: dopo, si risale.",
-  "en": "Even the longest descent has an end — after it, you climb back up."
+  "en": "Even the longest descent has an end — after it, you climb back up.",
+  "trans": "The banners of the king of hell come forth"
  },
  {
   "ref": "Inferno XXXIV, 139",
   "verse": "E quindi uscimmo a riveder le stelle",
   "it": "Dopo la salita, le stelle: stasera fermati a guardarle dalla piazza.",
-  "en": "After the climb, the stars — tonight, stop and look at them from the square."
+  "en": "After the climb, the stars — tonight, stop and look at them from the square.",
+  "trans": "And from there we came out to see the stars again"
  },
  {
   "ref": "Purgatorio I, 1",
   "verse": "Per correr miglior acque alza le vele",
   "it": "Un nuovo inizio, con il vento in poppa: oggi si salpa verso acque migliori.",
-  "en": "A fresh start, wind at your back: today we sail toward better waters."
+  "en": "A fresh start, wind at your back: today we sail toward better waters.",
+  "trans": "To run over better waters it now raises its sails"
  },
  {
   "ref": "Purgatorio I, 71",
   "verse": "libertà va cercando, ch'è sì cara",
   "it": "La libertà è preziosa: anche solo prendersi un'ora per sé.",
-  "en": "Freedom is precious — even if it is only an hour for yourself."
+  "en": "Freedom is precious — even if it is only an hour for yourself.",
+  "trans": "he goes seeking freedom, which is so dear"
  },
  {
   "ref": "Purgatorio II, 1",
   "verse": "Già era 'l sole a l'orizzonte giunto",
   "it": "L'ora dorata, quando la luce rallenta e il tempo pure.",
-  "en": "The golden hour, when the light slows down and time does too."
+  "en": "The golden hour, when the light slows down and time does too.",
+  "trans": "The sun had already reached the horizon"
  },
  {
   "ref": "Purgatorio II, 112",
   "verse": "«Amor che ne la mente mi ragiona»",
   "it": "Una canzone dolce basta a far dimenticare la fretta.",
-  "en": "A sweet song is enough to make you forget the rush."
+  "en": "A sweet song is enough to make you forget the rush.",
+  "trans": "“Love that speaks to me in my mind”"
  },
  {
   "ref": "Purgatorio III, 1",
   "verse": "Avvegna che la subitana fuga",
   "it": "Dopo la corsa, si cammina piano: ed è lì che si nota il paesaggio.",
-  "en": "After the rush, you walk slowly — and that is when you notice the landscape."
+  "en": "After the rush, you walk slowly — and that is when you notice the landscape.",
+  "trans": "Although their sudden flight"
  },
  {
   "ref": "Purgatorio III, 121–122",
   "verse": "Orribil furon li peccati miei; / ma la bontà infinita ha sì gran braccia",
   "it": "Si può sempre ricominciare: le braccia della bontà sono grandi.",
-  "en": "You can always begin again — goodness has wide arms."
+  "en": "You can always begin again — goodness has wide arms.",
+  "trans": "Horrible were my sins; / but infinite goodness has such wide arms"
  },
  {
   "ref": "Purgatorio IV, 1",
   "verse": "Quando per diletto o per doglia",
   "it": "Il tempo vola se si è assorti: una buona chiacchierata lo dimostra.",
-  "en": "Time flies when you're absorbed — a good conversation proves it."
+  "en": "Time flies when you're absorbed — a good conversation proves it.",
+  "trans": "When through delight or through pain"
  },
  {
   "ref": "Purgatorio IV, 25",
   "verse": "Vassi in Sanleo e discendesi in Noli",
   "it": "Per certi percorsi servono gambe, non ali: si va piano e si arriva.",
-  "en": "Some paths need legs, not wings — go slowly and you'll arrive."
+  "en": "Some paths need legs, not wings — go slowly and you'll arrive.",
+  "trans": "One goes up to Sanleo and down to Noli"
  },
  {
   "ref": "Purgatorio V, 1",
   "verse": "Io era già da quell'ombre partito",
   "it": "Ci si congeda, ma i discorsi restano nell'aria.",
-  "en": "We say goodbye, but the conversations linger in the air."
+  "en": "We say goodbye, but the conversations linger in the air.",
+  "trans": "I had already left those shades"
  },
  {
   "ref": "Purgatorio V, 134",
   "verse": "Siena mi fé, disfecemi Maremma",
   "it": "Siena, la nostra provincia, ha un posto nella Commedia.",
-  "en": "Siena, our province, has a place in the Comedy."
+  "en": "Siena, our province, has a place in the Comedy.",
+  "trans": "Siena made me, Maremma unmade me"
  },
  {
   "ref": "Purgatorio VI, 1",
   "verse": "Quando si parte il gioco de la zara",
   "it": "Finisce la partita: chi ha vinto offre un giro, chi ha perso lo accetta con eleganza.",
-  "en": "The game ends: the winner buys a round, the loser accepts gracefully."
+  "en": "The game ends: the winner buys a round, the loser accepts gracefully.",
+  "trans": "When the game of dice breaks up"
  },
  {
   "ref": "Purgatorio VI, 76",
   "verse": "Ahi serva Italia, di dolore ostello",
   "it": "Un grido d'amore per l'Italia, con tutta la sua complicata bellezza.",
-  "en": "A cry of love for Italy, with all its complicated beauty."
+  "en": "A cry of love for Italy, with all its complicated beauty.",
+  "trans": "Ah, enslaved Italy, hostel of grief"
  },
  {
   "ref": "Purgatorio VII, 1",
   "verse": "Poscia che l'accoglienze oneste e liete",
   "it": "L'accoglienza onesta e lieta: la cosa che ci piace di più offrire.",
-  "en": "Honest, cheerful hospitality — the thing we most like to offer."
+  "en": "Honest, cheerful hospitality — the thing we most like to offer.",
+  "trans": "After the honest and joyful greetings"
  },
  {
   "ref": "Purgatorio VIII, 1",
   "verse": "Era già l'ora che volge il disio",
   "it": "L'ora in cui si pensa a casa e agli amici: l'ora dell'aperitivo.",
-  "en": "The hour when thoughts turn to home and friends — aperitivo time."
+  "en": "The hour when thoughts turn to home and friends — aperitivo time.",
+  "trans": "It was already the hour that turns back the longing"
  },
  {
   "ref": "Purgatorio IX, 1",
   "verse": "La concubina di Titone antico",
   "it": "L'alba arriva piano: il momento migliore per un cappuccino.",
-  "en": "Dawn arrives gently — the best moment for a cappuccino."
+  "en": "Dawn arrives gently — the best moment for a cappuccino.",
+  "trans": "The concubine of ancient Tithonus"
  },
  {
   "ref": "Purgatorio X, 1",
   "verse": "Poi fummo dentro al soglio de la porta",
   "it": "Varcare la soglia è già metà del viaggio.",
-  "en": "Crossing the threshold is already half the journey."
+  "en": "Crossing the threshold is already half the journey.",
+  "trans": "When we were inside the threshold of the gate"
  },
  {
   "ref": "Purgatorio XI, 1",
   "verse": "O Padre nostro, che ne' cieli stai",
   "it": "Ringraziare prima di mangiare è un gesto antico e semplice.",
-  "en": "Giving thanks before a meal is an old, simple gesture."
+  "en": "Giving thanks before a meal is an old, simple gesture.",
+  "trans": "O our Father, who are in the heavens"
  },
  {
   "ref": "Purgatorio XII, 1",
   "verse": "Di pari, come buoi che vanno a giogo",
   "it": "Camminare in due, allo stesso passo: la compagnia rende il carico più leggero.",
-  "en": "Walking side by side at the same pace makes the load lighter."
+  "en": "Walking side by side at the same pace makes the load lighter.",
+  "trans": "Side by side, like oxen going under the yoke"
  },
  {
   "ref": "Purgatorio XIII, 1",
   "verse": "Noi eravamo al sommo de la scala",
   "it": "Arrivati in cima alla scala, si guarda indietro con soddisfazione.",
-  "en": "At the top of the stairs, you look back with satisfaction."
+  "en": "At the top of the stairs, you look back with satisfaction.",
+  "trans": "We were at the top of the stairs"
  },
  {
   "ref": "Purgatorio XIV, 1",
   "verse": "Chi è costui che 'l nostro monte cerchia",
   "it": "La curiosità verso i forestieri è antica: da noi si chiede sempre «di dove sei?».",
-  "en": "Curiosity about strangers is as old as time — here we always ask “where are you from?”"
+  "en": "Curiosity about strangers is as old as time — here we always ask “where are you from?”",
+  "trans": "Who is this who circles our mountain"
  },
  {
   "ref": "Purgatorio XV, 1",
   "verse": "Quanto tra l'ultimar de l'ora terza",
   "it": "Il tempo scorre tra una luce e l'altra: ogni ora ha il suo caffè.",
-  "en": "Time runs between one light and the next — every hour has its coffee."
+  "en": "Time runs between one light and the next — every hour has its coffee.",
+  "trans": "As much as between the end of the third hour"
  },
  {
   "ref": "Purgatorio XVI, 1",
   "verse": "Buio d'inferno e di notte privata",
   "it": "Nelle giornate grigie, una luce calda in un bar fa la differenza.",
-  "en": "On grey days, a warm light in a bar makes all the difference."
+  "en": "On grey days, a warm light in a bar makes all the difference.",
+  "trans": "Darkness of hell and of night deprived"
  },
  {
   "ref": "Purgatorio XVII, 1",
   "verse": "Ricorditi, lettor, se mai ne l'alpe",
   "it": "Il ricordo di una nebbia che si dirada: dopo, tutto sembra più nitido.",
-  "en": "The memory of a fog lifting — afterwards, everything looks sharper."
+  "en": "The memory of a fog lifting — afterwards, everything looks sharper.",
+  "trans": "Remember, reader, if ever in the Alps"
  },
  {
   "ref": "Purgatorio XVIII, 1",
   "verse": "Posto avea fine al suo ragionamento",
   "it": "Quando una bella discussione finisce, resta il piacere di averla fatta.",
-  "en": "When a good conversation ends, the pleasure of having had it remains."
+  "en": "When a good conversation ends, the pleasure of having had it remains.",
+  "trans": "The teacher had put an end to his reasoning"
  },
  {
   "ref": "Purgatorio XIX, 1",
   "verse": "Ne l'ora che non può 'l calor dïurno",
   "it": "L'ora in cui il caldo cede: la più bella per sedersi fuori.",
-  "en": "The hour when the heat yields — the loveliest for sitting outside."
+  "en": "The hour when the heat yields — the loveliest for sitting outside.",
+  "trans": "At the hour when the heat of the day"
  },
  {
   "ref": "Purgatorio XX, 1",
   "verse": "Contra miglior voler voler mal pugna",
   "it": "Ogni tanto bisogna scegliere il meglio, anche quando il resto è più comodo.",
-  "en": "Now and then you have to choose the better thing, even when the rest is easier."
+  "en": "Now and then you have to choose the better thing, even when the rest is easier.",
+  "trans": "Against a better will, a worse will fights badly"
  },
  {
   "ref": "Purgatorio XXI, 1",
   "verse": "La sete natural che mai non sazia",
   "it": "La sete naturale che non si sazia mai: per fortuna, al banco c'è rimedio.",
-  "en": "The natural thirst that is never quenched — luckily, the counter has a remedy."
+  "en": "The natural thirst that is never quenched — luckily, the counter has a remedy.",
+  "trans": "The natural thirst that is never satisfied"
  },
  {
   "ref": "Purgatorio XXII, 1",
   "verse": "Già era l'angel dietro a noi rimaso",
   "it": "Si procede più leggeri: ogni passo ha tolto un peso.",
-  "en": "We move on lighter — each step has taken away a weight."
+  "en": "We move on lighter — each step has taken away a weight.",
+  "trans": "The angel was already behind us"
  },
  {
   "ref": "Purgatorio XXIII, 1",
   "verse": "Mentre che li occhi per la fronda verde",
   "it": "Guardare tra le foglie verdi: la pausa migliore è quella all'ombra.",
-  "en": "Looking through the green leaves — the best break is the one in the shade."
+  "en": "Looking through the green leaves — the best break is the one in the shade.",
+  "trans": "While my eyes were on the green leaves"
  },
  {
   "ref": "Purgatorio XXIV, 1",
   "verse": "Né 'l dir l'andar, né l'andar lui più lento",
   "it": "Camminare e parlare insieme: i discorsi migliori si fanno così.",
-  "en": "Walking and talking together — the best conversations happen that way."
+  "en": "Walking and talking together — the best conversations happen that way.",
+  "trans": "Neither did speaking slow our going, nor going our speaking"
  },
  {
   "ref": "Purgatorio XXIV, 52–54",
   "verse": "I' mi son un che, quando / Amor mi spira, noto, e a quel modo / ch'e' ditta dentro vo significando",
   "it": "Scrivi come ti detta dentro: vale anche per un biglietto d'auguri.",
-  "en": "Write the way it dictates inside you — it works for a greeting card too."
+  "en": "Write the way it dictates inside you — it works for a greeting card too.",
+  "trans": "I am one who, when / Love breathes in me, takes note, and in the way / he dictates within, I go on setting it down"
  },
  {
   "ref": "Purgatorio XXV, 1",
   "verse": "Ora era onde 'l salir non volea storpio",
   "it": "Quando la salita è ripida, il passo giusto è quello costante.",
-  "en": "When the climb is steep, the right pace is a steady one."
+  "en": "When the climb is steep, the right pace is a steady one.",
+  "trans": "It was the hour when the climb would allow no delay"
  },
  {
   "ref": "Purgatorio XXVI, 1",
   "verse": "Mentre che sì per l'orlo, uno innanzi altro",
   "it": "In fila, uno dopo l'altro, lungo il bordo: la pazienza della coda al banco.",
-  "en": "One after another along the edge — the patience of queueing at the counter."
+  "en": "One after another along the edge — the patience of queueing at the counter.",
+  "trans": "While thus along the edge, one before the other"
  },
  {
   "ref": "Purgatorio XXVII, 1",
   "verse": "Sì come quando i primi raggi vibra",
   "it": "Il primo sole del mattino: il momento in cui riapre il bar.",
-  "en": "The first morning sunlight — the moment the bar opens again."
+  "en": "The first morning sunlight — the moment the bar opens again.",
+  "trans": "As when it sends out its first rays"
  },
  {
   "ref": "Purgatorio XXVII, 140–141",
   "verse": "Libero, dritto e sano è tuo arbitrio, / e fallo fora non fare a suo senno",
   "it": "Il tuo giudizio è libero: oggi scegli tu cosa bere.",
-  "en": "Your judgement is free — today, you choose what to drink."
+  "en": "Your judgement is free — today, you choose what to drink.",
+  "trans": "Free, upright and sound is your will, / and it would be a fault not to act on its judgement"
  },
  {
   "ref": "Purgatorio XXVIII, 1",
   "verse": "Vago già di cercar dentro e dintorno",
   "it": "La voglia di esplorare: dai un'occhiata al menù, poi scegli.",
-  "en": "The urge to explore — have a look at the menu, then choose."
+  "en": "The urge to explore — have a look at the menu, then choose.",
+  "trans": "Eager already to search within and around"
  },
  {
   "ref": "Purgatorio XXIX, 1",
   "verse": "Cantando come donna innamorata",
   "it": "Una voce che canta rende più dolce anche una giornata qualunque.",
-  "en": "A singing voice makes even an ordinary day sweeter."
+  "en": "A singing voice makes even an ordinary day sweeter.",
+  "trans": "Singing like a woman in love"
  },
  {
   "ref": "Purgatorio XXX, 1",
   "verse": "Quando il settentrïon del primo cielo",
   "it": "Quando le stelle si fermano, qualcosa sta per accadere.",
-  "en": "When the stars stand still, something is about to happen."
+  "en": "When the stars stand still, something is about to happen.",
+  "trans": "When the Septentrion of the first heaven"
  },
  {
   "ref": "Purgatorio XXX, 73",
   "verse": "Guardaci ben! Ben son, ben son Beatrice",
   "it": "Il momento in cui Beatrice si presenta: un nome, e tutto cambia.",
-  "en": "The moment Beatrice introduces herself — one name, and everything changes."
+  "en": "The moment Beatrice introduces herself — one name, and everything changes.",
+  "trans": "Look at me well! I am, I am indeed Beatrice"
  },
  {
   "ref": "Purgatorio XXXI, 1",
   "verse": "O tu che se' di là dal fiume sacro",
   "it": "Un invito diretto, senza giri di parole: a volte è la cosa più gentile.",
-  "en": "A direct invitation, no beating about the bush — sometimes that's the kindest thing."
+  "en": "A direct invitation, no beating about the bush — sometimes that's the kindest thing.",
+  "trans": "O you who are on the far side of the sacred river"
  },
  {
   "ref": "Purgatorio XXXII, 1",
   "verse": "Tant' eran li occhi miei fissi e attenti",
   "it": "Quando qualcosa ci assorbe, il tempo si ferma.",
-  "en": "When something absorbs us, time stands still."
+  "en": "When something absorbs us, time stands still.",
+  "trans": "So fixed and attentive were my eyes"
  },
  {
   "ref": "Purgatorio XXXIII, 1",
   "verse": "«Deus, venerunt gentes», alternando",
   "it": "Voci che si alternano: il bello di un canto, o di una conversazione.",
-  "en": "Voices taking turns — the beauty of a chant, or of a conversation."
+  "en": "Voices taking turns — the beauty of a chant, or of a conversation.",
+  "trans": "“Deus, venerunt gentes,” alternating"
  },
  {
   "ref": "Purgatorio XXXIII, 145",
   "verse": "puro e disposto a salire a le stelle",
   "it": "Pronti a ripartire, leggeri: dopo una buona tavola anche il passo è più lieve.",
-  "en": "Light and ready to set off: after a good meal even the step is lighter."
+  "en": "Light and ready to set off: after a good meal even the step is lighter.",
+  "trans": "pure and ready to rise to the stars"
  },
  {
   "ref": "Paradiso I, 1",
   "verse": "La gloria di colui che tutto move",
   "it": "Il movimento di tutto ciò che esiste: anche una piazza ha il suo ritmo.",
-  "en": "The motion of everything that exists — even a square has its rhythm."
+  "en": "The motion of everything that exists — even a square has its rhythm.",
+  "trans": "The glory of Him who moves all things"
  },
  {
   "ref": "Paradiso II, 1",
   "verse": "O voi che siete in piccioletta barca",
   "it": "Un invito ai curiosi: seguire il viaggio, o fermarsi al porto. Il nostro porto è comodo.",
-  "en": "An invitation to the curious: follow the voyage, or stay in port. Our port is comfortable."
+  "en": "An invitation to the curious: follow the voyage, or stay in port. Our port is comfortable.",
+  "trans": "O you who are in a little boat"
  },
  {
   "ref": "Paradiso III, 1",
   "verse": "Quel sol che pria d'amor mi scaldò 'l petto",
   "it": "Il sole che scalda il petto: la panchina al sole della piazza, in una mattina di primavera.",
-  "en": "The sun that warms the heart — a sunny bench on the square on a spring morning."
+  "en": "The sun that warms the heart — a sunny bench on the square on a spring morning.",
+  "trans": "That sun which first warmed my breast with love"
  },
  {
   "ref": "Paradiso III, 85",
   "verse": "E 'n la sua volontade è nostra pace",
   "it": "In pace con ciò che si ha: il segreto di ogni buona serata.",
-  "en": "At peace with what you have — the secret of every good evening."
+  "en": "At peace with what you have — the secret of every good evening.",
+  "trans": "And in His will is our peace"
  },
  {
   "ref": "Paradiso IV, 1–3",
   "verse": "Intra due cibi, distanti e moventi / d'un modo, prima si morria di fame, / che liber' omo l'un recasse ai denti",
   "it": "Tra due piatti ugualmente invitanti si morirebbe di fame, dice Dante: da noi si possono ordinare entrambi.",
-  "en": "Between two equally tempting dishes, Dante says, a man would starve — here you can order both."
+  "en": "Between two equally tempting dishes, Dante says, a man would starve — here you can order both.",
+  "trans": "Between two foods, equally far and equally tempting, / a free man would die of hunger / before bringing one of them to his teeth"
  },
  {
   "ref": "Paradiso V, 1",
   "verse": "S'io ti fiammeggio nel caldo d'amore",
   "it": "Il calore di una buona compagnia vale più di mille parole.",
-  "en": "The warmth of good company is worth more than a thousand words."
+  "en": "The warmth of good company is worth more than a thousand words.",
+  "trans": "If I blaze at you in the warmth of love"
  },
  {
   "ref": "Paradiso VI, 1",
   "verse": "Poscia che Costantin l'aquila volse",
   "it": "La storia ha il passo lento: ci vuole un bicchiere per raccontarla tutta.",
-  "en": "History moves slowly — it takes a glass to tell it all."
+  "en": "History moves slowly — it takes a glass to tell it all.",
+  "trans": "After Constantine turned the eagle back"
  },
  {
   "ref": "Paradiso VII, 1",
   "verse": "«Osanna, sanctus Deus sabaòth»",
   "it": "Un canto di festa che riempie l'aria: la gioia si sente da lontano.",
-  "en": "A festive song filling the air — joy can be heard from afar."
+  "en": "A festive song filling the air — joy can be heard from afar.",
+  "trans": "“Hosanna, holy God of hosts”"
  },
  {
   "ref": "Paradiso VIII, 1",
   "verse": "Solea creder lo mondo in suo periclo",
   "it": "Le convinzioni cambiano: il bello è continuare a imparare.",
-  "en": "Convictions change — the beauty is in going on learning."
+  "en": "Convictions change — the beauty is in going on learning.",
+  "trans": "The world used to believe, to its peril"
  },
  {
   "ref": "Paradiso IX, 1",
   "verse": "Da poi che Carlo tuo, bella Clemenza",
   "it": "Le parole gentili fanno la differenza: «bella» e «grazie» non costano nulla.",
-  "en": "Kind words make a difference — “lovely” and “thank you” cost nothing."
+  "en": "Kind words make a difference — “lovely” and “thank you” cost nothing.",
+  "trans": "After your Charles, fair Clemence"
  },
  {
   "ref": "Paradiso X, 1",
   "verse": "Guardando nel suo Figlio con l'Amore",
   "it": "Guardare con affetto quello che si ha davanti: un piatto, un amico, una piazza.",
-  "en": "Looking with affection at what is in front of you: a plate, a friend, a square."
+  "en": "Looking with affection at what is in front of you: a plate, a friend, a square.",
+  "trans": "Looking upon His Son with the Love"
  },
  {
   "ref": "Paradiso XI, 1",
   "verse": "O insensata cura de' mortali",
   "it": "Quante preoccupazioni inutili: oggi lasciale fuori dalla porta.",
-  "en": "So many pointless worries — today, leave them outside the door."
+  "en": "So many pointless worries — today, leave them outside the door.",
+  "trans": "O senseless cares of mortals"
  },
  {
   "ref": "Paradiso XII, 1",
   "verse": "Sì tosto come l'ultima parola",
   "it": "Dopo l'ultima parola, il silenzio buono di chi è stato bene.",
-  "en": "After the last word, the good silence of someone who has enjoyed themselves."
+  "en": "After the last word, the good silence of someone who has enjoyed themselves.",
+  "trans": "As soon as the last word"
  },
  {
   "ref": "Paradiso XIII, 1",
   "verse": "Imagini, chi bene intender cupe",
   "it": "Un invito a immaginare: chiudi gli occhi, annusa il caffè, e sei già a metà del piacere.",
-  "en": "An invitation to imagine: close your eyes, breathe in the coffee, and you're halfway to pleasure."
+  "en": "An invitation to imagine: close your eyes, breathe in the coffee, and you're halfway to pleasure.",
+  "trans": "Let him imagine, whoever wishes to understand well"
  },
  {
   "ref": "Paradiso XIV, 1",
   "verse": "Dal centro al cerchio, e sì dal cerchio al centro",
   "it": "Come l'acqua in una ciotola, le cose vanno dal centro al bordo e tornano: il nostro centro è la piazza.",
-  "en": "Like water in a bowl, things move from the centre outward and back — our centre is the square."
+  "en": "Like water in a bowl, things move from the centre outward and back — our centre is the square.",
+  "trans": "From the centre to the rim, and from the rim to the centre"
  },
  {
   "ref": "Paradiso XV, 1",
   "verse": "Benigna volontade in che si liqua",
   "it": "La buona volontà si scioglie in gesti semplici: un posto a sedere, un sorriso.",
-  "en": "Goodwill dissolves into simple gestures: a seat, a smile."
+  "en": "Goodwill dissolves into simple gestures: a seat, a smile.",
+  "trans": "Kindly will, in which dissolves"
  },
  {
   "ref": "Paradiso XV, 97",
   "verse": "Fiorenza dentro da la cerchia antica",
   "it": "Il fascino di un tempo semplice, che qui proviamo a tenere vivo.",
-  "en": "The charm of a simpler time, which we try to keep alive here."
+  "en": "The charm of a simpler time, which we try to keep alive here.",
+  "trans": "Florence, within the ancient circle"
  },
  {
   "ref": "Paradiso XVI, 1",
   "verse": "O poca nostra nobiltà di sangue",
   "it": "Conta di più come tratti le persone che il cognome che porti.",
-  "en": "How you treat people matters more than the name you carry."
+  "en": "How you treat people matters more than the name you carry.",
+  "trans": "O our little nobility of blood"
  },
  {
   "ref": "Paradiso XVII, 1",
   "verse": "Qual venne a Climenè, per accertarsi",
   "it": "Chiedere conferma a chi sa: la cosa più saggia, in cucina come altrove.",
-  "en": "Asking someone who knows — the wisest thing, in the kitchen and elsewhere."
+  "en": "Asking someone who knows — the wisest thing, in the kitchen and elsewhere.",
+  "trans": "As he who came to Clymene, to be made certain"
  },
  {
   "ref": "Paradiso XVII, 58–60",
   "verse": "Tu proverai sì come sa di sale / lo pane altrui, e come è duro calle / lo scendere e 'l salir per l'altrui scale",
   "it": "Dante conosceva il sapore del pane degli altri. Qui, almeno, il pane è nostro.",
-  "en": "Dante knew how other people's bread tastes. Here, at least, the bread is ours."
+  "en": "Dante knew how other people's bread tastes. Here, at least, the bread is ours.",
+  "trans": "You will find out how salty is the taste / of another's bread, and how hard the path / of going down and up another's stairs"
  },
  {
   "ref": "Paradiso XVIII, 1",
   "verse": "Già si godeva solo del suo verbo",
   "it": "Chi ama le parole sa quanto ci si può godere in silenzio un bel discorso.",
-  "en": "Whoever loves words knows how much you can enjoy a good speech in silence."
+  "en": "Whoever loves words knows how much you can enjoy a good speech in silence.",
+  "trans": "Already that blessed mirror was rejoicing alone in its own word"
  },
  {
   "ref": "Paradiso XIX, 1",
   "verse": "Parea dinanzi a me con l'ali aperte",
   "it": "Con le ali aperte: così si accoglie chi arriva.",
-  "en": "With wings wide open — that's how you welcome whoever arrives."
+  "en": "With wings wide open — that's how you welcome whoever arrives.",
+  "trans": "There appeared before me, with open wings"
  },
  {
   "ref": "Paradiso XX, 1",
   "verse": "Quando colui che tutto 'l mondo alluma",
   "it": "Quando il sole tramonta, le luci della piazza si accendono una a una.",
-  "en": "When the sun goes down, the lights of the square come on one by one."
+  "en": "When the sun goes down, the lights of the square come on one by one.",
+  "trans": "When he who lights the whole world"
  },
  {
   "ref": "Paradiso XXI, 1",
   "verse": "Già eran li occhi miei rifissi al volto",
   "it": "Sguardi che si incontrano: a volte basta quello per capirsi.",
-  "en": "Eyes that meet — sometimes that is enough to understand each other."
+  "en": "Eyes that meet — sometimes that is enough to understand each other.",
+  "trans": "My eyes were already fixed again on her face"
  },
  {
   "ref": "Paradiso XXII, 1",
   "verse": "Oppresso di stupore, a la mia guida",
   "it": "Lo stupore è un buon segno: vuol dire che c'è ancora qualcosa da scoprire.",
-  "en": "Wonder is a good sign: it means there's still something to discover."
+  "en": "Wonder is a good sign: it means there's still something to discover.",
+  "trans": "Overcome with amazement, I turned to my guide"
  },
  {
   "ref": "Paradiso XXII, 151",
   "verse": "L'aiuola che ci fa tanto feroci",
   "it": "Vista dall'alto la terra è un'aiuola piccola: le nostre liti sembrano minuscole.",
-  "en": "Seen from above, the earth is a small flowerbed — our quarrels look tiny."
+  "en": "Seen from above, the earth is a small flowerbed — our quarrels look tiny.",
+  "trans": "The little threshing-floor that makes us so fierce"
  },
  {
   "ref": "Paradiso XXIII, 1",
   "verse": "Come l'augello, intra l'amate fronde",
   "it": "Come l'uccello che aspetta l'alba tra le foglie: la pazienza del mattino.",
-  "en": "Like the bird waiting for dawn among the leaves: morning patience."
+  "en": "Like the bird waiting for dawn among the leaves: morning patience.",
+  "trans": "As the bird, among the beloved leaves"
  },
  {
   "ref": "Paradiso XXIV, 1",
   "verse": "O sodalizio eletto a la gran cena",
   "it": "Un invito alla grande cena: a tavola c'è posto per tutti.",
-  "en": "An invitation to the great supper — at the table there is room for everyone."
+  "en": "An invitation to the great supper — at the table there is room for everyone.",
+  "trans": "O fellowship chosen for the great supper"
  },
  {
   "ref": "Paradiso XXV, 1",
   "verse": "Se mai continga che 'l poema sacro",
   "it": "Il sogno di tornare a casa: chi parte porta con sé il desiderio del ritorno.",
-  "en": "The dream of coming home — those who leave carry the wish to return."
+  "en": "The dream of coming home — those who leave carry the wish to return.",
+  "trans": "If it ever happens that the sacred poem"
  },
  {
   "ref": "Paradiso XXVI, 1",
   "verse": "Mentr' io dubbiava per lo viso spento",
   "it": "Un dubbio che passa: dopo un buon bicchiere le cose si vedono meglio.",
-  "en": "A doubt that passes — after a good glass, things look clearer."
+  "en": "A doubt that passes — after a good glass, things look clearer.",
+  "trans": "While I was doubting, because of my dimmed sight"
  },
  {
   "ref": "Paradiso XXVII, 1",
   "verse": "«Al Padre, al Figlio, a lo Spirito Santo»",
   "it": "Un canto di gioia che riempie tutto: la felicità è contagiosa.",
-  "en": "A song of joy that fills everything — happiness is contagious."
+  "en": "A song of joy that fills everything — happiness is contagious.",
+  "trans": "“To the Father, to the Son, to the Holy Spirit”"
  },
  {
   "ref": "Paradiso XXVIII, 1",
   "verse": "Poscia che 'ncontro a la vita presente",
   "it": "Dopo un lungo discorso, un momento per guardare ciò che ci circonda.",
-  "en": "After a long speech, a moment to look at what's around us."
+  "en": "After a long speech, a moment to look at what's around us.",
+  "trans": "After, against the present life"
  },
  {
   "ref": "Paradiso XXIX, 1",
   "verse": "Quando ambedue li figli di Latona",
   "it": "Due luci in equilibrio, per un istante: il bilanciamento perfetto di una serata.",
-  "en": "Two lights in balance for an instant — the perfect balance of an evening."
+  "en": "Two lights in balance for an instant — the perfect balance of an evening.",
+  "trans": "When both of Latona's children"
  },
  {
   "ref": "Paradiso XXX, 1",
   "verse": "Forse semilia miglia di lontano",
   "it": "Lontano, la mattina arriva: da qui si vede un nuovo giorno cominciare.",
-  "en": "Far away the morning is arriving — from here you can watch a new day begin."
+  "en": "Far away the morning is arriving — from here you can watch a new day begin.",
+  "trans": "Perhaps six thousand miles away"
  },
  {
   "ref": "Paradiso XXXI, 1",
   "verse": "In forma dunque di candida rosa",
   "it": "Una rosa fatta di persone: l'immagine di una grande tavolata.",
-  "en": "A rose made of people — the image of one long, crowded table."
+  "en": "A rose made of people — the image of one long, crowded table.",
+  "trans": "In the form, then, of a white rose"
  },
  {
   "ref": "Paradiso XXXII, 1",
   "verse": "Contemplando il suo Gaudio, quel contemplante",
   "it": "Contemplare ciò che ci rende felici: un piatto, una vista, una persona.",
-  "en": "Contemplating what makes us happy: a plate, a view, a person."
+  "en": "Contemplating what makes us happy: a plate, a view, a person.",
+  "trans": "Contemplating his Joy, that contemplator"
  },
  {
   "ref": "Paradiso XXXIII, 1",
   "verse": "«Vergine Madre, figlia del tuo figlio»",
   "it": "Una preghiera che comincia con un paradosso: la poesia ama sorprendere.",
-  "en": "A prayer that begins with a paradox — poetry loves to surprise."
+  "en": "A prayer that begins with a paradox — poetry loves to surprise.",
+  "trans": "“Virgin Mother, daughter of your Son”"
  },
  {
   "ref": "Paradiso XXXIII, 85–87",
   "verse": "Nel suo profondo vidi che s'interna, / legato con amore in un volume, / ciò che per l'universo si squaderna",
   "it": "Ciò che è sparso ovunque, raccolto in un solo volume: come un menù ben fatto.",
-  "en": "What lies scattered everywhere, gathered in a single volume — like a well-made menu."
+  "en": "What lies scattered everywhere, gathered in a single volume — like a well-made menu.",
+  "trans": "In its depth I saw gathered, / bound by love into one volume, / what is scattered through the universe"
  },
  {
   "ref": "Paradiso XXXIII, 145",
   "verse": "l'amor che move il sole e l'altre stelle",
   "it": "L'ultimo verso della Commedia: l'amore, la cosa che mette in moto tutto.",
-  "en": "The last line of the Comedy: love, the thing that sets everything in motion."
+  "en": "The last line of the Comedy: love, the thing that sets everything in motion.",
+  "trans": "the love that moves the sun and the other stars"
  }
 ]

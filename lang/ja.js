@@ -154,6 +154,7 @@ window.BDA_LANG.ja = {
  "WhatsApp opens with your message ready — just press Send. The bar replies there.": "WhatsAppがメッセージ入力済みで開きます。送信を押すだけです。お店から返信します。",
  "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "＋と－で選んで、WhatsAppで注文を送信してください。お店からWhatsAppで返信します。お支払いはこれまでどおりカウンターで。",
  "Install the menu on your phone": "メニューをスマホにインストール",
- "On iPhone: Share → “Add to Home Screen”": "iPhoneの場合：共有 → 「ホーム画面に追加」"
+ "On iPhone: Share → “Add to Home Screen”": "iPhoneの場合：共有 → 「ホーム画面に追加」",
+ "What are you in the mood for?": "今日は何の気分ですか？"
 }
 };

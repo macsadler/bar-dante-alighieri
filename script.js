@@ -429,10 +429,42 @@
   }
   var todayOverride = null;     // set only if data/today.json is valid AND dated today (Rome)
   function ieLang() { return document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'it'; }
+  // --- "canto by canto": 100 ticks (34 Inferno, 33 Purgatorio, 33 Paradiso); today's canto is lit ---
+  var CANTICHE = [['Inferno', 34], ['Purgatorio', 33], ['Paradiso', 33]];
+  function romanToInt(r) {
+    var v = { I: 1, V: 5, X: 10, L: 50 }, n = 0;
+    for (var i = 0; i < r.length; i++) { var c = v[r[i]], nx = v[r[i + 1]]; if (!c) return NaN; n += (nx && nx > c) ? -c : c; }
+    return n;
+  }
+  (function buildTrack() {
+    var track = document.getElementById('cantoTrack');
+    CANTICHE.forEach(function (c) {
+      var g = document.createElement('span'); g.className = 'ct-group'; g.setAttribute('data-c', c[0]);
+      for (var i = 1; i <= c[1]; i++) { var t = document.createElement('i'); t.setAttribute('data-n', i); g.appendChild(t); }
+      track.appendChild(g);
+    });
+  })();
+  function markCanto(ref) {
+    var wrap = document.getElementById('cantoWrap'), lab = document.getElementById('cantoLabel');
+    var on = document.querySelector('#cantoTrack i.on'); if (on) on.className = '';
+    var m = /^(Inferno|Purgatorio|Paradiso) ([IVXL]+)/.exec(String(ref));
+    var total = m && { Inferno: 34, Purgatorio: 33, Paradiso: 33 }[m[1]];
+    var n = m ? romanToInt(m[2]) : NaN;
+    if (!m || isNaN(n) || n < 1 || n > total) { wrap.hidden = true; return; } // an unusual reference: just hide the track
+    wrap.hidden = false;
+    var tick = document.querySelector('#cantoTrack .ct-group[data-c="' + m[1] + '"] i[data-n="' + n + '"]');
+    if (tick) tick.className = 'on';
+    lab.textContent = m[1] + ' · canto ' + m[2] + ' (' + n + '/' + total + ')';
+  }
   function renderDaily() {
     if (!dailyEntries || !dailyEntries.length) return; // keep the static default
     var e = (todayOverride && dailyOffset === 0) ? todayOverride : dailyEntries[(dailyIndex + dailyOffset) % dailyEntries.length];
     document.getElementById('verseText').textContent = String(e.verse).replace(/ \/ /g, '\n');
+    var hasTrans = typeof e.trans === 'string' && e.trans.trim() !== ''; // parallel English, when the entry has it
+    document.getElementById('verseTrans').textContent = hasTrans ? e.trans.replace(/ \/ /g, '\n') : '';
+    document.getElementById('vpEn').hidden = !hasTrans;
+    document.getElementById('vpNote').hidden = !hasTrans;
+    markCanto(e.ref);
     var g = document.getElementById('verseGloss');
     g.innerHTML = '';
     ['it', 'en'].forEach(function (l) {
@@ -440,6 +472,7 @@
     });
     var ref = document.createElement('span'); ref.className = 'verse-ref'; ref.textContent = ' — ' + e.ref; g.appendChild(ref);
   }
+  markCanto('Inferno I, 1'); // matches the static default
   if (location.protocol.indexOf('http') === 0 && window.fetch) {
     fetch('data/daily.json', { cache: 'default' }).then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (d) {
       if (Array.isArray(d) && d.length && d.every(validEntry)) {
@@ -450,7 +483,7 @@
         // It is used only if it parses, has date + verse + ref + it + en, and its date is today in Rome. Anything else is ignored silently.
         fetch('data/today.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (t) {
           if (validEntry(t) && typeof t.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(t.date) && t.date === romeDateString()) {
-            todayOverride = { verse: t.verse, ref: t.ref, it: t.it, en: t.en };
+            todayOverride = { verse: t.verse, ref: t.ref, it: t.it, en: t.en, trans: t.trans }; // trans is optional
             renderDaily();
           }
         }).catch(function () { /* ignored: the scheduled pick stays */ });

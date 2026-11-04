@@ -14,9 +14,9 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <title>Bar Dante Alighieri · Radda in Chianti</title>
 <meta name="description" content="Bar Dante Alighieri — Bar · Enoteca · Tabacchi nella piazza di Radda in Chianti. Caffè, vini del Chianti e cucina toscana. / Bar, wine bar and tobacconist on the village square of Radda in Chianti.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<!-- Fonts are self-hosted (no request to Google): fewer round trips, works offline, nothing to track -->
+<link rel="preload" href="fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lato-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.className+=" js";</script>
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -92,6 +92,7 @@
   <div class="wrap hero-content">
     <p class="eyebrow">Bar · Enoteca · Tabacchi</p>
     <h1>Bar Dante Alighieri</h1>
+    <p class="hero-story"><span lang="it">Quarant'anni di piazza, un nuovo capitolo</span><span lang="en">Forty years on the square, a new chapter</span></p>
     <p class="lead">
       <span lang="it">Nel cuore della piazza di Radda in Chianti: dal caffè del mattino allo spritz della sera.</span><span lang="en">In the heart of the village square in Radda in Chianti: from the morning espresso to the evening spritz.</span>
     </p>
@@ -117,6 +118,7 @@
     <p class="section-intro">
       <span lang="it">Dal caffè del mattino all'aperitivo: piatti della tradizione, bruschette, panini e vini al bicchiere. Prezzi in euro.</span><span lang="en">From morning coffee to aperitivo: traditional dishes, bruschette, sandwiches and wines by the glass. Prices in euro.</span>
     </p>
+    <p class="menu-ask"><span lang="it">Cosa ti va oggi?</span><span lang="en">What are you in the mood for?</span></p>
     <nav class="menu-tabs" id="menuFilter" aria-label="Menu">
         <button type="button" data-filter="all" aria-pressed="true" class="active"><span lang="it">Tutto</span><span lang="en">All</span></button>
         <button type="button" data-filter="caffe" aria-pressed="false"><span lang="it">Caffetteria</span><span lang="en">Coffee &amp; soft drinks</span></button>
@@ -386,10 +388,22 @@
     <div class="verse ie-only" id="verse">
       <p class="verse-label"><span lang="it">Il verso del giorno</span><span lang="en">Today's verse</span> <span class="ie-tag"><span lang="it">solo italiano e inglese</span><span lang="en">Italian and English only</span></span></p>
       <!-- Static default: shown if data/daily.json cannot be loaded -->
-      <p class="verse-text" id="verseText" lang="it">Nel mezzo del cammin di nostra vita
-mi ritrovai per una selva oscura</p>
+      <div class="verse-parallel">
+        <div class="vp-col"><span class="vp-lang">Italiano</span>
+          <p class="verse-text" id="verseText" lang="it">Nel mezzo del cammin di nostra vita
+mi ritrovai per una selva oscura</p></div>
+        <div class="vp-col" id="vpEn"><span class="vp-lang">English</span>
+          <p class="verse-trans" id="verseTrans">Midway along the journey of our life
+I found myself in a dark wood</p></div>
+      </div>
+      <p class="vp-note" id="vpNote"><span lang="it">L'inglese è una resa letterale del bar, non una traduzione letteraria.</span><span lang="en">The English is the bar's own plain, literal rendering — not a literary translation.</span></p>
+      <div class="canto-track-wrap" id="cantoWrap">
+        <div class="canto-track" id="cantoTrack" aria-hidden="true"></div>
+        <p class="canto-label" id="cantoLabel"></p>
+      </div>
       <p class="verse-gloss" id="verseGloss"><span lang="it">Ogni strada ha un punto in cui non si vede più dove porta. Una sosta aiuta a ritrovare la direzione.</span><span lang="en">Every road has a point where you can't see where it leads. A pause helps you find your bearings.</span> <span class="verse-ref">— Inferno I, 1</span></p>
       <button type="button" class="btn btn-light btn-small" id="verseNext"><span lang="it">Un altro verso</span><span lang="en">Another verse</span></button>
+      <p class="deeper"><span lang="it">Per approfondire, canto per canto:</span><span lang="en">To go deeper, canto by canto:</span> <a href="https://digitaldante.columbia.edu/" target="_blank" rel="noopener">Digital Dante (Columbia University)</a> · <a href="https://dante.princeton.edu/" target="_blank" rel="noopener">Dante Project (Princeton)</a></p>
     </div>
 
     <div class="quiz ie-only" id="quiz">

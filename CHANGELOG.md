@@ -2,6 +2,13 @@
 
 Newest first. Each round is one set of changes pushed to the preview branch.
 
+## Round 13 — 4 Nov 2026 · design polish from the references
+- **A storied café feel:** gilt hairlines and a small diamond ornament under headings, a printed-menu double rule on the menu cards, a gilt frame and "forty years on the square" line in the hero.
+- **A bolder, friendlier menu:** bigger dish names, prices as little pills, a "Cosa ti va oggi?" question, chunkier category buttons with small food icons.
+- **Dante, canto by canto:** the verse of the day is now parallel text — Italian beside the bar's own plain English rendering — with a 100-tick track that lights today's canto, and links to Digital Dante (Columbia) and the Dante Project (Princeton). Every verse in `data/daily.json` has its English rendering.
+- **Fonts are self-hosted** (no request to Google; works offline). The page now contacts no outside host except the map.
+- A "gift, not a business" note in the README (no ads, no bookings, no partnerships, no tracking).
+
 ## Round 12 — 4 Nov 2026 · verse-of-the-day override
 - **`data/today.json`:** an outside routine can publish today's verse by writing only that file. It is used only when it is valid and dated today (Rome); anything else is ignored silently, so it can never break the site. Details in `docs/DAILY-VERSES.md`.
 

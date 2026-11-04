@@ -1,5 +1,7 @@
 # Bar Dante Alighieri — website
 
+> **A gift, not a business.** No ads, no bookings, no commercial partnerships, no tracking or analytics, no third-party scripts. Ordering from the table goes straight to the bar's own WhatsApp: no platform, no commission, no subscription. Fonts are self-hosted. The only outside contents are the OpenStreetMap map and plain links (TripAdvisor, Digital Dante, Dante Project), which are not partnerships.
+
 Static bilingual (IT/EN) one-page site. No build step: open `index.html` or serve the folder from any static host.
 
 Files: `index.html`, `styles.css`, `script.js`.

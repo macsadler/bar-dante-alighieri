@@ -154,6 +154,7 @@ window.BDA_LANG.fr = {
  "WhatsApp opens with your message ready — just press Send. The bar replies there.": "WhatsApp s'ouvre avec votre message prêt : appuyez simplement sur Envoyer. Le bar vous répond là-bas.",
  "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "Choisissez avec + et −, puis envoyez votre commande sur WhatsApp : le bar vous répond là-bas. Le paiement se fait au comptoir, comme d'habitude.",
  "Install the menu on your phone": "Installer le menu sur votre téléphone",
- "On iPhone: Share → “Add to Home Screen”": "Sur iPhone : Partager → « Sur l'écran d'accueil »"
+ "On iPhone: Share → “Add to Home Screen”": "Sur iPhone : Partager → « Sur l'écran d'accueil »",
+ "What are you in the mood for?": "Qu'est-ce qui vous tente aujourd'hui ?"
 }
 };

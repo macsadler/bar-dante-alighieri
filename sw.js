@@ -1,15 +1,17 @@
 /* Service worker: lets the menu open with no signal (in the bar's back room, on a bad connection).
    - Stale-while-revalidate for the site's own files: the cached copy opens instantly, and a fresh copy is fetched in the
      background for next time. So there is no version number to bump and nothing to maintain.
-   - Only same-origin files and the Google Fonts files are touched; the map, WhatsApp and TripAdvisor always use the network.
+   - Only the site's own files are touched; the map, WhatsApp and TripAdvisor always use the network.
    - No tracking, no analytics, nothing is sent anywhere. */
 const CACHE = 'bda-site';
 const PRECACHE = [
   './', 'index.html', 'styles.css', 'script.js', 'config.js', 'photos.js', 'menu-photos.js',
   'data/daily.json', 'data/hours.json', 'manifest.webmanifest',
-  'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'
+  'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
+  'fonts/cormorant-garamond-latin-500-normal.woff2', 'fonts/cormorant-garamond-latin-600-normal.woff2', 'fonts/cormorant-garamond-latin-500-italic.woff2',
+  'fonts/lato-latin-400-normal.woff2', 'fonts/lato-latin-700-normal.woff2'
 ];
-const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
+const FONT_HOSTS = []; // fonts are self-hosted in /fonts, so nothing outside this site is ever cached
 const INDEX = new URL('index.html', self.registration.scope).href;
 
 self.addEventListener('install', (event) => {
