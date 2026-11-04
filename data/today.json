@@ -1,3 +1,1 @@
-{
-  "_comment": "OPTIONAL daily override. An outside routine may overwrite this whole file to publish a verse of the day. It is shown ONLY if date equals today's date in Europe/Rome (YYYY-MM-DD) and verse, ref, it and en are all non-empty text; otherwise the site silently keeps the scheduled verse from daily.json. Example: {\"date\":\"2026-11-05\",\"verse\":\"Nel mezzo del cammin di nostra vita / mi ritrovai per una selva oscura\",\"ref\":\"Inferno I, 1\",\"it\":\"Riflessione.\",\"en\":\"Reflection.\"}"
-}
+{"date":"2026-11-05","verse":"l'amor che move il sole e l'altre stelle","ref":"Paradiso XXXIII, 145","it":"Dante chiude il viaggio con l'amore che muove tutto. Anche un buon giovedì comincia così: con un caffè offerto a qualcuno.","en":"Dante ends his journey with the love that moves everything. A good Thursday can start the same way: with a coffee for someone else."}
