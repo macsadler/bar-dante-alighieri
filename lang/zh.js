@@ -99,7 +99,7 @@ window.BDA_LANG.zh = {
  "Tap to interact": "点按以操作地图",
  "Dante": "但丁",
  "Photos": "照片",
- "Open now · until 21:30": "营业中 · 营业至21:30",
+ "Open now · until {t}": "营业中 · 营业至{t}",
  "Closed now": "目前已打烊",
  "Closed today": "今日休息",
  "See the photos": "查看照片",
@@ -152,6 +152,8 @@ window.BDA_LANG.zh = {
  "Clear": "清空",
  "Send on WhatsApp": "通过 WhatsApp 发送",
  "WhatsApp opens with your message ready — just press Send. The bar replies there.": "WhatsApp 会打开并填好消息，只需点按“发送”。酒吧会在那里回复您。",
- "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "用 + 和 − 选择，然后通过 WhatsApp 发送订单——酒吧会在那里回复您。付款仍和往常一样在吧台办理。"
+ "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "用 + 和 − 选择，然后通过 WhatsApp 发送订单——酒吧会在那里回复您。付款仍和往常一样在吧台办理。",
+ "Install the menu on your phone": "将菜单安装到手机",
+ "On iPhone: Share → “Add to Home Screen”": "在 iPhone 上：分享 → “添加到主屏幕”"
 }
 };

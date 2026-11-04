@@ -99,7 +99,7 @@ window.BDA_LANG.de = {
  "Tap to interact": "Zum Bedienen tippen",
  "Dante": "Dante",
  "Photos": "Fotos",
- "Open now · until 21:30": "Jetzt geöffnet · bis 21:30 Uhr",
+ "Open now · until {t}": "Jetzt geöffnet · bis {t} Uhr",
  "Closed now": "Jetzt geschlossen",
  "Closed today": "Heute geschlossen",
  "See the photos": "Fotos ansehen",
@@ -152,6 +152,8 @@ window.BDA_LANG.de = {
  "Clear": "Leeren",
  "Send on WhatsApp": "Per WhatsApp senden",
  "WhatsApp opens with your message ready — just press Send. The bar replies there.": "WhatsApp öffnet sich mit Ihrer fertigen Nachricht – einfach auf Senden tippen. Die Bar antwortet dort.",
- "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "Wählen Sie mit + und −, und senden Sie Ihre Bestellung per WhatsApp – die Bar antwortet dort. Bezahlt wird wie gewohnt an der Theke."
+ "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "Wählen Sie mit + und −, und senden Sie Ihre Bestellung per WhatsApp – die Bar antwortet dort. Bezahlt wird wie gewohnt an der Theke.",
+ "Install the menu on your phone": "Menü auf dem Handy installieren",
+ "On iPhone: Share → “Add to Home Screen”": "Auf dem iPhone: Teilen → „Zum Home-Bildschirm“"
 }
 };

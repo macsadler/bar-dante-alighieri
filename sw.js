@@ -1,0 +1,48 @@
+/* Service worker: lets the menu open with no signal (in the bar's back room, on a bad connection).
+   - Stale-while-revalidate for the site's own files: the cached copy opens instantly, and a fresh copy is fetched in the
+     background for next time. So there is no version number to bump and nothing to maintain.
+   - Only same-origin files and the Google Fonts files are touched; the map, WhatsApp and TripAdvisor always use the network.
+   - No tracking, no analytics, nothing is sent anywhere. */
+const CACHE = 'bda-site';
+const PRECACHE = [
+  './', 'index.html', 'styles.css', 'script.js', 'config.js', 'photos.js', 'menu-photos.js',
+  'data/daily.json', 'data/hours.json', 'manifest.webmanifest',
+  'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'
+];
+const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com'];
+const INDEX = new URL('index.html', self.registration.scope).href;
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE)
+      .then((c) => Promise.all(PRECACHE.map((u) => c.add(u).catch(() => {})))) // a missing file never blocks installing
+      .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener('fetch', (event) => {
+  const req = event.request;
+  if (req.method !== 'GET') return;
+  const url = new URL(req.url);
+  const sameOrigin = url.origin === self.location.origin;
+  if (!sameOrigin && FONT_HOSTS.indexOf(url.hostname) < 0) return;
+  const isNav = req.mode === 'navigate';
+  // every page address (?table=7, ?cat=panini, #carta ...) is the same single-page site
+  const key = isNav ? INDEX : req;
+  event.respondWith(
+    caches.open(CACHE).then((cache) =>
+      cache.match(key).then((cached) => {
+        const network = fetch(req).then((res) => {
+          if (res && (res.ok || res.type === 'opaque')) cache.put(key, res.clone());
+          return res;
+        });
+        if (cached) { network.catch(() => {}); return cached; } // fresh copy arrives in the background
+        return network.catch(() => (isNav ? cache.match(INDEX) : Response.error()));
+      })
+    )
+  );
+});

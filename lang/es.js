@@ -99,7 +99,7 @@ window.BDA_LANG.es = {
  "Tap to interact": "Toca para interactuar",
  "Dante": "Dante",
  "Photos": "Fotos",
- "Open now · until 21:30": "Abierto ahora · hasta las 21:30",
+ "Open now · until {t}": "Abierto ahora · hasta las {t}",
  "Closed now": "Cerrado ahora",
  "Closed today": "Cerrado hoy",
  "See the photos": "Ver las fotos",
@@ -152,6 +152,8 @@ window.BDA_LANG.es = {
  "Clear": "Vaciar",
  "Send on WhatsApp": "Enviar por WhatsApp",
  "WhatsApp opens with your message ready — just press Send. The bar replies there.": "WhatsApp se abre con tu mensaje listo: solo pulsa Enviar. El bar te responde allí.",
- "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "Elige con + y −, luego envía tu pedido por WhatsApp: el bar te responde allí. Se paga en la barra, como siempre."
+ "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "Elige con + y −, luego envía tu pedido por WhatsApp: el bar te responde allí. Se paga en la barra, como siempre.",
+ "Install the menu on your phone": "Instala el menú en tu teléfono",
+ "On iPhone: Share → “Add to Home Screen”": "En iPhone: Compartir → «Añadir a pantalla de inicio»"
 }
 };

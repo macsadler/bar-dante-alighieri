@@ -22,11 +22,12 @@
     var L = window.BDA_LANG[code];
     document.querySelectorAll('span[lang="en"]').forEach(function (en) {
       if (en.closest('.ie-only')) return; // quiz and daily verse stay Italian/English only
-      var t = L.strings[en.innerHTML];
+      var key = en.getAttribute('data-tpl') || en.innerHTML; // the open-now text is keyed by its {t} template
+      var t = L.strings[key];
       var sp = document.createElement('span');
       sp.setAttribute('lang', code);
       sp.setAttribute('data-gen', '');
-      sp.innerHTML = t !== undefined ? t : en.innerHTML; // fall back to English
+      sp.innerHTML = t !== undefined ? t : key; // fall back to English
       en.parentNode.insertBefore(sp, en.nextSibling);
     });
     document.title = L.title || origTitle;
@@ -160,13 +161,42 @@
   applyFilter(wanted, false);
   syncMenu();
 
-  /* ---------- Open now (usual hours, Rome time; nothing to maintain) ---------- */
-  // Sunday 8:15-21:30; Monday, Wednesday-Saturday 6:30-21:30; Tuesday closed
+  /* ---------- Open now: reads data/hours.json (built-in copy used if it cannot be loaded) ---------- */
   var HOURS = { 0: [495, 1290], 1: [390, 1290], 2: null, 3: [390, 1290], 4: [390, 1290], 5: [390, 1290], 6: [390, 1290] };
+  var HOURS_TZ = 'Europe/Rome';
+  var hourRows = Array.prototype.slice.call(document.querySelectorAll('.hours tr'));
+  hourRows.forEach(function (tr) { tr.querySelector('td').setAttribute('data-orig', tr.querySelector('td').innerHTML); });
+  function toMins(s) { var m = /^(\d{1,2}):(\d{2})$/.exec(String(s)); return m ? (+m[1]) * 60 + (+m[2]) : NaN; }
+  function fmt(mins) { return Math.floor(mins / 60) + ':' + ('0' + (mins % 60)).slice(-2); }
+  function loadHours(d) { // accepts the shape of data/hours.json; ignores anything malformed
+    if (!d || !d.week) return false;
+    var out = {};
+    for (var k = 0; k < 7; k++) {
+      var w = d.week[k];
+      if (w === null) { out[k] = null; continue; }
+      if (!w || w.length !== 2 || isNaN(toMins(w[0])) || isNaN(toMins(w[1]))) return false;
+      out[k] = [toMins(w[0]), toMins(w[1])];
+    }
+    HOURS = out; if (d.timezone) HOURS_TZ = d.timezone;
+    return true;
+  }
+  function renderHoursTable() { // the table shows what the data file says
+    hourRows.forEach(function (tr) {
+      var day = parseInt(tr.getAttribute('data-day'), 10), td = tr.querySelector('td'), h = HOURS[day];
+      if (h) { td.textContent = fmt(h[0]) + ' – ' + fmt(h[1]); tr.classList.remove('closed'); }
+      else { td.innerHTML = td.getAttribute('data-orig'); tr.classList.add('closed'); }
+    });
+  }
+  function fillTimes(h) { // put the closing time into the "until {t}" text, in whichever language is showing
+    document.querySelectorAll('.ob-open span').forEach(function (sp) {
+      if (!sp.hasAttribute('data-tpl')) sp.setAttribute('data-tpl', sp.textContent);
+      sp.textContent = sp.getAttribute('data-tpl').replace('{t}', h ? fmt(h[1]) : '');
+    });
+  }
   function updateOpen() {
     var day = null, mins = null;
     try {
-      var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Rome', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+      var parts = new Intl.DateTimeFormat('en-GB', { timeZone: HOURS_TZ, weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
       var map = {};
       parts.forEach(function (p) { map[p.type] = p.value; });
       day = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[map.weekday];
@@ -175,13 +205,19 @@
     if (day === undefined || isNaN(mins)) return;
     var h = HOURS[day];
     var state = !h ? 'closedtoday' : (mins >= h[0] && mins < h[1] ? 'open' : 'closed');
+    fillTimes(h);
     document.querySelectorAll('[data-open]').forEach(function (b) { b.setAttribute('data-state', state); });
-    document.querySelectorAll('.hours tr').forEach(function (tr) {
-      tr.classList.toggle('today', parseInt(tr.getAttribute('data-day'), 10) === day);
-    });
+    hourRows.forEach(function (tr) { tr.classList.toggle('today', parseInt(tr.getAttribute('data-day'), 10) === day); });
   }
+  renderHoursTable();
   updateOpen();
   setInterval(updateOpen, 60000);
+  document.addEventListener('bda-lang', updateOpen); // new language -> new "until {t}" text needs its time
+  if (location.protocol.indexOf('http') === 0 && window.fetch) {
+    fetch('data/hours.json').then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (d) {
+      if (loadHours(d)) { renderHoursTable(); updateOpen(); }
+    }).catch(function () { /* built-in hours stay */ });
+  }
 
   /* ---------- Optional contacts from config.js (empty = not shown) ---------- */
   var cfg = window.BDA_CONFIG || {};
@@ -215,6 +251,28 @@
   document.addEventListener('pointerdown', function (e) {
     if (mapFrame.classList.contains('active') && !mapFrame.contains(e.target)) sleepMap();
   });
+
+  /* ---------- Install to the home screen + offline menu (no tracking) ---------- */
+  if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
+    window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+  }
+  (function () {
+    var row = document.getElementById('installRow'), btn = document.getElementById('installBtn'), ios = document.getElementById('iosHint');
+    var standalone = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone;
+    if (standalone) return;
+    var deferred = null;
+    window.addEventListener('beforeinstallprompt', function (e) { // Android / desktop Chrome: a real install button, only when it can work
+      e.preventDefault(); deferred = e; btn.hidden = false; row.hidden = false;
+    });
+    btn.addEventListener('click', function () {
+      if (!deferred) return;
+      deferred.prompt();
+      deferred.userChoice.then(function () { deferred = null; btn.hidden = true; row.hidden = !ios || ios.hidden; });
+    });
+    window.addEventListener('appinstalled', function () { btn.hidden = true; row.hidden = true; });
+    var ua = navigator.userAgent || '';
+    if (/iPhone|iPad|iPod/.test(ua) && !/CriOS|FxiOS|EdgiOS/.test(ua)) { ios.hidden = false; row.hidden = false; } // iOS Safari has no install event
+  })();
 
   /* ---------- Photo-ready menu: a dish shows a picture only if menu-photos.js lists one ---------- */
   (function () {

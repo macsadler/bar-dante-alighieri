@@ -4,6 +4,8 @@ Static bilingual (IT/EN) one-page site. No build step: open `index.html` or serv
 
 Files: `index.html`, `styles.css`, `script.js`.
 
+What changed and when: see `CHANGELOG.md`. Opening hours live in `data/hours.json`; the site installs to the home screen and the menu works offline (`manifest.webmanifest`, `sw.js`).
+
 ## Things that wait on the family
 Everything below is already built and switched off; it appears by itself once the value exists. See `docs/QR-TABLES.md` for the table-ordering setup.
 

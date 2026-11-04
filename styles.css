@@ -328,6 +328,11 @@ html:not([data-lang="it"]):not([data-lang="en"]) .ie-note{display:block}
 .quiz .btn-ghost{background:transparent;color:var(--olive-d);border-color:var(--olive-d)}
 .quiz-fun{margin:1rem 0 0;font-size:.8rem;color:var(--muted)}
 
+/* install-to-home-screen hint (footer; shown only when it can work) */
+.install{margin:.8rem 0 0}
+.install[hidden],.install [hidden]{display:none}
+#iosHint{font-size:.9rem;opacity:.9}
+
 /* print: the menu on paper (A4, two columns, everything open) */
 @media print{
   .site-header,.hero,.dante,.order-bar,.sheet-back,#galleria,#feedback,.menu-tabs,.order-intro,.menu-disclaimer .x,#chi-siamo,#vini,#dove-siamo,.site-footer,.lightbox,.mt-note{display:none !important}

@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#444825">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bar Dante">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <title>Bar Dante Alighieri · Radda in Chianti</title>
 <meta name="description" content="Bar Dante Alighieri — Bar · Enoteca · Tabacchi nella piazza di Radda in Chianti. Caffè, vini del Chianti e cucina toscana. / Bar, wine bar and tobacconist on the village square of Radda in Chianti.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +95,7 @@
     <p class="lead">
       <span lang="it">Nel cuore della piazza di Radda in Chianti: dal caffè del mattino allo spritz della sera.</span><span lang="en">In the heart of the village square in Radda in Chianti: from the morning espresso to the evening spritz.</span>
     </p>
-    <p class="hero-open"><span class="open-badge " data-open><span class="ob ob-open"><span lang="it">Aperto ora · fino alle 21:30</span><span lang="en">Open now · until 21:30</span></span><span class="ob ob-closed"><span lang="it">Chiuso ora</span><span lang="en">Closed now</span></span><span class="ob ob-closedtoday"><span lang="it">Oggi chiuso</span><span lang="en">Closed today</span></span></span></p>
+    <p class="hero-open"><span class="open-badge " data-open><span class="ob ob-open"><span lang="it">Aperto ora · fino alle {t}</span><span lang="en">Open now · until {t}</span></span><span class="ob ob-closed"><span lang="it">Chiuso ora</span><span lang="en">Closed now</span></span><span class="ob ob-closedtoday"><span lang="it">Oggi chiuso</span><span lang="en">Closed today</span></span></span></p>
     <div class="hero-actions">
       <a class="btn" href="#carta"><span lang="it">La carta</span><span lang="en">See the menu</span></a>
       <a class="btn btn-ghost" id="galleryCta" href="#galleria" hidden><span lang="it">Guarda le foto</span><span lang="en">See the photos</span></a>
@@ -453,7 +461,7 @@ mi ritrovai per una selva oscura</p>
         <dl id="extraContacts" class="extra-contacts" hidden></dl>
         <!-- Wi-Fi appears only when set in config.js (TO-CONFIRM: does the bar offer guest Wi-Fi? family to say). -->
         <p class="wifi" id="wifiRow" hidden><strong>Wi-Fi</strong> <span id="wifiName"></span> · <button type="button" class="linklike" id="wifiCopy"><span lang="it">Copia la password</span><span lang="en">Copy password</span></button> <span class="wifi-done" id="wifiDone" hidden><span lang="it">Copiata!</span><span lang="en">Copied!</span></span></p>
-        <h3 class="sub"><span lang="it">Orari</span><span lang="en">Hours</span> <span class="open-badge inline" data-open><span class="ob ob-open"><span lang="it">Aperto ora · fino alle 21:30</span><span lang="en">Open now · until 21:30</span></span><span class="ob ob-closed"><span lang="it">Chiuso ora</span><span lang="en">Closed now</span></span><span class="ob ob-closedtoday"><span lang="it">Oggi chiuso</span><span lang="en">Closed today</span></span></span></h3>
+        <h3 class="sub"><span lang="it">Orari</span><span lang="en">Hours</span> <span class="open-badge inline" data-open><span class="ob ob-open"><span lang="it">Aperto ora · fino alle {t}</span><span lang="en">Open now · until {t}</span></span><span class="ob ob-closed"><span lang="it">Chiuso ora</span><span lang="en">Closed now</span></span><span class="ob ob-closedtoday"><span lang="it">Oggi chiuso</span><span lang="en">Closed today</span></span></span></h3>
         <!-- Hours per the bar's Google Business listing -->
         <table class="hours">
           <tr data-day="1"><th><span lang="it">Lunedì</span><span lang="en">Monday</span></th><td>6:30 – 21:30</td></tr>
@@ -509,6 +517,10 @@ mi ritrovai per una selva oscura</p>
     <!-- TO-CONFIRM: P.IVA — family to provide, then add a visible line here. Not shown until confirmed. -->
     <!-- TO-CONFIRM: email / WhatsApp — family to provide, then add here. Not shown until confirmed. -->
     <!-- PLACEHOLDER: all photos on this page are temporary TripAdvisor guest photos, not the family's own -->
+    <p class="install" id="installRow" hidden>
+      <button type="button" class="btn btn-light btn-small" id="installBtn" hidden><span lang="it">Installa il menù sul telefono</span><span lang="en">Install the menu on your phone</span></button>
+      <span id="iosHint" hidden><span lang="it">Su iPhone: Condividi → «Aggiungi a Home»</span><span lang="en">On iPhone: Share → “Add to Home Screen”</span></span>
+    </p>
     <p class="small">Radda in Chianti · Toscana</p>
   </div>
 </footer>

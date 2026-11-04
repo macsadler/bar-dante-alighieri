@@ -99,7 +99,7 @@ window.BDA_LANG.ja = {
  "Tap to interact": "タップして操作",
  "Dante": "ダンテ",
  "Photos": "写真",
- "Open now · until 21:30": "営業中 · 21:30まで",
+ "Open now · until {t}": "営業中 · {t}まで",
  "Closed now": "現在閉店中",
  "Closed today": "本日定休日",
  "See the photos": "写真を見る",
@@ -152,6 +152,8 @@ window.BDA_LANG.ja = {
  "Clear": "クリア",
  "Send on WhatsApp": "WhatsAppで送信",
  "WhatsApp opens with your message ready — just press Send. The bar replies there.": "WhatsAppがメッセージ入力済みで開きます。送信を押すだけです。お店から返信します。",
- "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "＋と－で選んで、WhatsAppで注文を送信してください。お店からWhatsAppで返信します。お支払いはこれまでどおりカウンターで。"
+ "Pick with + and −, then send your order on WhatsApp — the bar replies there. Payment is at the counter, as usual.": "＋と－で選んで、WhatsAppで注文を送信してください。お店からWhatsAppで返信します。お支払いはこれまでどおりカウンターで。",
+ "Install the menu on your phone": "メニューをスマホにインストール",
+ "On iPhone: Share → “Add to Home Screen”": "iPhoneの場合：共有 → 「ホーム画面に追加」"
 }
 };

@@ -1,0 +1,21 @@
+{
+  "id": "./",
+  "name": "Bar Dante Alighieri",
+  "short_name": "Bar Dante",
+  "description": "Il menù e le informazioni del Bar Dante Alighieri, Radda in Chianti. / Menu and info for Bar Dante Alighieri, Radda in Chianti.",
+  "lang": "it",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf3e6",
+  "theme_color": "#444825",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "La carta / Menu", "url": "./#carta" }
+  ]
+}
