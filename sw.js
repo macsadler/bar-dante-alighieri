@@ -31,6 +31,17 @@ self.addEventListener('fetch', (event) => {
   const sameOrigin = url.origin === self.location.origin;
   if (!sameOrigin && FONT_HOSTS.indexOf(url.hostname) < 0) return;
   const isNav = req.mode === 'navigate';
+  // Files the page asks for with cache:'no-store' (data/today.json) must be fresh: network first, cached copy only if offline.
+  if (req.cache === 'no-store' || req.cache === 'reload') {
+    const k = new Request(req.url); // plain request as the cache key
+    event.respondWith(
+      fetch(req).then((res) => {
+        if (res && res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(k, copy)).catch(() => {}); } // clone BEFORE the page reads it
+        return res;
+      }).catch(() => caches.match(k).then((hit) => hit || Response.error()))
+    );
+    return;
+  }
   // every page address (?table=7, ?cat=panini, #carta ...) is the same single-page site
   const key = isNav ? INDEX : req;
   event.respondWith(

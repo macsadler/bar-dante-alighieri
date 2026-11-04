@@ -10,6 +10,19 @@ Both live in the Dante section and are **Italian and English only, on purpose**:
 - **If the file cannot be loaded** (offline, blocked, broken JSON, empty list) the page keeps the static verse already written in `index.html`. The "Un altro verso" button then does nothing and nothing breaks.
 - To make the cycle longer, just append entries to the end of the list; no code changes. Keep each one to a real line of the poem and a one-sentence reflection in Italian and in English.
 
+### Optional override (`data/today.json`)
+
+An outside routine can publish a verse for *today only* by overwriting this one file, without touching anything else:
+
+```json
+{ "date": "2026-11-05", "verse": "line one / line two", "ref": "Inferno I, 1", "it": "riflessione", "en": "reflection" }
+```
+
+- After `daily.json` loads, the page fetches `data/today.json` (never from cache). It is used **only if** it parses, `date`, `verse`, `ref`, `it` and `en` are all non-empty text (the same check as `daily.json` entries), **and** `date` is today's date in Rome (`YYYY-MM-DD`). Otherwise it is ignored silently and the scheduled verse stays. A wrong, old, malformed or missing file therefore can never break the site, and yesterday's file simply stops applying at midnight Rome time.
+- Text is always shown as plain text, never as HTML.
+- The shipped file contains only a comment (no verse), so by default it does nothing.
+- The service worker fetches this file from the network first, so a freshly published verse is not hidden by an old cached copy; offline, the last copy is used (and still ignored unless it is dated today).
+
 ### Proofreading (important)
 
 The verses were written out from memory, in modernised spelling, because no verified text of the Commedia was reachable while building the site. Before the site goes public, have someone check every `verse` and `ref` against a printed edition (spelling and line numbers vary slightly between editions; canto numbers and the quoted words should match). The reflections are the bar's own light-hearted thoughts, not scholarship.

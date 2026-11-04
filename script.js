@@ -414,16 +414,24 @@
   var dailyEntries = null;      // from data/daily.json; stays null (static default shown) if the file cannot be loaded
   var dailyIndex = 0;
   var dailyOffset = 0;          // "Another verse" steps forward from today's entry
-  function romeDayNumber() {
+  function romeDateString() { // today's date in Rome, as YYYY-MM-DD
     try {
-      var p = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date()).split('-');
-      return Math.floor(Date.UTC(+p[0], +p[1] - 1, +p[2]) / 86400000);
-    } catch (e) { return Math.floor(Date.now() / 86400000); }
+      return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+    } catch (e) { return new Date().toISOString().slice(0, 10); }
   }
+  function romeDayNumber() {
+    var p = romeDateString().split('-');
+    return Math.floor(Date.UTC(+p[0], +p[1] - 1, +p[2]) / 86400000);
+  }
+  // one validator for both files: daily.json entries and the optional data/today.json override
+  function validEntry(x) {
+    return !!x && ['verse', 'ref', 'it', 'en'].every(function (k) { return typeof x[k] === 'string' && x[k].trim() !== ''; });
+  }
+  var todayOverride = null;     // set only if data/today.json is valid AND dated today (Rome)
   function ieLang() { return document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'it'; }
   function renderDaily() {
     if (!dailyEntries || !dailyEntries.length) return; // keep the static default
-    var e = dailyEntries[(dailyIndex + dailyOffset) % dailyEntries.length];
+    var e = (todayOverride && dailyOffset === 0) ? todayOverride : dailyEntries[(dailyIndex + dailyOffset) % dailyEntries.length];
     document.getElementById('verseText').textContent = String(e.verse).replace(/ \/ /g, '\n');
     var g = document.getElementById('verseGloss');
     g.innerHTML = '';
@@ -434,10 +442,18 @@
   }
   if (location.protocol.indexOf('http') === 0 && window.fetch) {
     fetch('data/daily.json', { cache: 'default' }).then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (d) {
-      if (Array.isArray(d) && d.length && d.every(function (x) { return x && x.verse && x.ref && x.it && x.en; })) {
+      if (Array.isArray(d) && d.length && d.every(validEntry)) {
         dailyEntries = d;
         dailyIndex = romeDayNumber() % d.length;
         renderDaily();
+        // Optional override: an outside routine may publish today's verse by writing only data/today.json.
+        // It is used only if it parses, has date + verse + ref + it + en, and its date is today in Rome. Anything else is ignored silently.
+        fetch('data/today.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (t) {
+          if (validEntry(t) && typeof t.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(t.date) && t.date === romeDateString()) {
+            todayOverride = { verse: t.verse, ref: t.ref, it: t.it, en: t.en };
+            renderDaily();
+          }
+        }).catch(function () { /* ignored: the scheduled pick stays */ });
       }
     }).catch(function () { /* static default stays */ });
   }

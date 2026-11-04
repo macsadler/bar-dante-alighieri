@@ -2,6 +2,9 @@
 
 Newest first. Each round is one set of changes pushed to the preview branch.
 
+## Round 12 — 4 Nov 2026 · verse-of-the-day override
+- **`data/today.json`:** an outside routine can publish today's verse by writing only that file. It is used only when it is valid and dated today (Rome); anything else is ignored silently, so it can never break the site. Details in `docs/DAILY-VERSES.md`.
+
 ## Round 11 — 4 Nov 2026 · installable, offline menu, hours from a file
 - **Installable:** add the site to the phone home screen (icon, full-screen app look). An "Install" button appears only where the phone supports it; iPhone users get a one-line hint.
 - **Menu works offline:** after one visit the menu, hours and daily verse open with no signal. No tracking, no analytics, nothing is sent anywhere.
