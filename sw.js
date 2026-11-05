@@ -23,7 +23,12 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    // when the cache name is bumped (bda-site-v2, -v3 ...), the old caches (with their cached photos) are deleted, not left on the phone
+    caches.keys()
+      .then((names) => Promise.all(names.filter((n) => n.indexOf('bda-site') === 0 && n !== CACHE).map((n) => caches.delete(n))))
+      .then(() => self.clients.claim())
+  );
 });
 
 self.addEventListener('fetch', (event) => {
