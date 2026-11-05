@@ -327,11 +327,12 @@
       }
       if (n <= 8) { gal.classList.remove('collapsed'); more.hidden = true; }
     }
-    gallerySet.forEach(function (p) {
+    gallerySet.forEach(function (p, idx) {
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'g-tile';
       var im = document.createElement('img');
-      im.src = p.src; im.alt = p.alt || ''; im.loading = 'lazy'; im.decoding = 'async';
+      if (idx >= 8) im.setAttribute('data-lazy-src', p.src); else im.src = p.src; // photos past the first 8 wait for "Show all"
+      im.alt = p.alt || ''; im.loading = 'lazy'; im.decoding = 'async';
       if (p.full) im.setAttribute('data-full', p.full);
       im.addEventListener('error', function () { if (b.parentNode) b.parentNode.removeChild(b); syncGallery(); });
       b.appendChild(im); gal.appendChild(b);
@@ -341,22 +342,30 @@
     if (gallerySet.length > 8) {
       more.hidden = false;
       more.addEventListener('click', function () {
+        Array.prototype.forEach.call(gal.querySelectorAll('img[data-lazy-src]'), function (i) { i.src = i.getAttribute('data-lazy-src'); i.removeAttribute('data-lazy-src'); });
         var c = gal.classList.toggle('collapsed');
         more.setAttribute('aria-expanded', String(!c));
         if (!c) more.hidden = true;
       });
     } else { gal.classList.remove('collapsed'); }
   }
-  (function probeGallery(i) { // try the listed photos in order until one loads (one small request in the usual case)
+  function probeGallery(i) { // try the listed photos in order until one loads (one request in the usual case)
     if (i >= gallerySet.length) { // none of the listed photos loads
       if (preview.indexOf('gallery') > -1) { gallerySet = sampleTiles(); revealGallery(); } // ?preview=gallery still shows the layout
       return;
     }
     var im = new Image();
+    if ('fetchPriority' in im) im.fetchPriority = 'low';
     im.onload = revealGallery;
     im.onerror = function () { probeGallery(i + 1); };
-    im.src = gallerySet[i].src;
-  })(0);
+    im.src = gallerySet[i].src; // the same file the first tile needs, so nothing is downloaded twice
+  }
+  // only once the menu has loaded and the browser is idle, so the photos never slow down the first view
+  function startGallery() {
+    var go = function () { probeGallery(0); };
+    if (window.requestIdleCallback) window.requestIdleCallback(go, { timeout: 4000 }); else setTimeout(go, 1500);
+  }
+  if (document.readyState === 'complete') startGallery(); else window.addEventListener('load', startGallery);
 
   document.querySelectorAll('main img').forEach(hideBroken);
 
@@ -369,18 +378,19 @@
   var idx = 0;
   var lastFocus = null;
 
+  function photoSrc(img) { return img.getAttribute('data-full') || img.currentSrc || img.src || img.getAttribute('data-lazy-src'); }
   function show(i) {
     var n = list.length;
     idx = (i + n) % n;
     var img = list[idx];
     boxImg.style.visibility = ''; // the broken-image handler must never hide the lightbox image
-    boxImg.src = img.getAttribute('data-full') || img.currentSrc || img.src;
+    boxImg.src = photoSrc(img);
     boxImg.alt = img.alt || '';
     boxCount.textContent = (idx + 1) + ' / ' + n;
     prevBtn.hidden = nextBtn.hidden = boxCount.hidden = n < 2;
     if (n > 1) { // warm the neighbours so swiping feels instant, even with dozens of photos
       [list[(idx + 1) % n], list[(idx - 1 + n) % n]].forEach(function (nb) {
-        new Image().src = nb.getAttribute('data-full') || nb.currentSrc || nb.src;
+        new Image().src = photoSrc(nb);
       });
     }
   }
