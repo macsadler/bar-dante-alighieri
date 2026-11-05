@@ -4,7 +4,7 @@ Newest first. Each round is one set of changes pushed to the preview branch.
 
 ## Round 14 — 5 Nov 2026 · the gallery only shows photos that exist
 - The gallery (and its "Foto" menu link and hero button) now appears only once a listed photo really loads, and a photo that cannot load removes its own tile. A list pointing at files that are not uploaded yet therefore shows nothing instead of blank squares. `?preview=gallery` still shows sample tiles when no listed photo loads.
-- The gallery check runs only after the page has finished loading and the browser is idle, at low priority, so the 3.6 MB of photos can never slow the menu's first view (photos load lazily, as tiles come into view).
+- The gallery check runs only after the page has finished loading and the browser is idle, at low priority, so the 3.6 MB of photos can never slow the menu's first view; only the first 8 photos load until "Show all photos" is tapped, and the full-screen viewer still steps through all 15.
 - Owner updates since Round 13: the verse for 5 Nov published through `data/today.json` (`a6196ce`), and 15 photos added to `photos/` with their list in `photos.js` (`e6b39b6` … `bc5f473`): the gallery is now live.
 
 ## Round 13 — 4 Nov 2026 · design polish from the references
