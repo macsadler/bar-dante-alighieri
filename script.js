@@ -313,20 +313,31 @@
   if (!gallerySet.length && preview.indexOf('gallery') > -1) gallerySet = sampleTiles();
 
   function hideBroken(img) { img.addEventListener('error', function () { img.style.visibility = 'hidden'; }); }
-  if (gallerySet.length) {
+  // The gallery appears only when a listed photo really loads (a missing file never leaves empty squares),
+  // and any tile whose photo cannot be loaded removes itself.
+  function revealGallery() {
     var gal = document.getElementById('gallery');
+    var more = document.getElementById('galleryMore');
+    function syncGallery() {
+      var n = gal.querySelectorAll('.g-tile').length;
+      if (n === 0) { // nothing usable left: hide the whole gallery again
+        document.getElementById('galleria').hidden = true;
+        ['navGallery', 'galleryCta'].forEach(function (id) { document.getElementById(id).hidden = true; });
+        return;
+      }
+      if (n <= 8) { gal.classList.remove('collapsed'); more.hidden = true; }
+    }
     gallerySet.forEach(function (p) {
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'g-tile';
       var im = document.createElement('img');
       im.src = p.src; im.alt = p.alt || ''; im.loading = 'lazy'; im.decoding = 'async';
       if (p.full) im.setAttribute('data-full', p.full);
-      hideBroken(im);
+      im.addEventListener('error', function () { if (b.parentNode) b.parentNode.removeChild(b); syncGallery(); });
       b.appendChild(im); gal.appendChild(b);
     });
     document.getElementById('galleria').hidden = false;
     ['navGallery', 'galleryCta'].forEach(function (id) { document.getElementById(id).hidden = false; });
-    var more = document.getElementById('galleryMore');
     if (gallerySet.length > 8) {
       more.hidden = false;
       more.addEventListener('click', function () {
@@ -336,6 +347,16 @@
       });
     } else { gal.classList.remove('collapsed'); }
   }
+  (function probeGallery(i) { // try the listed photos in order until one loads (one small request in the usual case)
+    if (i >= gallerySet.length) { // none of the listed photos loads
+      if (preview.indexOf('gallery') > -1) { gallerySet = sampleTiles(); revealGallery(); } // ?preview=gallery still shows the layout
+      return;
+    }
+    var im = new Image();
+    im.onload = revealGallery;
+    im.onerror = function () { probeGallery(i + 1); };
+    im.src = gallerySet[i].src;
+  })(0);
 
   document.querySelectorAll('main img').forEach(hideBroken);
 

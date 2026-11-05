@@ -2,6 +2,10 @@
 
 Newest first. Each round is one set of changes pushed to the preview branch.
 
+## Round 14 — 5 Nov 2026 · the gallery only shows photos that exist
+- The gallery (and its "Foto" menu link and hero button) now appears only once a listed photo really loads, and a photo that cannot load removes its own tile. A list pointing at files that are not uploaded yet therefore shows nothing instead of blank squares. `?preview=gallery` still shows sample tiles when no listed photo loads.
+- Owner updates since Round 13: the verse for 5 Nov published through `data/today.json` (`a6196ce`), and the photo list restored in `photos.js` (`e6b39b6`) — **the image files themselves (`photos/photo-01.jpg` … `photo-16.jpg`) are not in the repository yet.**
+
 ## Round 13 — 4 Nov 2026 · design polish from the references
 - **A storied café feel:** gilt hairlines and a small diamond ornament under headings, a printed-menu double rule on the menu cards, a gilt frame and "forty years on the square" line in the hero.
 - **A bolder, friendlier menu:** bigger dish names, prices as little pills, a "Cosa ti va oggi?" question, chunkier category buttons with small food icons.
