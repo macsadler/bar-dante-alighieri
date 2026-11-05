@@ -118,6 +118,11 @@
     <p class="section-intro">
       <span lang="it">Dal caffè del mattino all'aperitivo: piatti della tradizione, bruschette, panini e vini al bicchiere. Prezzi in euro.</span><span lang="en">From morning coffee to aperitivo: traditional dishes, bruschette, sandwiches and wines by the glass. Prices in euro.</span>
     </p>
+    <div class="photo-strip">
+      <img src="photos/photo-02.jpg" alt="Bruschette at Bar Dante" loading="lazy" width="1200" height="1200">
+      <img src="photos/photo-03.jpg" alt="Pici pasta at Bar Dante" loading="lazy" width="1200" height="1200">
+      <img src="photos/photo-04.jpg" alt="A plate from the Bar Dante kitchen" loading="lazy" width="1200" height="1200">
+    </div>
     <p class="menu-ask"><span lang="it">Cosa ti va oggi?</span><span lang="en">What are you in the mood for?</span></p>
     <nav class="menu-tabs" id="menuFilter" aria-label="Menu">
         <button type="button" data-filter="all" aria-pressed="true" class="active"><span lang="it">Tutto</span><span lang="en">All</span></button>
@@ -352,7 +357,10 @@
         <a href="https://www.tripadvisor.com/Restaurant_Review-g235123-d2105959-Reviews-Bar_Dante-Radda_in_Chianti_Tuscany.html" target="_blank" rel="noopener"><span lang="it">Leggi le recensioni dei clienti →</span><span lang="en">Read guest reviews →</span></a>
       </p>
     </div>
-    <!-- Typographic panel instead of a photo (real photos are pending from the family) -->
+    <figure class="photo">
+      <img src="photos/photo-05.jpg" alt="Bar Dante on the village square" loading="lazy" width="1200" height="800">
+      <figcaption><span lang="it">Il caffè, ogni mattina.</span><span lang="en">Coffee, every morning.</span></figcaption>
+    </figure>
     <div class="timeline" aria-label="Storia / History">
       <div class="tl-item"><span class="tl-big"><span lang="it">40 anni</span><span lang="en">40 years</span></span><span class="tl-who">Fabrizio &amp; Carolyn</span></div>
       <svg class="tl-laurel" aria-hidden="true" focusable="false"><use href="#laurel"/></svg>
@@ -419,8 +427,7 @@ I found myself in a dark wood</p></div>
   </div>
 </section>
 
-<!-- GALLERIA — a ready-made component. It stays hidden until photos are listed in photos.js (or ?preview=gallery
-     shows it with clearly-labelled sample tiles). Real photos are pending from the family; no stock photo stands in for the bar. -->
+<!-- GALLERIA — photos from the family collection, shown in the gallery below. -->
 <section class="section" id="galleria" hidden>
   <div class="wrap">
     <p class="eyebrow"><span lang="it">Galleria</span><span lang="en">Gallery</span></p>
@@ -432,7 +439,11 @@ I found myself in a dark wood</p></div>
 
 <!-- I VINI -->
 <section class="section" id="vini">
-  <div class="wrap narrow">
+  <div class="wrap two-col reverse">
+    <figure class="photo">
+      <img src="photos/photo-07.jpg" alt="Inside the bar at Bar Dante" loading="lazy" width="1200" height="1200">
+    </figure>
+    <div>
     <p class="eyebrow"><span lang="it">I vini</span><span lang="en">Wines &amp; drinks</span></p>
     <h2><span lang="it">Dal caffè al calice</span><span lang="en">From coffee to wine glass</span></h2>
     <h3 class="sub"><span lang="it">Bar</span><span lang="en">Bar</span></h3>
@@ -448,6 +459,7 @@ I found myself in a dark wood</p></div>
       <li>Vin Santo</li>
     </ul>
     <p class="note-small"><span lang="it">Chiedete al banco per l'etichetta del giorno e per un consiglio.</span><span lang="en">Ask at the counter for today's bottles and a recommendation.</span></p>
+    </div>
   </div>
 </section>
 
@@ -497,6 +509,9 @@ I found myself in a dark wood</p></div>
           <button type="button" class="map-lock" id="mapLock" aria-label="Fine / Done" hidden>&times;</button>
         </div>
         <a class="map-link" href="https://www.openstreetmap.org/?mlat=43.4885&amp;mlon=11.3760#map=18/43.4885/11.3760" target="_blank" rel="noopener"><span lang="it">Apri la mappa grande</span><span lang="en">Open larger map</span></a>
+      <figure class="visit-photo">
+        <img src="photos/photo-11.jpg" alt="Inside Bar Dante" loading="lazy" width="1200" height="1200">
+      </figure>
       </div>
     </div>
   </div>
@@ -516,9 +531,8 @@ I found myself in a dark wood</p></div>
   </div>
 </section>
 
-<!-- PHOTOS: none are shown on purpose. Real photos are pending from the family, and stock or guest photos must not
-     pass as the bar. When the photos arrive: put them in /photos and add <img src="photos/NAME.jpg" alt="..." loading="lazy">
-     tags anywhere inside <main>. They automatically get tap-to-enlarge, with swipe / arrows (see script.js). -->
+<!-- PHOTOS: family photos are shown throughout the page and in the gallery below.
+     They automatically get tap-to-enlarge, with swipe / arrows (see script.js). -->
 
 </main>
 
