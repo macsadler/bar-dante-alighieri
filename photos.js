@@ -1,7 +1,20 @@
-/* PHOTOS — real photos are pending from the family. While this list is empty the gallery stays hidden.
-   To add photos: put the image files in a /photos folder (about 1600 px wide, JPG, under ~300 KB each), then add one line per photo:
-     { src: 'photos/banco.jpg', alt: 'Il banco al mattino' },
-   Optional: full: 'photos/banco-large.jpg' for a bigger version used in the full-screen viewer.
-   They appear automatically in the gallery and in the tap-to-enlarge viewer (swipe / arrows / counter). Dozens are fine. */
+/* PHOTOS — Bar Dante Alighieri gallery.
+   Photos from the family collection, restored for the private proof-of-concept preview.
+   They appear automatically in the gallery and in the tap-to-enlarge viewer. */
 window.BDA_PHOTOS = [
+  { src: 'photos/photo-01.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-02.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-03.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-04.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-05.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-06.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-07.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-09.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-10.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-11.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-12.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-13.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-14.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-15.jpg', alt: 'Bar Dante Alighieri' },
+  { src: 'photos/photo-16.jpg', alt: 'Bar Dante Alighieri' },
 ];
