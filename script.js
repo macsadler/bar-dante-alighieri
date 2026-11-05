@@ -378,7 +378,10 @@
   var idx = 0;
   var lastFocus = null;
 
-  function photoSrc(img) { return img.getAttribute('data-full') || img.currentSrc || img.src || img.getAttribute('data-lazy-src'); }
+  function photoSrc(img) { // always an absolute address, so the same photo is recognised wherever it appears
+    var s = img.getAttribute('data-full') || img.currentSrc || img.src || img.getAttribute('data-lazy-src') || '';
+    try { return new URL(s, location.href).href; } catch (e) { return s; }
+  }
   function show(i) {
     var n = list.length;
     idx = (i + n) % n;
@@ -395,10 +398,15 @@
     }
   }
   function openBox(img) {
-    list = Array.prototype.filter.call(document.querySelectorAll('main img'), function (p) {
-      return p.style.visibility !== 'hidden' && !p.closest('[hidden]') && p.offsetParent !== null;
+    // every distinct photo once, in page order: a photo shown in the page AND in the gallery counts once
+    var seen = {};
+    list = [];
+    Array.prototype.forEach.call(document.querySelectorAll('main img'), function (p) {
+      if (p.style.visibility === 'hidden' || p.closest('[hidden]') || p.offsetParent === null) return;
+      var k = photoSrc(p);
+      if (!seen[k]) { seen[k] = p; list.push(p); }
     });
-    var i = list.indexOf(img);
+    var i = list.indexOf(seen[photoSrc(img)]);
     if (i < 0) return;
     lastFocus = document.activeElement;
     show(i);

@@ -8,6 +8,10 @@ Newest first. Each round is one set of changes pushed to the preview branch.
 - The gallery check runs only after the page has finished loading and the browser is idle, at low priority, so the 3.6 MB of photos can never slow the menu's first view; only the first 8 photos load until "Show all photos" is tapped, and the full-screen viewer still steps through all 15.
 - Owner updates since Round 13: the verse for 5 Nov published through `data/today.json` (`a6196ce`), and 15 photos added to `photos/` with their list in `photos.js` (`e6b39b6` … `bc5f473`): the gallery is now live.
 
+## Round 15 — 5 Nov 2026 · the owner's photos woven through the page
+- The owner added photos to About, the menu, Wines and the visit block (`660b667`). Made them fit the design: on phones the three menu photos are one slim swipeable row, so the menu stays the first thing you see; About shows the photo above the history panel; the photo viewer counts each photo once (15, not 21).
+- Alt text now describes what each photo shows, and the caption that did not match its picture was removed.
+
 ## Round 13 — 4 Nov 2026 · design polish from the references
 - **A storied café feel:** gilt hairlines and a small diamond ornament under headings, a printed-menu double rule on the menu cards, a gilt frame and "forty years on the square" line in the hero.
 - **A bolder, friendlier menu:** bigger dish names, prices as little pills, a "Cosa ti va oggi?" question, chunkier category buttons with small food icons.

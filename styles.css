@@ -386,6 +386,26 @@ html:not([data-lang="it"]):not([data-lang="en"]) .ie-note{display:block}
   .hero::after{inset:9px}
 }
 
+/* photos woven through the page (the owner's photos): About, menu strip, wines, visit */
+.two-col.reverse{grid-template-columns:1fr 1.2fr}
+.photo{margin:0}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;background:var(--cream-2);box-shadow:0 14px 34px rgba(46,36,24,.18)}
+#chi-siamo .two-col{align-items:start;row-gap:28px}
+#chi-siamo .two-col > div:first-child{grid-row:1 / span 2}
+#chi-siamo .photo img{aspect-ratio:3/2}
+.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.photo-strip img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;background:var(--cream-2)}
+.visit-photo{margin:.8rem 0 0}
+.visit-photo img{width:100%;max-height:380px;object-fit:cover;object-position:50% 25%;border-radius:8px;background:var(--cream-2)}
+@media (max-width:820px){
+  .two-col.reverse .photo{order:2}
+  .photo img,#chi-siamo .photo img{aspect-ratio:4/3}
+  /* phones: the menu is what people came for, so the three food photos become one slim swipeable row */
+  .photo-strip{display:flex;overflow-x:auto;gap:8px;margin:16px -20px 0;padding:0 20px;scroll-snap-type:x mandatory;scroll-padding-left:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .photo-strip::-webkit-scrollbar{display:none}
+  .photo-strip img{flex:0 0 64%;height:150px;width:auto;aspect-ratio:auto;scroll-snap-align:start}
+}
+
 /* print: the menu on paper (A4, two columns, everything open) */
 @media print{
   .site-header,.hero,.dante,.order-bar,.sheet-back,#galleria,#feedback,.menu-tabs,.order-intro,.menu-disclaimer .x,#chi-siamo,#vini,#dove-siamo,.site-footer,.lightbox,.mt-note{display:none !important}
