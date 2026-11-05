@@ -3,7 +3,7 @@
      background for next time. So there is no version number to bump and nothing to maintain.
    - Only the site's own files are touched; the map, WhatsApp and TripAdvisor always use the network.
    - No tracking, no analytics, nothing is sent anywhere. */
-const CACHE = 'bda-site';
+const CACHE = 'bda-site-v2';
 const PRECACHE = [
   './', 'index.html', 'styles.css', 'script.js', 'config.js', 'photos.js', 'menu-photos.js',
   'data/daily.json', 'data/hours.json', 'manifest.webmanifest',
