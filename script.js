@@ -466,7 +466,7 @@
   /* ---------- Dante: verse of the day + quiz (Italian and English only; no upkeep) ---------- */
   var dailyEntries = null;      // from data/daily.json; stays null (static default shown) if the file cannot be loaded
   var dailyIndex = 0;
-  var dailyOffset = 0;          // "Another verse" steps forward from today's entry
+  var dailyOffset = 0;          // Previous / Next step from today; Today resets to zero
   function romeDateString() { // today's date in Rome, as YYYY-MM-DD
     try {
       return new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
@@ -511,13 +511,15 @@
   }
   function renderDaily() {
     if (!dailyEntries || !dailyEntries.length) return; // keep the static default
-    var e = (todayOverride && dailyOffset === 0) ? todayOverride : dailyEntries[(dailyIndex + dailyOffset) % dailyEntries.length];
+    var e = (todayOverride && dailyOffset === 0) ? todayOverride : dailyEntries[((dailyIndex + dailyOffset) % dailyEntries.length + dailyEntries.length) % dailyEntries.length];
     document.getElementById('verseText').textContent = String(e.verse).replace(/ \/ /g, '\n');
     var hasTrans = typeof e.trans === 'string' && e.trans.trim() !== ''; // parallel English, when the entry has it
     document.getElementById('verseTrans').textContent = hasTrans ? e.trans.replace(/ \/ /g, '\n') : '';
     document.getElementById('vpEn').hidden = !hasTrans;
     document.getElementById('vpNote').hidden = !hasTrans;
     markCanto(e.ref);
+    currentDailyRef = e.ref;
+    renderDeeper();
     var g = document.getElementById('verseGloss');
     g.innerHTML = '';
     ['it', 'en'].forEach(function (l) {
@@ -525,8 +527,49 @@
     });
     var ref = document.createElement('span'); ref.className = 'verse-ref'; ref.textContent = ' — ' + e.ref; g.appendChild(ref);
   }
+  var currentDailyRef = 'Inferno I, 1';
+  var canti = null;
+  var expandButton = document.getElementById('verseExpand');
+  var deeperPanel = document.getElementById('verseDeeper');
+  function updateVerseLabels() {
+    var en = ieLang() === 'en';
+    [['versePrev', 'Verso precedente', 'Previous verse'], ['verseToday', 'Oggi', 'Today'], ['verseNext', 'Prossimo verso', 'Next verse']].forEach(function (b) {
+      document.getElementById(b[0]).setAttribute('aria-label', b[en ? 2 : 1]);
+    });
+    var labels = deeperPanel.hidden ? ['Leggi di più', 'Read more'] : ['Chiudi', 'Close'];
+    expandButton.setAttribute('aria-label', labels[en ? 1 : 0]);
+    expandButton.querySelector('[lang="it"]').textContent = labels[0];
+    expandButton.querySelector('[lang="en"]').textContent = labels[1];
+  }
+  function setDeeper(open) {
+    deeperPanel.hidden = !open;
+    expandButton.setAttribute('aria-expanded', String(open));
+    updateVerseLabels();
+  }
+  function renderDeeper() {
+    var m = /^(Inferno|Purgatorio|Paradiso) ([IVXL]+)(?:,|$)/.exec(currentDailyRef);
+    var n = m && romanToInt(m[2]);
+    var total = m && { Inferno: 34, Purgatorio: 33, Paradiso: 33 }[m[1]];
+    var valid = m && n >= 1 && n <= total;
+    var key = valid ? m[1] + ' ' + m[2] : '';
+    var summary = canti && canti[key];
+    document.getElementById('deeperCanto').textContent = valid ? m[1] + ' · canto ' + m[2] + ' (' + n + '/' + total + ')' : '';
+    document.getElementById('deeperRef').textContent = currentDailyRef;
+    document.getElementById('cantoSummaryIt').textContent = summary && typeof summary.it === 'string' ? summary.it : 'Il riassunto non è disponibile. Puoi leggere il testo sul sito del Princeton Dante Project.';
+    document.getElementById('cantoSummaryEn').textContent = summary && typeof summary.en === 'string' ? summary.en : 'The summary is unavailable. You can read the text on the Princeton Dante Project website.';
+    // Parameters verified against Princeton's canto form; LANG=1 selects only the Italian text.
+    document.getElementById('cantoLink').href = valid ? 'https://dante.princeton.edu/cgi-bin/dante/campuscgi/mpb/GetCantoSection.pl?INP_POEM=' + { Inferno: 'Inf', Purgatorio: 'Purg', Paradiso: 'Par' }[m[1]] + '&INP_SECT=' + n + '&INP_START=1&INP_LEN=200&LANG=1' : 'https://dante.princeton.edu/pdp/';
+    document.getElementById('cantoLinkRef').textContent = currentDailyRef;
+  }
+  expandButton.addEventListener('click', function () { setDeeper(deeperPanel.hidden); });
+  document.addEventListener('bda-lang', updateVerseLabels);
+  updateVerseLabels();
+  renderDeeper();
   markCanto('Inferno I, 1'); // matches the static default
   if (location.protocol.indexOf('http') === 0 && window.fetch) {
+    fetch('data/canti.json', { cache: 'default' }).then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (d) {
+      if (d && typeof d === 'object' && !Array.isArray(d)) { canti = d; renderDeeper(); }
+    }).catch(function () { /* the direct canto link and fallback note stay available */ });
     fetch('data/daily.json', { cache: 'default' }).then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (d) {
       if (Array.isArray(d) && d.length && d.every(validEntry)) {
         dailyEntries = d;
@@ -543,8 +586,13 @@
       }
     }).catch(function () { /* static default stays */ });
   }
-  document.getElementById('verseNext').addEventListener('click', function () {
-    if (dailyEntries) { dailyOffset += 1; renderDaily(); }
+  [['versePrev', -1], ['verseNext', 1], ['verseToday', 0]].forEach(function (control) {
+    document.getElementById(control[0]).addEventListener('click', function () {
+      if (!dailyEntries) return;
+      dailyOffset = control[1] === 0 ? 0 : dailyOffset + control[1];
+      setDeeper(false); // changing verse always collapses the explanation
+      renderDaily();
+    });
   });
 
   // --- the quiz: five light questions, each answer feeds two of seven "circles"; each circle is a drink from our menu ---
