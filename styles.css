@@ -484,6 +484,17 @@ html[dir="rtl"] .map-lock{right:auto;left:10px}
   html[dir="rtl"] .lang-panel{margin-left:0;margin-right:auto}
 }
 
+/* About: the six story photos form a compact grid on desktop and one swipeable row on phones
+   (a single column of tall portraits was ~3000 px long beside a short text block) */
+.story-photos{grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:820px){
+  .story-photos{display:flex;overflow-x:auto;gap:8px;margin:0 -20px;padding:0 20px;scroll-snap-type:x mandatory;scroll-padding-left:20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .story-photos::-webkit-scrollbar{display:none}
+  .story-photos .photo{flex:0 0 62%;scroll-snap-align:start}
+  /* photos past the first two are not rendered (so not downloaded) until the row is swiped near them */
+  .story-photos .photo:nth-child(n+3){content-visibility:auto;contain-intrinsic-size:auto 242px auto 323px}
+}
+
 /* print: the menu on paper (A4, two columns, everything open) */
 @media print{
   .site-header,.hero,.dante,.order-bar,.sheet-back,#galleria,#feedback,.menu-tabs,.order-intro,.menu-disclaimer .x,#chi-siamo,#vini,#dove-siamo,.site-footer,.lightbox,.mt-note{display:none !important}

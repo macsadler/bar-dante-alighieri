@@ -8,6 +8,10 @@ Newest first. Each round is one set of changes pushed to the preview branch.
 - The gallery check runs only after the page has finished loading and the browser is idle, at low priority, so the 3.6 MB of photos can never slow the menu's first view; only the first 8 photos load until "Show all photos" is tapped, and the full-screen viewer still steps through all 15.
 - Owner updates since Round 13: the verse for 5 Nov published through `data/today.json` (`a6196ce`), and 15 photos added to `photos/` with their list in `photos.js` (`e6b39b6` … `bc5f473`): the gallery is now live.
 
+## Round 20 — 6 Nov 2026 · new hero (owner, `903164f`)
+- The hero is now a sharp opening-day photo with a solid dark text strip along the bottom (title, line, open-now, buttons); fits a phone screen with no overlap.
+- The same commit had dropped the About-photo layout from Round 18 (the six story photos went back to one 3,000 px column); restored.
+
 ## Round 19 — 6 Nov 2026 · food photos restored (added by another session, `cf6e845`)
 - The same account restored the 15 food and interior photos next to the handover photos (27 photos in the gallery now), put five food photos in the menu strip, and gave the hero a text card so the faces in the group photo show through.
 - Fixed here: that commit had removed the lines that switch image alt text to the page language, so English visitors got Italian alt text; they are back.
