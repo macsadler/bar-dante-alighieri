@@ -412,7 +412,19 @@ I found myself in a dark wood</p></div>
         <p class="canto-label" id="cantoLabel"></p>
       </div>
       <p class="verse-gloss" id="verseGloss"><span lang="it">Ogni strada ha un punto in cui non si vede più dove porta. Una sosta aiuta a ritrovare la direzione.</span><span lang="en">Every road has a point where you can't see where it leads. A pause helps you find your bearings.</span> <span class="verse-ref">— Inferno I, 1</span></p>
-      <button type="button" class="btn btn-light btn-small" id="verseNext"><span lang="it">Un altro verso</span><span lang="en">Another verse</span></button>
+      <div class="verse-controls">
+        <button type="button" class="btn btn-light btn-small" id="versePrev" aria-label="Verso precedente">← <span lang="it">Verso precedente</span><span lang="en">Previous verse</span></button>
+        <button type="button" class="btn btn-light btn-small" id="verseToday" aria-label="Oggi"><span lang="it">Oggi</span><span lang="en">Today</span></button>
+        <button type="button" class="btn btn-light btn-small" id="verseNext" aria-label="Prossimo verso"><span lang="it">Prossimo verso</span><span lang="en">Next verse</span> →</button>
+      </div>
+      <button type="button" class="btn btn-light btn-small" id="verseExpand" aria-expanded="false" aria-controls="verseDeeper" aria-label="Leggi di più"><span lang="it">Leggi di più</span><span lang="en">Read more</span></button>
+      <div id="verseDeeper" class="verse-deeper" hidden>
+        <p id="deeperCanto" class="canto-label"></p>
+        <p id="deeperRef"></p>
+        <p id="cantoSummaryIt" lang="it"></p>
+        <p id="cantoSummaryEn" lang="en"></p>
+        <a id="cantoLink" target="_blank" rel="noopener"><span lang="it">Leggi questo canto (testo italiano)</span><span lang="en">Read this canto (Italian text)</span> — <span id="cantoLinkRef"></span></a>
+      </div>
       <p class="deeper"><span lang="it">Per approfondire, canto per canto:</span><span lang="en">To go deeper, canto by canto:</span> <a href="https://digitaldante.columbia.edu/" target="_blank" rel="noopener">Digital Dante (Columbia University)</a> · <a href="https://dante.princeton.edu/" target="_blank" rel="noopener">Dante Project (Princeton)</a></p>
     </div>
 
