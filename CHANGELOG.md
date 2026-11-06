@@ -8,6 +8,11 @@ Newest first. Each round is one set of changes pushed to the preview branch.
 - The gallery check runs only after the page has finished loading and the browser is idle, at low priority, so the 3.6 MB of photos can never slow the menu's first view; only the first 8 photos load until "Show all photos" is tapped, and the full-screen viewer still steps through all 15.
 - Owner updates since Round 13: the verse for 5 Nov published through `data/today.json` (`a6196ce`), and 15 photos added to `photos/` with their list in `photos.js` (`e6b39b6` … `bc5f473`): the gallery is now live.
 
+## Round 17 — 6 Nov 2026 · verse of the day: browse and read more (owner, `61fcf87` … `a49acf8`)
+- **Previous / Today / Next** buttons walk through the verses (wrapping around the list); "Today" returns to the day's verse, including a verse published through `data/today.json`.
+- **"Leggi di più / Read more"** opens a short bilingual summary of the verse's canto (`data/canti.json`, all 100 cantos) and a link to the Italian text of that canto on the Princeton Dante Project. Changing verse closes it. Still Italian and English only.
+- Checked here: navigation and wrap-around, expand/collapse, the override, the other languages (the block stays hidden), no errors; spot-checked five canto summaries (Inferno V and XXVI, Purgatorio V, Paradiso XVII and XXXIII) and they are accurate. The owner added `tests/check-daily.py` (needs Python Playwright).
+
 ## Round 16 — 6 Nov 2026 · 31 languages
 - Owner: the picker now offers 29 machine-translated languages plus Italiano and English (`5eddfb8` … `b70427a`). All 29 language files are in the repository; each loads, covers the same text and fits a phone screen. They are machine translations and need native review.
 - **Right-to-left done properly:** Arabic, Farsi and Hebrew now switch the whole page to right-to-left (text alignment, header, menu, hours, bullets), not just the text spans.
