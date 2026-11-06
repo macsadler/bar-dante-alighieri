@@ -515,3 +515,9 @@ html[dir="rtl"] .map-lock{right:auto;left:10px}
 .hero-has-photo .lead{font-size:clamp(1.15rem,4.4vw,1.35rem)}
 .hero-has-photo .eyebrow{font-size:.95rem}
 .hero-has-photo .hero-open{font-size:1.1rem}
+
+/* platter higher + light gradient shade over tablecloth (Mac, Nov 6 12:15) */
+.hero-has-photo .hero-photo{top:auto;bottom:0;height:118%;object-position:50% 100%}
+@media (max-width:620px){.hero-has-photo .hero-photo{height:134%;object-position:30% 100%}}
+.hero-has-photo .hero-strip{background:linear-gradient(180deg,rgba(22,14,10,.18) 0%,rgba(22,14,10,.42) 55%,rgba(22,14,10,.6) 100%);border-top:0;box-shadow:none;backdrop-filter:blur(1.5px);-webkit-backdrop-filter:blur(1.5px)}
+.hero-has-photo::before{height:30%;background:linear-gradient(180deg,rgba(20,12,8,0) 0%,rgba(20,12,8,.2) 100%)}
