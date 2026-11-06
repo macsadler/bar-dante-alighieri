@@ -440,7 +440,8 @@ html[dir="rtl"] .map-lock{right:auto;left:10px}
 }
 
 /* Verse navigation and bilingual canto explanation. */
-.verse-controls{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px}
+.verse-controls{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.verse-controls .btn{flex:1 1 0;min-width:0;justify-content:center;text-align:center;padding:10px 6px}
 .verse-controls .btn,#verseExpand{min-height:44px;white-space:normal}
 .verse-controls .btn:focus-visible,#verseExpand:focus-visible,.verse-deeper a:focus-visible{outline:3px solid #f0c9a8;outline-offset:4px}
 .verse-deeper{margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,.22);color:#e6dcc4;overflow-wrap:anywhere}
