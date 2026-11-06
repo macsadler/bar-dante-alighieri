@@ -323,6 +323,26 @@
     }
     return out;
   }
+  function photoAlt(p) {
+    var lang = document.documentElement.getAttribute('data-lang') || 'it';
+    if (lang === 'en' && p.alt_en) return p.alt_en;
+    if (lang === 'it' && p.alt_it) return p.alt_it;
+    if (p.alt_it) return p.alt_it;
+    if (p.alt_en) return p.alt_en;
+    return p.alt || '';
+  }
+  function syncImgAlts() {
+    var lang = document.documentElement.getAttribute('data-lang') || 'it';
+    Array.prototype.forEach.call(document.querySelectorAll('main img[data-alt-it], main img[data-alt-en]'), function (img) {
+      var v = lang === 'en' ? (img.getAttribute('data-alt-en') || img.getAttribute('data-alt-it'))
+                            : (img.getAttribute('data-alt-it') || img.getAttribute('data-alt-en'));
+      if (v) img.alt = v;
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('#gallery img'), function (img, i) {
+      var p = gallerySet[i];
+      if (p) img.alt = photoAlt(p);
+    });
+  }
   var gallerySet = (Array.isArray(window.BDA_PHOTOS) ? window.BDA_PHOTOS : []).filter(function (p) { return p && p.src; });
   if (!gallerySet.length && preview.indexOf('gallery') > -1) gallerySet = sampleTiles();
 
@@ -346,7 +366,7 @@
       b.type = 'button'; b.className = 'g-tile';
       var im = document.createElement('img');
       if (idx >= 8) im.setAttribute('data-lazy-src', p.src); else im.src = p.src; // photos past the first 8 wait for "Show all"
-      im.alt = p.alt || ''; im.loading = 'lazy'; im.decoding = 'async';
+      im.alt = photoAlt(p); im.loading = 'lazy'; im.decoding = 'async';
       if (p.full) im.setAttribute('data-full', p.full);
       im.addEventListener('error', function () { if (b.parentNode) b.parentNode.removeChild(b); syncGallery(); });
       b.appendChild(im); gal.appendChild(b);
@@ -362,6 +382,7 @@
         if (!c) more.hidden = true;
       });
     } else { gal.classList.remove('collapsed'); }
+    syncImgAlts();
   }
   function probeGallery(i) { // try the listed photos in order until one loads (one request in the usual case)
     if (i >= gallerySet.length) { // none of the listed photos loads
@@ -564,7 +585,9 @@
   }
   expandButton.addEventListener('click', function () { setDeeper(deeperPanel.hidden); });
   document.addEventListener('bda-lang', updateVerseLabels);
+  document.addEventListener('bda-lang', syncImgAlts);
   updateVerseLabels();
+  syncImgAlts();
   renderDeeper();
   markCanto('Inferno I, 1'); // matches the static default
   if (location.protocol.indexOf('http') === 0 && window.fetch) {
