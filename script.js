@@ -540,6 +540,7 @@
     expandButton.setAttribute('aria-label', labels[en ? 1 : 0]);
     expandButton.querySelector('[lang="it"]').textContent = labels[0];
     expandButton.querySelector('[lang="en"]').textContent = labels[1];
+    renderDeeper(); // refresh the canto link so it follows the site language (IT text / EN translation)
   }
   function setDeeper(open) {
     deeperPanel.hidden = !open;
@@ -558,7 +559,7 @@
     document.getElementById('cantoSummaryIt').textContent = summary && typeof summary.it === 'string' ? summary.it : 'Il riassunto non è disponibile. Puoi leggere il testo sul sito del Princeton Dante Project.';
     document.getElementById('cantoSummaryEn').textContent = summary && typeof summary.en === 'string' ? summary.en : 'The summary is unavailable. You can read the text on the Princeton Dante Project website.';
     // Parameters verified against Princeton's canto form; LANG=1 selects only the Italian text.
-    document.getElementById('cantoLink').href = valid ? 'https://dante.princeton.edu/cgi-bin/dante/campuscgi/mpb/GetCantoSection.pl?INP_POEM=' + { Inferno: 'Inf', Purgatorio: 'Purg', Paradiso: 'Par' }[m[1]] + '&INP_SECT=' + n + '&INP_START=1&INP_LEN=200&LANG=1' : 'https://dante.princeton.edu/pdp/';
+    document.getElementById('cantoLink').href = valid ? 'https://dante.princeton.edu/cgi-bin/dante/campuscgi/mpb/GetCantoSection.pl?INP_POEM=' + { Inferno: 'Inf', Purgatorio: 'Purg', Paradiso: 'Par' }[m[1]] + '&INP_SECT=' + n + '&INP_START=1&INP_LEN=200&LANG=' + (ieLang() === 'en' ? '2' : '1') : 'https://dante.princeton.edu/pdp/';
     document.getElementById('cantoLinkRef').textContent = currentDailyRef;
   }
   expandButton.addEventListener('click', function () { setDeeper(deeperPanel.hidden); });
