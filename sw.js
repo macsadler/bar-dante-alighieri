@@ -5,7 +5,7 @@
    - No tracking, no analytics, nothing is sent anywhere. */
 const CACHE = 'bda-site-v2';
 const PRECACHE = [
-  './', 'index.html', 'styles.css', 'script.js', 'config.js', 'photos.js', 'menu-photos.js',
+  './', 'index.html', 'styles.css', 'layout.css', 'script.js', 'config.js', 'photos.js', 'menu-photos.js',
   'data/daily.json', 'data/hours.json', 'manifest.webmanifest',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
   'fonts/cormorant-garamond-latin-500-normal.woff2', 'fonts/cormorant-garamond-latin-600-normal.woff2', 'fonts/cormorant-garamond-latin-500-italic.woff2',

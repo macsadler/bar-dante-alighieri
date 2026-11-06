@@ -8,6 +8,11 @@ Newest first. Each round is one set of changes pushed to the preview branch.
 - The gallery check runs only after the page has finished loading and the browser is idle, at low priority, so the 3.6 MB of photos can never slow the menu's first view; only the first 8 photos load until "Show all photos" is tapped, and the full-screen viewer still steps through all 15.
 - Owner updates since Round 13: the verse for 5 Nov published through `data/today.json` (`a6196ce`), and 15 photos added to `photos/` with their list in `photos.js` (`e6b39b6` … `bc5f473`): the gallery is now live.
 
+## Round 21 — 6 Nov 2026 · hero with the appetizer platter (owner, `43108a4`); layout fix moved to its own file
+- Hero: the appetizer platter photo, see-through text strip and larger type; fits phones down to 320 px.
+- The About-photo layout was dropped from `styles.css` a second time (pushes made from an older copy of that file replace it wholesale). It now lives in its own file, `layout.css`, linked after `styles.css`, so it survives.
+- The Pages deploy for `43108a4` failed on GitHub's side ("Deployment failed, try again later"; the 42 earlier deploys passed). The next push redeploys.
+
 ## Round 20 — 6 Nov 2026 · new hero (owner, `903164f`)
 - The hero is now a sharp opening-day photo with a solid dark text strip along the bottom (title, line, open-now, buttons); fits a phone screen with no overlap.
 - The same commit had dropped the About-photo layout from Round 18 (the six story photos went back to one 3,000 px column); restored.
