@@ -8,6 +8,11 @@ Newest first. Each round is one set of changes pushed to the preview branch.
 - The gallery check runs only after the page has finished loading and the browser is idle, at low priority, so the 3.6 MB of photos can never slow the menu's first view; only the first 8 photos load until "Show all photos" is tapped, and the full-screen viewer still steps through all 15.
 - Owner updates since Round 13: the verse for 5 Nov published through `data/today.json` (`a6196ce`), and 15 photos added to `photos/` with their list in `photos.js` (`e6b39b6` … `bc5f473`): the gallery is now live.
 
+## Round 19 — 6 Nov 2026 · food photos restored (added by another session, `cf6e845`)
+- The same account restored the 15 food and interior photos next to the handover photos (27 photos in the gallery now), put five food photos in the menu strip, and gave the hero a text card so the faces in the group photo show through.
+- Fixed here: that commit had removed the lines that switch image alt text to the page language, so English visitors got Italian alt text; they are back.
+- Page weight: about 8 MB of photos in the repository; a phone downloads about 2.5 MB on first view (it was 0.5 MB before the photos).
+
 ## Round 18 — 6 Nov 2026 · opening-day photos (added by another session, `f9dbd99`)
 - A commit authored as "number one (Palio Bar Dante)" replaced the 15 photos with 20 album photos from the Feb 2025 handover: a hero photo, six story photos in About, a farewell-letter image, new menu-strip and gallery photos, Italian and English alt text, and a non-breaking phone number on the Call button.
 - Fit to the page: the six story photos are a two-column grid on desktop and one swipeable row on phones (they were a single column about 3,000 px long), and off-screen photos in that row load only when swiped near, so phones still download about 2.2 MB on first view rather than 2.9 MB.

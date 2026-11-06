@@ -382,6 +382,7 @@
         if (!c) more.hidden = true;
       });
     } else { gal.classList.remove('collapsed'); }
+    syncImgAlts(); // alt text follows the page language (data-alt-it / data-alt-en)
   }
   function probeGallery(i) { // try the listed photos in order until one loads (one request in the usual case)
     if (i >= gallerySet.length) { // none of the listed photos loads
@@ -584,7 +585,9 @@
   }
   expandButton.addEventListener('click', function () { setDeeper(deeperPanel.hidden); });
   document.addEventListener('bda-lang', updateVerseLabels);
+  document.addEventListener('bda-lang', syncImgAlts);
   updateVerseLabels();
+  syncImgAlts();
   renderDeeper();
   markCanto('Inferno I, 1'); // matches the static default
   if (location.protocol.indexOf('http') === 0 && window.fetch) {
