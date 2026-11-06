@@ -6,6 +6,7 @@
   // Italiano and English are written by hand in the HTML. The languages below are
   // machine translations, each in lang/<code>.js, loaded only when picked.
   var MACHINE = { de: 1, fr: 1, es: 1, nl: 1, pt: 1, ja: 1, zh: 1, ko: 1, ru: 1, pl: 1, sv: 1, da: 1, ar: 1, hr: 1, cs: 1, fi: 1, el: 1, he: 1, hi: 1, hu: 1, no: 1, fa: 1, ro: 1, th: 1, tr: 1, uk: 1, sq: 1, gd: 1, sw: 1 };
+  var RTL = { ar: 1, fa: 1, he: 1 };
   window.BDA_LANG = window.BDA_LANG || {};
   var picker = document.getElementById('langPicker');
   var moreBtn = document.getElementById('moreLangBtn');
@@ -39,6 +40,7 @@
     if (machine) { applyText(code); } else { clearGenerated(); document.title = origTitle; }
     root.setAttribute('lang', code);
     root.setAttribute('data-lang', code);
+    root.setAttribute('dir', RTL[code] ? 'rtl' : 'ltr'); // Arabic, Farsi, Hebrew read right to left
     document.querySelectorAll('[data-lang-code]').forEach(function (b) {
       var on = b.getAttribute('data-lang-code') === code;
       if (b.classList.contains('lang-btn')) b.setAttribute('aria-pressed', String(on));
@@ -50,6 +52,14 @@
     document.dispatchEvent(new Event('bda-lang'));
   }
 
+  // A language whose file is not there (yet) must not stay a dead button: grey it out, like the other "coming soon" ones.
+  function markUnavailable(code) {
+    document.querySelectorAll('.lang-item[data-lang-code="' + code + '"]').forEach(function (b) {
+      b.disabled = true; b.setAttribute('aria-disabled', 'true');
+      if (!b.querySelector('small')) { var sm = document.createElement('small'); sm.textContent = 'prossimamente / coming soon'; b.appendChild(sm); }
+    });
+  }
+
   function setLang(code) {
     var mine = ++token;
     if (code === 'it' || code === 'en') { finish(code); return; }
@@ -57,8 +67,11 @@
     if (window.BDA_LANG[code]) { finish(code); return; }
     var s = document.createElement('script');
     s.src = 'lang/' + code + '.js';
-    s.onload = function () { if (mine === token && window.BDA_LANG[code]) finish(code); };
-    s.onerror = function () { if (s.parentNode) s.parentNode.removeChild(s); };
+    s.onload = function () {
+      if (!window.BDA_LANG[code]) { markUnavailable(code); return; }
+      if (mine === token) finish(code);
+    };
+    s.onerror = function () { if (s.parentNode) s.parentNode.removeChild(s); markUnavailable(code); };
     document.head.appendChild(s);
   }
 

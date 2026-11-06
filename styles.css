@@ -406,6 +406,28 @@ html:not([data-lang="it"]):not([data-lang="en"]) .ie-note{display:block}
   .photo-strip img{flex:0 0 64%;height:150px;width:auto;aspect-ratio:auto;scroll-snap-align:start}
 }
 
+/* right-to-left languages (Arabic, Farsi, Hebrew): script.js sets <html dir="rtl"> */
+html[dir="rtl"] .brand{margin-right:0;margin-left:auto}
+html[dir="rtl"] .lang-picker{margin-left:0;margin-right:22px}
+html[dir="rtl"] .lang-panel{right:auto;left:0}
+html[dir="rtl"] .lang-item,html[dir="rtl"] .card-toggle,html[dir="rtl"] .quiz-answer,html[dir="rtl"] .hours th{text-align:right}
+html[dir="rtl"] .hours td{text-align:left}
+html[dir="rtl"] .hours tr.today th{padding-left:0;padding-right:8px}
+html[dir="rtl"] .hours tr.today td{padding-right:0;padding-left:8px}
+html[dir="rtl"] .wine-list li{padding:6px 22px 6px 0}
+html[dir="rtl"] .wine-list li::before{left:auto;right:0}
+html[dir="rtl"] .eyebrow::before{margin-right:0;margin-left:10px}
+html[dir="rtl"] .section h2::after{background-position:right center}
+html[dir="rtl"] .center h2::after{background-position:center}
+html[dir="rtl"] .open-badge.inline{margin-left:0;margin-right:8px}
+html[dir="rtl"] .order-row > .stepper{margin-left:0;margin-right:auto}
+html[dir="rtl"] .map-lock{right:auto;left:10px}
+@media (max-width:960px){
+  html[dir="rtl"] .menu-toggle{margin-left:0;margin-right:2px}
+  html[dir="rtl"] .lang-picker{margin-left:0;margin-right:8px}
+  html[dir="rtl"] .lang-panel{margin-left:0;margin-right:auto}
+}
+
 /* print: the menu on paper (A4, two columns, everything open) */
 @media print{
   .site-header,.hero,.dante,.order-bar,.sheet-back,#galleria,#feedback,.menu-tabs,.order-intro,.menu-disclaimer .x,#chi-siamo,#vini,#dove-siamo,.site-footer,.lightbox,.mt-note{display:none !important}
