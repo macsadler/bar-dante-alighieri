@@ -8,6 +8,11 @@ Newest first. Each round is one set of changes pushed to the preview branch.
 - The gallery check runs only after the page has finished loading and the browser is idle, at low priority, so the 3.6 MB of photos can never slow the menu's first view; only the first 8 photos load until "Show all photos" is tapped, and the full-screen viewer still steps through all 15.
 - Owner updates since Round 13: the verse for 5 Nov published through `data/today.json` (`a6196ce`), and 15 photos added to `photos/` with their list in `photos.js` (`e6b39b6` … `bc5f473`): the gallery is now live.
 
+## Round 18 — 6 Nov 2026 · opening-day photos (added by another session, `f9dbd99`)
+- A commit authored as "number one (Palio Bar Dante)" replaced the 15 photos with 20 album photos from the Feb 2025 handover: a hero photo, six story photos in About, a farewell-letter image, new menu-strip and gallery photos, Italian and English alt text, and a non-breaking phone number on the Call button.
+- Fit to the page: the six story photos are a two-column grid on desktop and one swipeable row on phones (they were a single column about 3,000 px long), and off-screen photos in that row load only when swiped near, so phones still download about 2.2 MB on first view rather than 2.9 MB.
+- Checked here: all references resolve, every earlier test passes. Open questions are listed in the pull request (people named in captions, weight of the photos, previous owners in the handover photos).
+
 ## Round 17 — 6 Nov 2026 · verse of the day: browse and read more (owner, `61fcf87` … `a49acf8`)
 - **Previous / Today / Next** buttons walk through the verses (wrapping around the list); "Today" returns to the day's verse, including a verse published through `data/today.json`.
 - **"Leggi di più / Read more"** opens a short bilingual summary of the verse's canto (`data/canti.json`, all 100 cantos) and a link to the Italian text of that canto on the Princeton Dante Project. Changing verse closes it. Still Italian and English only.
