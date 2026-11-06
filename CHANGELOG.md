@@ -11,6 +11,7 @@ Newest first. Each round is one set of changes pushed to the preview branch.
 ## Round 17 — 6 Nov 2026 · verse of the day: browse and read more (owner, `61fcf87` … `a49acf8`)
 - **Previous / Today / Next** buttons walk through the verses (wrapping around the list); "Today" returns to the day's verse, including a verse published through `data/today.json`.
 - **"Leggi di più / Read more"** opens a short bilingual summary of the verse's canto (`data/canti.json`, all 100 cantos) and a link to the Italian text of that canto on the Princeton Dante Project. Changing verse closes it. Still Italian and English only.
+- On the smallest phones (320 px) the three buttons were clipping their arrows; there Previous and Next now sit side by side with Today full width below. The owner also made the buttons equal width and the canto link language-aware (`2a0eefb`).
 - Checked here: navigation and wrap-around, expand/collapse, the override, the other languages (the block stays hidden), no errors; spot-checked five canto summaries (Inferno V and XXVI, Purgatorio V, Paradiso XVII and XXXIII) and they are accurate. The owner added `tests/check-daily.py` (needs Python Playwright).
 
 ## Round 16 — 6 Nov 2026 · 31 languages

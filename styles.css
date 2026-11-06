@@ -443,6 +443,10 @@ html[dir="rtl"] .map-lock{right:auto;left:10px}
 .verse-controls{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
 .verse-controls .btn{flex:1 1 0;min-width:0;justify-content:center;text-align:center;padding:10px 6px}
 .verse-controls .btn,#verseExpand{min-height:44px;white-space:normal}
+@media (max-width:380px){ /* smallest phones: Previous | Next side by side, Today full width below, so no label or arrow is clipped */
+  .verse-controls .btn{flex:1 1 calc(50% - 4px);padding:10px 8px}
+  #versePrev{order:1}#verseNext{order:2}#verseToday{order:3;flex-basis:100%}
+}
 .verse-controls .btn:focus-visible,#verseExpand:focus-visible,.verse-deeper a:focus-visible{outline:3px solid #f0c9a8;outline-offset:4px}
 .verse-deeper{margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,.22);color:#e6dcc4;overflow-wrap:anywhere}
 .verse-deeper[hidden]{display:none}
