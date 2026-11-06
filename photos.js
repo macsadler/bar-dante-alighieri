@@ -3,7 +3,36 @@
    Use alt_it / alt_en (script.js picks by page language). `alt` is a bilingual fallback.
    Inline hero/story/farewell live in index.html and point at the same files under photos/. */
 window.BDA_PHOTOS = [
-  /* Gallery */
+  /* Food dishes (restored) — also woven into menu strip, wines, visit */
+  { src: 'photos/photo-02.jpg', role: 'food',
+    alt_it: 'Bruschette al pomodoro, melanzane grigliate e formaggio',
+    alt_en: 'Bruschette with tomato, grilled aubergine and cheese',
+    alt: 'Bruschette / Bruschette' },
+  { src: 'photos/photo-03.jpg', role: 'food',
+    alt_it: 'Pasta al pomodoro in ciotola decorata',
+    alt_en: 'Pasta with tomato sauce in a decorated bowl',
+    alt: 'Pasta al pomodoro / Pasta with tomato sauce' },
+  { src: 'photos/photo-04.jpg', role: 'food',
+    alt_it: 'Porchetta affettata con cuori di carciofo',
+    alt_en: 'Sliced porchetta with artichoke hearts',
+    alt: 'Porchetta / Porchetta' },
+  { src: 'photos/photo-05.jpg', role: 'food',
+    alt_it: 'Prosciutto, burrata e panzanella',
+    alt_en: 'Prosciutto, burrata and panzanella on one plate',
+    alt: 'Prosciutto, burrata e panzanella / Prosciutto, burrata and panzanella' },
+  { src: 'photos/photo-07.jpg', role: 'food',
+    alt_it: 'Insalata di rucola, fichi, prosciutto, noci e formaggio fresco',
+    alt_en: 'Salad of rocket, figs, prosciutto, walnuts and fresh cheese',
+    alt: 'Insalata con fichi / Salad with figs' },
+  { src: 'photos/photo-06.jpg', role: 'food',
+    alt_it: 'Tagliere di salumi e formaggi toscani',
+    alt_en: 'A board of Tuscan cured meats and cheeses',
+    alt: 'Tagliere / Sharing board' },
+  { src: 'photos/photo-11.jpg', role: 'food',
+    alt_it: 'Affettare il prosciutto al banco',
+    alt_en: 'Slicing cured ham at the counter',
+    alt: 'Prosciutto al banco / Ham at the counter' },
+  /* Gallery — opening day */
   { src: 'photos/PXL_20250216_164525217.jpg', role: 'gallery',
     alt_it: 'Ospiti e amici nella piazza di Radda, davanti al Bar Dante',
     alt_en: 'Guests and friends on the square in Radda, outside Bar Dante',
