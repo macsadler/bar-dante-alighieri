@@ -5,7 +5,7 @@
   /* ---------- Language ---------- */
   // Italiano and English are written by hand in the HTML. The languages below are
   // machine translations, each in lang/<code>.js, loaded only when picked.
-  var MACHINE = { de: 1, fr: 1, es: 1, ja: 1, zh: 1 };
+  var MACHINE = { de: 1, fr: 1, es: 1, nl: 1, pt: 1, ja: 1, zh: 1, ko: 1, ru: 1, pl: 1, sv: 1, da: 1, ar: 1, hr: 1, cs: 1, fi: 1, el: 1, he: 1, hi: 1, hu: 1, no: 1, fa: 1, ro: 1, th: 1, tr: 1, uk: 1, sq: 1, gd: 1, sw: 1 };
   window.BDA_LANG = window.BDA_LANG || {};
   var picker = document.getElementById('langPicker');
   var moreBtn = document.getElementById('moreLangBtn');
@@ -26,6 +26,7 @@
       var t = L.strings[key];
       var sp = document.createElement('span');
       sp.setAttribute('lang', code);
+      if (code === 'ar' || code === 'fa' || code === 'he') sp.setAttribute('dir', 'rtl');
       sp.setAttribute('data-gen', '');
       sp.innerHTML = t !== undefined ? t : key; // fall back to English
       en.parentNode.insertBefore(sp, en.nextSibling);
